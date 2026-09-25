@@ -48,6 +48,52 @@ function findProductInJsonLd(json: unknown): Record<string, unknown> | null {
   return null;
 }
 
+const CURRENCY_SYMBOLS: [RegExp, string][] = [
+  [/₸|тг\.?|тенге/i, "KZT"],
+  [/₽|руб\.?/i, "RUB"],
+  [/€/, "EUR"],
+  [/£/, "GBP"],
+  [/\$/, "USD"],
+  [/\b(KZT|RUB|USD|EUR|GBP|UAH|BYN|UZS|KGS)\b/i, ""],
+];
+
+function currencyFromText(text: string): string | null {
+  for (const [re, code] of CURRENCY_SYMBOLS) {
+    const m = text.match(re);
+    if (m) return code || m[1].toUpperCase();
+  }
+  return null;
+}
+
+/**
+ * Last resort for shops with no structured data at all: the price as shown
+ * on the page, in an element whose class mentions "price" and whose text has
+ * a currency. On sale items the current price is preferred over the crossed-
+ * out one.
+ */
+function findVisiblePrice($: cheerio.CheerioAPI): { price: number; currency: string | null } | null {
+  const candidates = $('[class*="price" i]')
+    .toArray()
+    // Leaf-ish elements only, so "₸ 103 990₸ 83 190" from a wrapper is skipped.
+    .filter((el) => $(el).find('[class*="price" i]').length === 0)
+    .map((el) => ({
+      cls: ($(el).attr("class") ?? "").toLowerCase(),
+      text: $(el).text().replace(/\s+/g, " ").trim(),
+    }))
+    .filter(({ text }) => /\d/.test(text) && text.length <= 40 && currencyFromText(text));
+
+  const isOld = (cls: string) => /old|regular|was|before|strike|cross|compare/.test(cls);
+  const isCurrent = (cls: string) => /actual|current|sale|special|final|new/.test(cls);
+  const best =
+    candidates.find((c) => isCurrent(c.cls) && !isOld(c.cls)) ??
+    candidates.find((c) => !isOld(c.cls)) ??
+    candidates[0];
+  if (!best) return null;
+
+  const price = parsePrice(best.text);
+  return price === null ? null : { price, currency: currencyFromText(best.text) };
+}
+
 export async function scrapeProduct(url: string): Promise<ScrapedProduct> {
   const res = await fetch(url, {
     headers: {
@@ -111,10 +157,14 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
   });
 
   if (!title) {
-    title =
+    const pageTitle =
       $('meta[property="og:title"]').attr("content") ??
-      $("title").first().text().trim() ??
-      null;
+      ($("title").first().text().trim() || null);
+    // og:title is often padded with SEO text ("… купить по выгодной цене |
+    // SHOP"); the page's <h1> is usually the clean product name. Only trust
+    // the <h1> when the page title contains it, so a logo/banner h1 is ignored.
+    const h1 = $("h1").first().text().replace(/\s+/g, " ").trim();
+    title = h1 && pageTitle?.includes(h1) ? h1 : pageTitle;
   }
 
   if (!imageUrl) {
@@ -137,6 +187,20 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
       $('meta[property="product:price:currency"]').attr("content") ??
       $('meta[property="og:price:currency"]').attr("content") ??
       null;
+  }
+
+  if (price === null) {
+    const itemprop = $('[itemprop="price"]').first();
+    price = parsePrice(itemprop.attr("content") ?? (itemprop.text().trim() || undefined));
+    if (!currency) currency = $('[itemprop="priceCurrency"]').first().attr("content") ?? null;
+  }
+
+  if (price === null) {
+    const visible = findVisiblePrice($);
+    if (visible) {
+      price = visible.price;
+      currency ??= visible.currency;
+    }
   }
 
   if (!siteName) {
