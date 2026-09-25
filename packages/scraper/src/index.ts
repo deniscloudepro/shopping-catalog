@@ -48,6 +48,8 @@ function findProductInJsonLd(json: unknown): Record<string, unknown> | null {
   return null;
 }
 
+const PLACEHOLDER_IMAGE = /vk-image|placeholder|no[-_]?image|default[-_]?(image|og)|logo/i;
+
 const CURRENCY_SYMBOLS: [RegExp, string][] = [
   [/₸|тг\.?|тенге/i, "KZT"],
   [/₽|руб\.?/i, "RUB"],
@@ -166,14 +168,33 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
       $('meta[property="og:title"]').attr("content") ??
       ($("title").first().text().trim() || null);
     // og:title is often padded with SEO text ("… купить по выгодной цене |
-    // SHOP"); the page's <h1> is usually the clean product name. Only trust
-    // the <h1> when the page title contains it, so a logo/banner h1 is ignored.
-    const h1 = $("h1").first().text().replace(/\s+/g, " ").trim();
-    title = h1 && pageTitle?.includes(h1) ? h1 : pageTitle;
+    // SHOP"); the page's <h1> is usually the clean product name. Trust
+    // the <h1> when the page title contains it, or when it's the page's only
+    // <h1> (some shops use a category-wide og:title), so a logo h1 is ignored.
+    const h1s = $("h1");
+    const h1 = h1s
+      .first()
+      .text()
+      .replace(/\s+/g, " ")
+      .replace(/\s+в\s+(Алматы|Астане|Казахстане)$/i, "")
+      .trim();
+    title = h1 && (pageTitle?.includes(h1) || h1s.length === 1) ? h1 : pageTitle;
   }
 
   if (!imageUrl) {
     imageUrl = $('meta[property="og:image"]').attr("content") ?? null;
+  }
+
+  // Some shops put a site-wide social/placeholder picture in og:image; use the
+  // product gallery's main photo instead.
+  if (!imageUrl || PLACEHOLDER_IMAGE.test(imageUrl)) {
+    const galleryImg = $(
+      'img[itemprop="image"], img[id^="main_image"], .woocommerce-product-gallery__image img, .product-gallery img'
+    )
+      .toArray()
+      .map((el) => $(el).attr("data-src") ?? $(el).attr("src"))
+      .find((src) => src && !src.startsWith("data:"));
+    if (galleryImg) imageUrl = galleryImg;
   }
 
   if (!siteName) {
