@@ -13,7 +13,7 @@
    - скриншот/текст: прочитай данные сам и вызови
      `npx tsx scripts/add-item.ts --json '{"title":"…","price":83190,"currency":"KZT","url":"…","imageUrl":"…"}'`.
    Всегда указывай раздел: `--category <id> [--subcategory <id>]` (id из
-   `docs/categories.json`: clothing — Одежда, shoes — Обувь, electronics — Электроника,
+   `docs/categories.json`: clothing — Одежда, shoes — Обувь, tourism — Туризм, electronics — Электроника,
    appliances — Бытовая техника, accessories — Аксессуары). Раздел выбирай
    сам по товару; подраздел — если товар подходит под существующий (например
    бренд The North Face → `the-north-face`). Если неясно — спроси.

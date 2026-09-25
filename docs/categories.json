@@ -20,6 +20,11 @@
     ]
   },
   {
+    "id": "tourism",
+    "name": "Туризм",
+    "subcategories": []
+  },
+  {
     "id": "electronics",
     "name": "Электроника",
     "subcategories": []
