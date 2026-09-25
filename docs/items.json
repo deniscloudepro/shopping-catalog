@@ -111,5 +111,45 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T13:15:52.551Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=SEATOSUMMIT+Passage+%E5%A4%A7%E7%A2%97+%E7%AE%AD%E6%9C%A8%E9%BB%84",
+    "title": "Sea to Summit Passage миска L (945 мл), жёлтая",
+    "price": 31.2,
+    "currency": "CNY",
+    "imageUrl": "images/sts-passage-bowl-l-yellow.jpg",
+    "siteName": "taobao.com",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:18:40.481Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=SEATOSUMMIT+Passage+%E4%B8%AD%E7%A2%97+%E7%AE%AD%E6%9C%A8%E9%BB%84",
+    "title": "Sea to Summit Passage миска M (720 мл), жёлтая",
+    "price": 27.2,
+    "currency": "CNY",
+    "imageUrl": "images/sts-passage-bowl-m-yellow.jpg",
+    "siteName": "taobao.com",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:18:41.388Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=SEATOSUMMIT+Passage+%E4%B8%AD%E7%A2%97+%E6%B0%B4%E8%93%9D%E8%89%B2",
+    "title": "Sea to Summit Passage миска M (720 мл), голубая",
+    "price": 27.2,
+    "currency": "CNY",
+    "imageUrl": "images/sts-passage-bowl-m-blue.jpg",
+    "siteName": "taobao.com",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:18:42.257Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=SEATOSUMMIT+Passage+%E5%B0%8F%E7%A2%97+%E6%B0%B4%E8%93%9D%E8%89%B2",
+    "title": "Sea to Summit Passage миска S, голубая",
+    "price": 23.2,
+    "currency": "CNY",
+    "imageUrl": "images/sts-passage-bowl-s-blue.jpg",
+    "siteName": "taobao.com",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:18:43.137Z"
   }
 ]
