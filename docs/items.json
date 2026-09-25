@@ -386,5 +386,15 @@
     "siteName": "technodom.kz",
     "category": "electronics",
     "createdAt": "2026-09-25T13:36:19.078Z"
+  },
+  {
+    "url": "https://www.garmin.com/en-US/p/pn/010-02921-00/",
+    "title": "Garmin GPSMAP H1i Plus — GPS-навигатор с inReach",
+    "price": 899,
+    "currency": "USD",
+    "imageUrl": "https://res.garmin.com/en/products/010-02921-00/v/cf-lg.jpg",
+    "siteName": "Garmin",
+    "category": "electronics",
+    "createdAt": "2026-09-25T13:48:01.735Z"
   }
 ]
