@@ -2,9 +2,36 @@
   {
     "id": "clothing",
     "name": "Одежда",
-    "subcategories": [{ "id": "the-north-face", "name": "The North Face" }]
+    "subcategories": [
+      {
+        "id": "the-north-face",
+        "name": "The North Face"
+      }
+    ]
   },
-  { "id": "electronics", "name": "Электроника", "subcategories": [] },
-  { "id": "appliances", "name": "Бытовая техника", "subcategories": [] },
-  { "id": "accessories", "name": "Аксессуары", "subcategories": [] }
+  {
+    "id": "shoes",
+    "name": "Обувь",
+    "subcategories": [
+      {
+        "id": "the-north-face",
+        "name": "The North Face"
+      }
+    ]
+  },
+  {
+    "id": "electronics",
+    "name": "Электроника",
+    "subcategories": []
+  },
+  {
+    "id": "appliances",
+    "name": "Бытовая техника",
+    "subcategories": []
+  },
+  {
+    "id": "accessories",
+    "name": "Аксессуары",
+    "subcategories": []
+  }
 ]
