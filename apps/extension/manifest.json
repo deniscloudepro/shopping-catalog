@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Мой каталог — добавить товар",
+  "version": "0.1.0",
+  "description": "Достаёт название/цену/фото с открытой страницы товара и добавляет в личный каталог покупок.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}

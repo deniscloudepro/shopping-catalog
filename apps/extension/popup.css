@@ -1,0 +1,88 @@
+body {
+  width: 300px;
+  padding: 14px 16px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+
+#status {
+  color: #767672;
+  font-size: 13px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  color: #4a4a48;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row .grow {
+  flex: 1;
+}
+
+input,
+textarea {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid #d9d9d5;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+}
+
+#preview {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  align-self: flex-start;
+}
+
+button {
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4fd1;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#settingsLink {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #767672;
+}

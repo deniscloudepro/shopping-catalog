@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Добавить в каталог</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>Добавить в каталог</h1>
+
+  <div id="status">Читаю страницу…</div>
+
+  <form id="form" hidden>
+    <label>
+      Название
+      <textarea id="title" rows="2"></textarea>
+    </label>
+    <div class="row">
+      <label class="grow">
+        Цена
+        <input id="price" type="text" inputmode="decimal" placeholder="4990" />
+      </label>
+      <label>
+        Валюта
+        <input id="currency" type="text" placeholder="RUB" />
+      </label>
+    </div>
+    <label>
+      Фото (URL)
+      <input id="image" type="text" placeholder="https://..." />
+    </label>
+    <img id="preview" hidden alt="" />
+    <button type="submit">Добавить в каталог</button>
+  </form>
+
+  <div id="result"></div>
+
+  <a id="settingsLink" href="options.html" target="_blank">Настройки</a>
+
+  <script src="popup.js"></script>
+</body>
+</html>

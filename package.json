@@ -1,0 +1,12 @@
+{
+  "name": "shopping-catalog",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "bot:dev": "npm run dev --workspace=@catalog/bot",
+    "web:dev": "npm run dev --workspace=@catalog/web"
+  }
+}
