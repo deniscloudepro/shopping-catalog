@@ -615,5 +615,25 @@
     "siteName": "sport-marafon.ru",
     "category": "clothing",
     "createdAt": "2026-09-25T18:10:32.038Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/bags-and-clutches-the-north-face-9023472",
+    "title": "Сумки The North Face модель NF0A52SC53R1",
+    "price": 66500,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp460777/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "accessories",
+    "createdAt": "2026-09-25T18:28:02.048Z"
+  },
+  {
+    "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/karemati/karemat-siden-e-dlya-vzroslyh-exped-flex-sit-pad-lot2612-1",
+    "title": "Каремат-сиденье для взрослых Exped Flex Sit Pad",
+    "price": 3900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/203885/exped-karemat-sidene-dlya-vzroslyh-flex-sit-pad-2-1000x1000.jpg",
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-25T18:28:03.060Z"
   }
 ]
