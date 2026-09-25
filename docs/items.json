@@ -181,5 +181,15 @@
     "siteName": "limpopo.kz",
     "category": "accessories",
     "createdAt": "2026-09-25T13:27:26.333Z"
+  },
+  {
+    "url": "https://sport-lab.kz/catalog/aksessuary-22/osprey-ryukzak-atmos-ag-65",
+    "title": "Рюкзак Osprey Atmos AG 65",
+    "price": 189900,
+    "currency": "KZT",
+    "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/full_10003553__11.jpg",
+    "siteName": "sport-lab.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:29:10.731Z"
   }
 ]
