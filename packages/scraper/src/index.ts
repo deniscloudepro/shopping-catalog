@@ -48,6 +48,26 @@ function findProductInJsonLd(json: unknown): Record<string, unknown> | null {
   return null;
 }
 
+const SIZE_SUFFIX = /-(\d+)x(\d+)[a-z]?(\.[a-z0-9]+)$/i;
+
+function largestVariant($: cheerio.CheerioAPI, url: string): string {
+  const m = url.match(SIZE_SUFFIX);
+  if (!m) return url;
+  const stem = url.slice(0, m.index);
+  let best = { url, area: Number(m[1]) * Number(m[2]) };
+  $("img, a")
+    .toArray()
+    .flatMap((el) => ["src", "data-src", "data-largeimg", "href"].map((a) => $(el).attr(a)))
+    .forEach((candidate) => {
+      if (!candidate?.startsWith(stem)) return;
+      const cm = candidate.slice(stem.length).match(/^-(\d+)x(\d+)(\.[a-z0-9]+)$/i);
+      if (!cm) return;
+      const area = Number(cm[1]) * Number(cm[2]);
+      if (area > best.area) best = { url: candidate, area };
+    });
+  return best.url;
+}
+
 const PLACEHOLDER_IMAGE = /vk-image|placeholder|no[-_]?image|default[-_]?(image|og)|logo/i;
 
 const CURRENCY_SYMBOLS: [RegExp, string][] = [
@@ -184,6 +204,11 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
   if (!imageUrl) {
     imageUrl = $('meta[property="og:image"]').attr("content") ?? null;
   }
+
+  // og:image is often a social-media crop (e.g. limpopo.kz "…-600x315w.jpg"
+  // cuts the product off). If the page also has the same picture in other
+  // sizes, take the biggest one.
+  if (imageUrl) imageUrl = largestVariant($, imageUrl);
 
   // Some shops put a site-wide social/placeholder picture in og:image; use the
   // product gallery's main photo instead.
