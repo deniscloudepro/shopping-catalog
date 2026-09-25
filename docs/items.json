@@ -396,5 +396,48 @@
     "siteName": "Garmin",
     "category": "electronics",
     "createdAt": "2026-09-25T13:48:01.735Z"
+  },
+  {
+    "url": "https://www.lamoda.kz/p/rtlafe046201/",
+    "title": "The North Face Сланцы M BASECAMP FLPFLP II",
+    "price": null,
+    "currency": null,
+    "imageUrl": "https://a.lmcdn.ru/img600x866/R/T/RTLAFE046201_33189162_1_v1_2x.jpg",
+    "siteName": "Lamoda.kz",
+    "category": "shoes",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T13:57:28.924Z"
+  },
+  {
+    "url": "https://www.lamoda.kz/p/rtlaeg594702/",
+    "title": "The North Face Бейсболка TNF LOGO TRUCKER",
+    "price": 10847,
+    "currency": "KZT",
+    "imageUrl": "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27505659_1_v1_2x.jpg",
+    "siteName": "Lamoda.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T13:57:29.872Z"
+  },
+  {
+    "url": "https://www.lamoda.kz/p/rtlacu180902/",
+    "title": "The North Face Слипоны M TB TRCTN MULE V",
+    "price": null,
+    "currency": null,
+    "imageUrl": "https://a.lmcdn.ru/img600x866/R/T/RTLACU180902_24325771_1_v1.jpg",
+    "siteName": "Lamoda.kz",
+    "category": "shoes",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T13:57:30.758Z"
+  },
+  {
+    "url": "https://limpopo.kz/odezhda-all/dozhdevik-poncho/dozhdevik-sea-to-summit-ultra-sil-15d-tarp-poncho-aponcho15dli",
+    "title": "Дождевик-пончо Sea To Summit Ultra-Sil 15D Tarp Poncho",
+    "price": 46900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/118526/dozhdevik-poncho-sea-to-summit-ultra-sil-15d-tarp-poncho-2-1000x1000.jpg",
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:57:31.735Z"
   }
 ]

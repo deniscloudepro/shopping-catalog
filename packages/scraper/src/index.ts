@@ -114,10 +114,18 @@ function findVisiblePrice($: cheerio.CheerioAPI): { price: number; currency: str
     /\d/.test(text) && text.length <= 40 && currencyFromText(text) !== null;
   const textOf = (el: Parameters<typeof $>[0]) => $(el).text().replace(/\s+/g, " ").trim();
 
+  const labelled = $('[aria-label="Итоговая цена"], [aria-label="Final price" i]').first().text();
+  if (looksLikePrice(labelled.replace(/\s+/g, " ").trim())) {
+    const price = parsePrice(labelled);
+    if (price !== null) return { price, currency: currencyFromText(labelled) };
+  }
+
   const priceEls = $('[class*="price" i]')
     .toArray()
     // Crossed-out old prices (WooCommerce wraps them in <del>).
     .filter((el) => $(el).closest("del, s, strike").length === 0)
+    // Prices of other products in "similar"/"recommended" carousels.
+    .filter((el) => $(el).closest('[class*="product-card" i], [class*="recommend" i], [class*="similar" i]').length === 0)
     .filter((el) => looksLikePrice(textOf(el)));
   const candidates = priceEls
     // Innermost matches only, so a wrapper holding "₸ 103 990₸ 83 190" is
@@ -232,6 +240,17 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
       .map((el) => $(el).attr("data-src") ?? $(el).attr("src"))
       .find((src) => src && !src.startsWith("data:"));
     if (galleryImg) imageUrl = galleryImg;
+  }
+
+  // Last resort: a photo captioned with the product name (Lamoda:
+  // alt="<title> - фото 1").
+  if ((!imageUrl || PLACEHOLDER_IMAGE.test(imageUrl)) && title) {
+    const name = title.toLowerCase();
+    const captioned = $("img[alt]")
+      .toArray()
+      .find((el) => ($(el).attr("alt") ?? "").toLowerCase().startsWith(name));
+    const src = captioned && ($(captioned).attr("data-src") ?? $(captioned).attr("src"));
+    if (src && !src.startsWith("data:")) imageUrl = src;
   }
 
   if (!siteName) {
