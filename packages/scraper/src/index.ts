@@ -30,6 +30,22 @@ export function parsePrice(raw: string | undefined | number): number | null {
   return Number.isFinite(num) ? num : null;
 }
 
+/**
+ * JSON-LD `image` is usually a string or a flat array of strings, but some
+ * shops (e.g. technodom.kz) nest it one level deeper (`[["url1", "url2"]]`) —
+ * walk arbitrarily nested arrays to find the first real URL either way.
+ */
+function firstImageUrl(image: unknown): string | null {
+  if (typeof image === "string") return image;
+  if (Array.isArray(image)) {
+    for (const item of image) {
+      const found = firstImageUrl(item);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
 function findProductInJsonLd(json: unknown): Record<string, unknown> | null {
   const candidates: unknown[] = Array.isArray(json)
     ? json
@@ -146,11 +162,7 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
 
       if (!title && typeof product.name === "string") title = product.name;
 
-      const image = product.image;
-      if (!imageUrl) {
-        if (typeof image === "string") imageUrl = image;
-        else if (Array.isArray(image) && typeof image[0] === "string") imageUrl = image[0];
-      }
+      if (!imageUrl) imageUrl = firstImageUrl(product.image);
 
       const offers = Array.isArray(product.offers) ? product.offers[0] : product.offers;
       if (offers && typeof offers === "object") {
