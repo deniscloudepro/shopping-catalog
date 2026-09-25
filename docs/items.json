@@ -20,5 +20,25 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T11:47:29.816Z"
+  },
+  {
+    "url": "https://limpopo.kz/gore-tex/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00",
+    "title": "Треккинговые ботинки мужские La Sportiva TX5 Evo Mid Gtx",
+    "price": 149900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-3-jpg-3-600x315w.jpg",
+    "siteName": "limpopo.kz",
+    "category": "shoes",
+    "createdAt": "2026-09-25T12:41:13.062Z"
+  },
+  {
+    "url": "https://limpopo.kz/obuv-all/boots/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00",
+    "title": "Треккинговые ботинки мужские La Sportiva Ultra Raptor 3 Mid Gtx",
+    "price": 119900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-1-jpg-1-600x315w.jpg",
+    "siteName": "limpopo.kz",
+    "category": "shoes",
+    "createdAt": "2026-09-25T12:41:14.027Z"
   }
 ]
