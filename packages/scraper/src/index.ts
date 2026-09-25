@@ -125,7 +125,12 @@ function findVisiblePrice($: cheerio.CheerioAPI): { price: number; currency: str
     // Crossed-out old prices (WooCommerce wraps them in <del>).
     .filter((el) => $(el).closest("del, s, strike").length === 0)
     // Prices of other products in "similar"/"recommended" carousels.
-    .filter((el) => $(el).closest('[class*="product-card" i], [class*="recommend" i], [class*="similar" i]').length === 0)
+    .filter(
+      (el) =>
+        $(el).closest(
+          '[class*="product-card" i], [class*="product-list" i], [class*="recommend" i], [class*="similar" i], [class*="viewed" i]'
+        ).length === 0
+    )
     .filter((el) => looksLikePrice(textOf(el)));
   const candidates = priceEls
     // Innermost matches only, so a wrapper holding "₸ 103 990₸ 83 190" is
