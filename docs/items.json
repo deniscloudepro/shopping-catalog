@@ -573,5 +573,27 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T17:49:50.927Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-7313659/",
+    "title": "Шапки и кепки The North Face модель NF0A5FX8WK21",
+    "price": 11500,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp251234/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T17:58:50.638Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-9728178",
+    "title": "Шапки и кепки The North Face модель NF0A8A2EJK31",
+    "price": 22390,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp582665/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T17:58:51.718Z"
   }
 ]
