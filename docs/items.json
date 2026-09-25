@@ -489,5 +489,48 @@
     "siteName": "Decathlon Kazakhstan",
     "category": "clothing",
     "createdAt": "2026-09-25T14:05:45.457Z"
+  },
+  {
+    "url": "https://salomon.kz/muzhchinam/ryukzaki-i-sumki/pitevye-sistemy/soft-reservoir-1-5l",
+    "title": "Питьевая система Salomon Soft Reservoir 1.5L",
+    "price": 22900,
+    "currency": "KZT",
+    "imageUrl": "https://salomon.kz/components/com_jshopping/files/img_products/C19162__1.jpg",
+    "siteName": "salomon.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-25T17:25:25.824Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/sandals-the-north-face-8687378",
+    "title": "Сандалии The North Face модель NF0A8ADRKX71",
+    "price": 38000,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp408893/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "shoes",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T17:25:26.855Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/step-ins-the-north-face-7553300/",
+    "title": "Шлёпанцы The North Face модель NF0A47AAKY41",
+    "price": 27190,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp285284/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "shoes",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T17:25:27.828Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/step-ins-the-north-face-10917044",
+    "title": "Шлёпанцы The North Face модель NF0A47AAC3F1",
+    "price": 13600,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp854524/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "shoes",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T17:25:28.732Z"
   }
 ]
