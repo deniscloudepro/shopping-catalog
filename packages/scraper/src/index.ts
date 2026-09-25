@@ -72,15 +72,20 @@ function currencyFromText(text: string): string | null {
  * out one.
  */
 function findVisiblePrice($: cheerio.CheerioAPI): { price: number; currency: string | null } | null {
-  const candidates = $('[class*="price" i]')
+  const looksLikePrice = (text: string) =>
+    /\d/.test(text) && text.length <= 40 && currencyFromText(text) !== null;
+  const textOf = (el: Parameters<typeof $>[0]) => $(el).text().replace(/\s+/g, " ").trim();
+
+  const priceEls = $('[class*="price" i]')
     .toArray()
-    // Leaf-ish elements only, so "₸ 103 990₸ 83 190" from a wrapper is skipped.
-    .filter((el) => $(el).find('[class*="price" i]').length === 0)
-    .map((el) => ({
-      cls: ($(el).attr("class") ?? "").toLowerCase(),
-      text: $(el).text().replace(/\s+/g, " ").trim(),
-    }))
-    .filter(({ text }) => /\d/.test(text) && text.length <= 40 && currencyFromText(text));
+    // Crossed-out old prices (WooCommerce wraps them in <del>).
+    .filter((el) => $(el).closest("del, s, strike").length === 0)
+    .filter((el) => looksLikePrice(textOf(el)));
+  const candidates = priceEls
+    // Innermost matches only, so a wrapper holding "₸ 103 990₸ 83 190" is
+    // skipped while "16 900 <span class=currencySymbol>KZT</span>" is kept.
+    .filter((el) => !priceEls.some((other) => other !== el && $(el).find(other).length > 0))
+    .map((el) => ({ cls: ($(el).attr("class") ?? "").toLowerCase(), text: textOf(el) }));
 
   const isOld = (cls: string) => /old|regular|was|before|strike|cross|compare/.test(cls);
   const isCurrent = (cls: string) => /actual|current|sale|special|final|new/.test(cls);

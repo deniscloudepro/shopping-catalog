@@ -70,5 +70,15 @@
     "siteName": "limpopo.kz",
     "category": "tourism",
     "createdAt": "2026-09-25T12:48:01.444Z"
+  },
+  {
+    "url": "https://thesport.kz/product/la-sportiva-noski-hike-tech-2/",
+    "title": "La Sportiva носки Hike Tech",
+    "price": 16900,
+    "currency": "KZT",
+    "imageUrl": "https://thesport.kz/wp-content/uploads/2026/08/elitesport-kopiya-33.png",
+    "siteName": "The Sport",
+    "category": "clothing",
+    "createdAt": "2026-09-25T12:52:18.844Z"
   }
 ]
