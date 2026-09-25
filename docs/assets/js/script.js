@@ -79,6 +79,19 @@ async function loadSheetItems() {
     .filter((item) => item.title && item.url);
 }
 
+async function loadCategories() {
+  try {
+    const res = await fetch(`categories.json?t=${Date.now()}`);
+    if (!res.ok) throw new Error(`categories.json: HTTP ${res.status}`);
+    return await res.json();
+  } catch (err) {
+    console.warn(err);
+    return [];
+  }
+}
+
+const UNCATEGORIZED = { id: "other", name: "Без категории", subcategories: [] };
+
 function cardHtml(item) {
   const price = formatPrice(item.price, item.currency);
   const image = item.imageUrl
@@ -97,21 +110,123 @@ function cardHtml(item) {
   `;
 }
 
+function gridHtml(items) {
+  return `<div class="grid">${items.map(cardHtml).join("")}</div>`;
+}
+
+function pluralItems(n) {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod10 === 1 && mod100 !== 11) return `${n} товар`;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${n} товара`;
+  return `${n} товаров`;
+}
+
+function chipHtml(href, label, count, active) {
+  return `<a class="chip${active ? " chip--active" : ""}" href="${href}">${escapeHtml(label)}${
+    count !== null ? ` <span class="chip-count">${count}</span>` : ""
+  }</a>`;
+}
+
+// Selection lives in the URL hash (#clothing or #clothing/the-north-face),
+// so a section can be bookmarked or shared.
+function currentSelection() {
+  const [cat, sub] = decodeURIComponent(location.hash.slice(1)).split("/");
+  return { cat: cat || null, sub: sub || null };
+}
+
+function categorySectionHtml(category, items, sub, showEmpty) {
+  const bySub = (id) => items.filter((i) => (i.subcategory || null) === id);
+  const parts = [];
+
+  for (const s of category.subcategories) {
+    if (sub && sub !== s.id) continue;
+    const subItems = bySub(s.id);
+    if (!subItems.length && !showEmpty) continue;
+    parts.push(`
+      <section class="subsection">
+        <h3>${escapeHtml(s.name)} <span class="section-count">${pluralItems(subItems.length)}</span></h3>
+        ${subItems.length ? gridHtml(subItems) : '<div class="section-empty">Пока пусто</div>'}
+      </section>
+    `);
+  }
+
+  const known = new Set(category.subcategories.map((s) => s.id));
+  const rest = items.filter((i) => !i.subcategory || !known.has(i.subcategory));
+  if (!sub && rest.length) {
+    parts.push(`
+      <section class="subsection">
+        ${category.subcategories.length ? `<h3>Разное <span class="section-count">${pluralItems(rest.length)}</span></h3>` : ""}
+        ${gridHtml(rest)}
+      </section>
+    `);
+  }
+
+  if (!parts.length) return '<div class="section-empty">Пока пусто</div>';
+  return parts.join("");
+}
+
+function renderCatalog(categories, items) {
+  const contentEl = document.getElementById("content");
+  const known = new Set(categories.map((c) => c.id));
+  const itemsOf = (catId) =>
+    items.filter((i) => (catId === UNCATEGORIZED.id ? !known.has(i.category) : i.category === catId));
+
+  const allCategories = itemsOf(UNCATEGORIZED.id).length ? [...categories, UNCATEGORIZED] : categories;
+  let { cat, sub } = currentSelection();
+  const selected = allCategories.find((c) => c.id === cat) || null;
+  if (!selected) sub = null;
+
+  const tabs = [
+    chipHtml("#", "Все", items.length, !selected),
+    ...allCategories.map((c) => chipHtml(`#${c.id}`, c.name, itemsOf(c.id).length, selected === c)),
+  ].join("");
+
+  let body;
+  if (selected) {
+    const subTabs = selected.subcategories.length
+      ? `<nav class="chips chips--sub">${[
+          chipHtml(`#${selected.id}`, "Все", null, !sub),
+          ...selected.subcategories.map((s) =>
+            chipHtml(`#${selected.id}/${s.id}`, s.name, null, sub === s.id)
+          ),
+        ].join("")}</nav>`
+      : "";
+    body = subTabs + categorySectionHtml(selected, itemsOf(selected.id), sub, true);
+  } else if (items.length === 0) {
+    body =
+      '<div class="empty-state">Пока пусто. Пришли товар Claude, боту в Telegram или добавь через расширение — он появится здесь.</div>';
+  } else {
+    body = allCategories
+      .filter((c) => itemsOf(c.id).length)
+      .map(
+        (c) => `
+        <section class="section">
+          <h2><a href="#${c.id}">${escapeHtml(c.name)}</a> <span class="section-count">${pluralItems(
+            itemsOf(c.id).length
+          )}</span></h2>
+          ${categorySectionHtml(c, itemsOf(c.id), null, false)}
+        </section>
+      `
+      )
+      .join("");
+  }
+
+  contentEl.innerHTML = `<nav class="chips">${tabs}</nav>${body}`;
+}
+
 async function render() {
   const contentEl = document.getElementById("content");
   const countEl = document.getElementById("count");
 
   try {
-    const items = await loadItems();
-    countEl.textContent = `${items.length} товаров`;
-
-    if (items.length === 0) {
-      contentEl.innerHTML =
-        '<div class="empty-state">Пока пусто. Пришли ссылку на товар Claude, боту в Telegram или добавь через расширение — он появится здесь.</div>';
-      return;
-    }
-
-    contentEl.innerHTML = `<div class="grid">${items.map(cardHtml).join("")}</div>`;
+    const [categories, items] = await Promise.all([loadCategories(), loadItems()]);
+    countEl.textContent = pluralItems(items.length);
+    renderCatalog(categories, items);
+    window.addEventListener("hashchange", () => {
+      renderCatalog(categories, items);
+      window.scrollTo(0, 0);
+    });
   } catch (err) {
     console.error(err);
     contentEl.innerHTML = `<div class="empty-state">Не получилось загрузить каталог: ${escapeHtml(

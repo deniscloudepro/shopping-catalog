@@ -6,7 +6,9 @@
     "currency": "KZT",
     "imageUrl": "https://kz.media.intertop.com/load/mp926429/medium/MAIN.webp",
     "siteName": "intertop.kz",
-    "createdAt": "2026-09-25T11:30:47.311Z"
+    "createdAt": "2026-09-25T11:30:47.311Z",
+    "category": "clothing",
+    "subcategory": "the-north-face"
   },
   {
     "url": "https://intertop.kz/ru-kz/product/jackets-the-north-face-10075204",
@@ -15,6 +17,8 @@
     "currency": "KZT",
     "imageUrl": "https://kz.media.intertop.com/load/mp649639/medium/MAIN.webp",
     "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
     "createdAt": "2026-09-25T11:47:29.816Z"
   }
 ]
