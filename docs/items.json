@@ -151,5 +151,15 @@
     "siteName": "taobao.com",
     "category": "tourism",
     "createdAt": "2026-09-25T13:18:43.137Z"
+  },
+  {
+    "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/palatki/palatka-naturehike-cloud-peak-2-man-tent-pro-nh17k240-y",
+    "title": "Палатка Naturehike Cloud Peak 2 Man Tent Pro",
+    "price": 139900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-7-600x315w.jpg",
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-25T13:21:26.815Z"
   }
 ]
