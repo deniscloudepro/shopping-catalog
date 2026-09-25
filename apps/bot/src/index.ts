@@ -1,7 +1,12 @@
 import "dotenv/config";
 import { Telegraf, type Context } from "telegraf";
 import { appendItemRow } from "@catalog/sheets";
-import { scrapeProduct, parsePrice } from "@catalog/scraper";
+import {
+  scrapeProduct,
+  parsePrice,
+  parseProductHtml,
+  extractHtmlFromMhtml,
+} from "@catalog/scraper";
 
 const token = process.env.BOT_TOKEN;
 if (!token) throw new Error("Missing required env var BOT_TOKEN");
@@ -21,6 +26,19 @@ interface ProductData {
 // Chats that failed auto-parsing and are now expected to reply with
 // manual product details (title / price / photo) instead of a new link.
 const awaitingManualEntry = new Map<number, { url: string }>();
+
+const MANUAL_ENTRY_HELP =
+  "Пришли вручную одним сообщением, каждое поле на отдельной строке:\n" +
+  "Название\nЦена (например 4990 KZT)\nСсылка на фото (необязательно)\n\n" +
+  "Или сохрани страницу в браузере (Поделиться → Сохранить как .mht / .html) " +
+  "и пришли файл сюда — я достану всё из него.";
+
+// Telegram file links contain the bot token, so they can't go into the
+// publicly readable sheet — only a regular image URL can.
+const PHOTO_NOT_SUPPORTED =
+  "Фото файлом я сохранить не могу — на сайт попадает только ссылка на картинку. " +
+  "Пришли ссылку на фото (правой кнопкой/долгим нажатием → «Копировать адрес изображения») " +
+  "или сохранённую страницу товара (.mht / .html).";
 
 function formatPrice(price: number | null, currency: string | null): string {
   if (price === null) return "цена не найдена";
@@ -126,13 +144,75 @@ bot.on("text", async (ctx) => {
     awaitingManualEntry.set(chatId, { url });
     await ctx.reply(
       "Не получилось автоматически достать данные с этой страницы (сайт блокирует ботов).\n\n" +
-        "Пришли вручную одним сообщением, каждое поле на отдельной строке:\n" +
-        "Название\nЦена (например 4990 KZT)\nСсылка на фото (необязательно)"
+        MANUAL_ENTRY_HELP
     );
     return;
   }
 
   await persistItem(ctx, addedBy, product);
+});
+
+const SAVED_PAGE_EXT = /\.(mht|mhtml|html?)$/i;
+// Telegram's Bot API refuses to hand out files bigger than this.
+const MAX_BOT_FILE_BYTES = 20 * 1024 * 1024;
+
+bot.on("document", async (ctx) => {
+  const chatId = ctx.chat.id;
+  const doc = ctx.message.document;
+  const fileName = doc.file_name ?? "";
+
+  if (doc.mime_type?.startsWith("image/")) {
+    await ctx.reply(PHOTO_NOT_SUPPORTED);
+    return;
+  }
+
+  if (!SAVED_PAGE_EXT.test(fileName)) {
+    await ctx.reply(
+      "Этот файл я не понимаю. Пришли ссылку на товар или сохранённую страницу (.mht / .html)."
+    );
+    return;
+  }
+
+  if (doc.file_size && doc.file_size > MAX_BOT_FILE_BYTES) {
+    await ctx.reply("Файл больше 20 МБ — Telegram не даёт боту его скачать.");
+    return;
+  }
+
+  await ctx.sendChatAction("typing");
+
+  let raw: Buffer;
+  try {
+    const link = await ctx.telegram.getFileLink(doc.file_id);
+    const res = await fetch(link);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    raw = Buffer.from(await res.arrayBuffer());
+  } catch (err) {
+    console.error("Failed to download document", err);
+    await ctx.reply("Не получилось скачать файл из Telegram, попробуй ещё раз.");
+    return;
+  }
+
+  const mhtml = /\.html?$/i.test(fileName) ? null : extractHtmlFromMhtml(raw);
+  const html = mhtml?.html ?? raw.toString("utf8");
+  // Prefer the link the user sent before; otherwise the URL the browser
+  // recorded when saving the page.
+  const awaiting = awaitingManualEntry.get(chatId);
+  const pageUrl = awaiting?.url ?? mhtml?.url ?? "";
+
+  const product = parseProductHtml(html, pageUrl);
+  if (!product.url) {
+    await ctx.reply(
+      "Не нашёл в файле ссылку на страницу товара. Сначала пришли ссылку, потом этот файл."
+    );
+    return;
+  }
+
+  awaitingManualEntry.delete(chatId);
+  await persistItem(ctx, getAddedBy(ctx), product);
+});
+
+bot.on("photo", async (ctx) => {
+  await ctx.reply(PHOTO_NOT_SUPPORTED);
 });
 
 bot.catch((err) => console.error("Bot error", err));

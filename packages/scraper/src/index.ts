@@ -61,9 +61,22 @@ export async function scrapeProduct(url: string): Promise<ScrapedProduct> {
     throw new Error(`Failed to fetch ${url}: HTTP ${res.status}`);
   }
 
-  const html = await res.text();
+  return parseProductHtml(await res.text(), res.url || url);
+}
+
+/**
+ * Extracts product data from already-downloaded HTML — e.g. a page the user
+ * saved in their own browser, for sites that block our server-side fetch.
+ */
+export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct {
   const $ = cheerio.load(html);
-  const finalUrl = res.url || url;
+  let finalUrl = pageUrl;
+  if (!finalUrl) {
+    finalUrl =
+      $('link[rel="canonical"]').attr("href") ??
+      $('meta[property="og:url"]').attr("content") ??
+      "";
+  }
 
   let title: string | null = null;
   let price: number | null = null;
@@ -142,4 +155,74 @@ export async function scrapeProduct(url: string): Promise<ScrapedProduct> {
     imageUrl: absolutize(imageUrl ?? undefined, finalUrl),
     siteName,
   };
+}
+
+function decodeQuotedPrintable(input: string): Buffer {
+  const bytes: number[] = [];
+  const text = input.replace(/=\r?\n/g, "");
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === "=" && /^[0-9A-Fa-f]{2}$/.test(text.slice(i + 1, i + 3))) {
+      bytes.push(parseInt(text.slice(i + 1, i + 3), 16));
+      i += 2;
+    } else {
+      bytes.push(...Buffer.from(ch, "latin1"));
+    }
+  }
+  return Buffer.from(bytes);
+}
+
+function parseMimeHeaders(block: string): Record<string, string> {
+  const headers: Record<string, string> = {};
+  // Unfold continuation lines before splitting.
+  for (const line of block.replace(/\r?\n[ \t]+/g, " ").split(/\r?\n/)) {
+    const idx = line.indexOf(":");
+    if (idx > 0) headers[line.slice(0, idx).trim().toLowerCase()] = line.slice(idx + 1).trim();
+  }
+  return headers;
+}
+
+/**
+ * Pulls the main HTML document (and its original URL) out of a "Save page
+ * as → Single file" web archive (.mht / .mhtml), as produced by Chrome/Edge.
+ * Returns null if the input doesn't look like MHTML.
+ */
+export function extractHtmlFromMhtml(raw: Buffer): { html: string; url: string | null } | null {
+  // Headers and QP-encoded bodies are ASCII, so latin1 round-trips every byte.
+  const text = raw.toString("latin1");
+  const headerEnd = text.search(/\r?\n\r?\n/);
+  if (headerEnd < 0) return null;
+  const topHeaders = parseMimeHeaders(text.slice(0, headerEnd));
+  const boundary = topHeaders["content-type"]?.match(/boundary="?([^";]+)"?/i)?.[1];
+  if (!boundary) return null;
+
+  for (const part of text.split(`--${boundary}`).slice(1)) {
+    const sep = part.search(/\r?\n\r?\n/);
+    if (sep < 0) continue;
+    const headers = parseMimeHeaders(part.slice(0, sep).replace(/^\r?\n/, ""));
+    const contentType = headers["content-type"] ?? "";
+    if (!/text\/html/i.test(contentType)) continue;
+
+    const body = part.slice(sep).replace(/^\r?\n\r?\n/, "");
+    const encoding = (headers["content-transfer-encoding"] ?? "").toLowerCase();
+    const bytes =
+      encoding === "quoted-printable"
+        ? decodeQuotedPrintable(body)
+        : encoding === "base64"
+          ? Buffer.from(body.replace(/\s+/g, ""), "base64")
+          : Buffer.from(body, "latin1");
+
+    const charset = contentType.match(/charset="?([^";]+)"?/i)?.[1] ?? "utf-8";
+    let html: string;
+    try {
+      html = new TextDecoder(charset).decode(bytes);
+    } catch {
+      html = bytes.toString("utf8");
+    }
+
+    const url =
+      topHeaders["snapshot-content-location"] ?? headers["content-location"] ?? null;
+    return { html, url };
+  }
+  return null;
 }
