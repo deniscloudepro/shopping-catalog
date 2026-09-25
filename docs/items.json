@@ -78,7 +78,7 @@
     "currency": "KZT",
     "imageUrl": "https://thesport.kz/wp-content/uploads/2026/08/elitesport-kopiya-33.png",
     "siteName": "The Sport",
-    "category": "clothing",
+    "category": "socks",
     "createdAt": "2026-09-25T12:52:18.844Z"
   },
   {
@@ -108,7 +108,7 @@
     "currency": "CNY",
     "imageUrl": "images/tnf-beanie-7ri6.jpg",
     "siteName": "taobao.com",
-    "category": "clothing",
+    "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T13:15:52.551Z"
   },
@@ -309,7 +309,7 @@
     "currency": "KZT",
     "imageUrl": "https://kz.media.intertop.com/load/mp460853/medium/MAIN.webp",
     "siteName": "intertop.kz",
-    "category": "clothing",
+    "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T13:44:01.974Z"
   },
@@ -352,7 +352,7 @@
     "currency": "KZT",
     "imageUrl": "https://kz.media.intertop.com/load/mp885447/medium/MAIN.webp",
     "siteName": "intertop.kz",
-    "category": "clothing",
+    "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T13:44:05.774Z"
   },
@@ -415,7 +415,7 @@
     "currency": "KZT",
     "imageUrl": "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27505659_1_v1_2x.jpg",
     "siteName": "Lamoda.kz",
-    "category": "clothing",
+    "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T13:57:29.872Z"
   },
@@ -560,7 +560,7 @@
     "currency": "KZT",
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/201672/lorpen-noski-ptlcc-pro-trek-coolmax-light-crew-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
-    "category": "clothing",
+    "category": "socks",
     "createdAt": "2026-09-25T17:34:35.921Z"
   },
   {
@@ -581,7 +581,7 @@
     "currency": "KZT",
     "imageUrl": "https://kz.media.intertop.com/load/mp251234/medium/MAIN.webp",
     "siteName": "intertop.kz",
-    "category": "clothing",
+    "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T17:58:50.638Z"
   },
@@ -592,7 +592,7 @@
     "currency": "KZT",
     "imageUrl": "https://kz.media.intertop.com/load/mp582665/medium/MAIN.webp",
     "siteName": "intertop.kz",
-    "category": "clothing",
+    "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T17:58:51.718Z"
   },

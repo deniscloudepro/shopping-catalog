@@ -20,6 +20,21 @@
     ]
   },
   {
+    "id": "caps",
+    "name": "Кепки",
+    "subcategories": [
+      {
+        "id": "the-north-face",
+        "name": "The North Face"
+      }
+    ]
+  },
+  {
+    "id": "socks",
+    "name": "Носки",
+    "subcategories": []
+  },
+  {
     "id": "tourism",
     "name": "Туризм",
     "subcategories": []
