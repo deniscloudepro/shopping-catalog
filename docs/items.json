@@ -366,5 +366,25 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T13:44:06.632Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/saundbar-lg-s95tr-283753",
+    "title": "Саундбар LG S95TR",
+    "price": 449990,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/283753_1.jpg",
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-25T13:36:10.047Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/televizor-lg-65-65qned91t6a-qned-uhd-smart-titan-280911",
+    "title": "Телевизор LG 65\" 65QNED91T6A QNED UHD Smart Titan",
+    "price": 699990,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/280911_zz.jpg",
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-25T13:36:19.078Z"
   }
 ]
