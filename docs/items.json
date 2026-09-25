@@ -532,5 +532,35 @@
     "category": "shoes",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-25T17:25:28.732Z"
+  },
+  {
+    "url": "https://sport-lab.kz/man/odezhda/futbolka-trackline-ss-tee-m-5",
+    "title": "Футболка Salomon Trackline SS Tee M",
+    "price": 24900,
+    "currency": "KZT",
+    "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__1.jpg",
+    "siteName": "sport-lab.kz",
+    "category": "clothing",
+    "createdAt": "2026-09-25T17:34:34.015Z"
+  },
+  {
+    "url": "https://sport-lab.kz/catalog/snaryazhenie-23/trosti-compact-3",
+    "title": "Треккинговые палки Fizan Compact 3",
+    "price": 36900,
+    "currency": "KZT",
+    "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/100.473_1.jpg",
+    "siteName": "sport-lab.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-25T17:34:34.951Z"
+  },
+  {
+    "url": "https://limpopo.kz/odezhda-all/noski/noski-lorpen-pro-trek-coolmax-light-crew-ptlcc-5791",
+    "title": "Носки Lorpen Pro Trek Coolmax Light Crew",
+    "price": 10900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/201672/lorpen-noski-ptlcc-pro-trek-coolmax-light-crew-1-1000x1000.jpg",
+    "siteName": "limpopo.kz",
+    "category": "clothing",
+    "createdAt": "2026-09-25T17:34:35.921Z"
   }
 ]
