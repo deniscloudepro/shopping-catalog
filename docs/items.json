@@ -562,5 +562,16 @@
     "siteName": "limpopo.kz",
     "category": "clothing",
     "createdAt": "2026-09-25T17:34:35.921Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/t-shirts-the-north-face-9053195",
+    "title": "Футболки и поло The North Face модель NF0A895MJK31",
+    "price": 18890,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp462866/medium/MAIN.webp",
+    "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-25T17:49:50.927Z"
   }
 ]
