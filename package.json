@@ -3,10 +3,12 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "scripts"
   ],
   "scripts": {
     "bot:dev": "npm run dev --workspace=@catalog/bot",
-    "site:dev": "python3 -m http.server 8000 --directory docs"
+    "site:dev": "python3 -m http.server 8000 --directory docs",
+    "add-item": "tsx scripts/add-item.ts"
   }
 }

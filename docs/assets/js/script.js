@@ -14,7 +14,38 @@ function formatPrice(price, currency) {
   return currency ? `${price} ${currency}` : `${price}`;
 }
 
+// Items Claude adds on request live in the repo itself — pushing to main is
+// the whole deploy. Cache-busted so a fresh push shows up on reload.
+async function loadRepoItems() {
+  const res = await fetch(`items.json?t=${Date.now()}`);
+  if (!res.ok) throw new Error(`items.json: HTTP ${res.status}`);
+  return res.json();
+}
+
+// gviz returns datetime cells as "Date(2026,8,25,11,30,0)" (month 0-based).
+function toTime(value) {
+  if (!value) return 0;
+  const m = String(value).match(/^Date\((\d+),(\d+),(\d+)(?:,(\d+),(\d+),(\d+))?\)$/);
+  if (m) return Date.UTC(+m[1], +m[2], +m[3], +(m[4] || 0), +(m[5] || 0), +(m[6] || 0));
+  const t = Date.parse(value);
+  return Number.isNaN(t) ? 0 : t;
+}
+
 async function loadItems() {
+  const [repo, sheet] = await Promise.allSettled([loadRepoItems(), loadSheetItems()]);
+  if (repo.status === "rejected" && sheet.status === "rejected") throw repo.reason;
+  if (repo.status === "rejected") console.warn(repo.reason);
+  if (sheet.status === "rejected") console.warn(sheet.reason);
+
+  const all = [
+    ...(repo.status === "fulfilled" ? repo.value : []),
+    ...(sheet.status === "fulfilled" ? sheet.value : []),
+  ].filter((item) => item.title && item.url);
+
+  return all.sort((a, b) => toTime(b.createdAt) - toTime(a.createdAt));
+}
+
+async function loadSheetItems() {
   // headers=1 forces Google to always treat row 1 as the header, explicitly —
   // without it, gviz guesses based on the data and gets it wrong when there's
   // only one data row (it can't tell a lone row of text apart from a header).
@@ -36,6 +67,7 @@ async function loadItems() {
       const cells = row.c || [];
       const get = (i) => (cells[i] && cells[i].v !== null && cells[i].v !== undefined ? cells[i].v : null);
       return {
+        createdAt: get(0),
         title: get(1),
         price: get(2),
         currency: get(3),
@@ -44,8 +76,7 @@ async function loadItems() {
         siteName: get(6),
       };
     })
-    .filter((item) => item.title && item.url)
-    .reverse();
+    .filter((item) => item.title && item.url);
 }
 
 function cardHtml(item) {
@@ -76,7 +107,7 @@ async function render() {
 
     if (items.length === 0) {
       contentEl.innerHTML =
-        '<div class="empty-state">Пока пусто. Пришли ссылку на товар боту в Telegram или добавь через расширение — он появится здесь.</div>';
+        '<div class="empty-state">Пока пусто. Пришли ссылку на товар Claude, боту в Telegram или добавь через расширение — он появится здесь.</div>';
       return;
     }
 
