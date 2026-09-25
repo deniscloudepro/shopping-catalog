@@ -80,5 +80,15 @@
     "siteName": "The Sport",
     "category": "clothing",
     "createdAt": "2026-09-25T12:52:18.844Z"
+  },
+  {
+    "url": "https://sport-lab.kz/catalog/odezhda-3/bryuki-wayfarer-zip-off-pants-m-2",
+    "title": "Брюки для мужчин Salomon WAYFARER ZIP OFF PANTS M",
+    "price": 48900,
+    "currency": "KZT",
+    "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__1.jpg",
+    "siteName": "sport-lab.kz",
+    "category": "clothing",
+    "createdAt": "2026-09-25T12:55:09.214Z"
   }
 ]
