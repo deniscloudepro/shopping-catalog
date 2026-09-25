@@ -55,13 +55,14 @@
 <body>
   <h2>Настройки каталога</h2>
   <p>
-    Адрес — там, где крутится сайт (<code>apps/web</code>). Для локальной
-    разработки: <code>http://localhost:3000</code>. Ключ — значение
-    <code>EXTENSION_API_KEY</code> из <code>apps/web/.env</code>.
+    URL — адрес твоего Google Apps Script Web App (заканчивается на
+    <code>/exec</code>), см. README раздел «Google Apps Script». Ключ — та
+    же строка, что вписана в <code>API_KEY</code> внутри самого скрипта и в
+    <code>EXTENSION_API_KEY</code> в <code>apps/bot/.env</code>.
   </p>
   <label>
-    Адрес сайта каталога
-    <input id="apiUrl" placeholder="http://localhost:3000" />
+    URL Apps Script Web App
+    <input id="webAppUrl" placeholder="https://script.google.com/macros/s/.../exec" />
   </label>
   <label>
     API-ключ
