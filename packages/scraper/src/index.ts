@@ -128,7 +128,7 @@ function findVisiblePrice($: cheerio.CheerioAPI): { price: number; currency: str
     .filter(
       (el) =>
         $(el).closest(
-          '[class*="product-card" i], [class*="product-list" i], [class*="recommend" i], [class*="similar" i], [class*="viewed" i]'
+          '[class*="product-card-description" i], [class*="product-list" i], [class*="recommend" i], [class*="similar" i], [class*="viewed" i]'
         ).length === 0
     )
     .filter((el) => looksLikePrice(textOf(el)));
@@ -248,12 +248,12 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
   }
 
   // Last resort: a photo captioned with the product name (Lamoda:
-  // alt="<title> - фото 1").
+  // alt="<title> - фото 1", DNS: alt="Купить <title> в интернет-магазине…").
   if ((!imageUrl || PLACEHOLDER_IMAGE.test(imageUrl)) && title) {
     const name = title.toLowerCase();
     const captioned = $("img[alt]")
       .toArray()
-      .find((el) => ($(el).attr("alt") ?? "").toLowerCase().startsWith(name));
+      .find((el) => ($(el).attr("alt") ?? "").toLowerCase().includes(name));
     const src = captioned && ($(captioned).attr("data-src") ?? $(captioned).attr("src"));
     if (src && !src.startsWith("data:")) imageUrl = src;
   }
