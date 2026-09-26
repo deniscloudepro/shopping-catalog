@@ -935,5 +935,15 @@
     "siteName": null,
     "category": "accessories",
     "createdAt": "2024-08-31T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Xiaomi+Robot+Vacuum+X20+Max",
+    "title": "Робот-пылесос Xiaomi Robot Vacuum X20 Max",
+    "price": 323000,
+    "currency": "KZT",
+    "imageUrl": null,
+    "siteName": null,
+    "category": "appliances",
+    "createdAt": "2025-02-01T12:00:00.000Z"
   }
 ]
