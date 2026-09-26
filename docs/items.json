@@ -685,5 +685,15 @@
     "siteName": "taobao.com",
     "category": "electronics",
     "createdAt": "2025-11-24T12:00:00.000Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=%E9%9D%92%E8%90%8D%E7%A9%BA%E6%B0%94%E6%A3%80%E6%B5%8B%E4%BB%AA2",
+    "title": "Монитор качества воздуха Qingping Air Monitor 2 (PM2.5, PM10, CO2, eTVOC, шум, температура, влажность)",
+    "price": 787,
+    "currency": "CNY",
+    "imageUrl": "images/air-monitor.jpg",
+    "siteName": "taobao.com",
+    "category": "electronics",
+    "createdAt": "2025-09-01T12:00:00.000Z"
   }
 ]
