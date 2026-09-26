@@ -645,5 +645,15 @@
     "siteName": "dns-shop.kz",
     "category": "electronics",
     "createdAt": "2026-09-26T12:47:45.651Z"
+  },
+  {
+    "url": "https://www.sulpak.kz/g/igrovoe_kompyuternoe_kreslo_canyon_cnd_sgch7_nightfall_867_352",
+    "title": "Игровое компьютерное кресло Canyon CND-SGCH7 Nightfall",
+    "price": 108090,
+    "currency": "KZT",
+    "imageUrl": "images/canyon-nightfall-chair.jpg",
+    "siteName": "sulpak.kz",
+    "category": "furniture",
+    "createdAt": "2026-09-26T13:03:31.652Z"
   }
 ]

@@ -50,6 +50,11 @@
     "subcategories": []
   },
   {
+    "id": "furniture",
+    "name": "Мебель",
+    "subcategories": []
+  },
+  {
     "id": "accessories",
     "name": "Аксессуары",
     "subcategories": []

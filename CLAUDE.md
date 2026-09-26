@@ -16,7 +16,7 @@
      `npx tsx scripts/add-item.ts --json '{"title":"…","price":83190,"currency":"KZT","url":"…","imageUrl":"…"}'`.
    Всегда указывай раздел: `--category <id> [--subcategory <id>]` (id из
    `docs/categories.json`: clothing — Одежда, shoes — Обувь, caps — Кепки (кепки, бейсболки, шапки), socks — Носки, tourism — Туризм, electronics — Электроника,
-   appliances — Бытовая техника, accessories — Аксессуары). Раздел выбирай
+   appliances — Бытовая техника, furniture — Мебель, accessories — Аксессуары). Раздел выбирай
    сам по товару; подраздел — если товар подходит под существующий (например
    бренд The North Face → `the-north-face`). Если неясно — спроси.
    Новые разделы/подразделы добавляй в `docs/categories.json` только по
