@@ -715,5 +715,15 @@
     "siteName": "dns-shop.kz",
     "category": "appliances",
     "createdAt": "2026-09-26T17:27:46.311Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Xiaomi+Mijia+Smart+Safe",
+    "title": "Сейф Xiaomi Mijia Smart Safe с отпечатком пальца",
+    "price": 81203,
+    "currency": "KZT",
+    "imageUrl": "images/xiaomi-safe.jpg",
+    "siteName": null,
+    "category": "appliances",
+    "createdAt": "2024-03-20T12:00:00.000Z"
   }
 ]
