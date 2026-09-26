@@ -885,5 +885,15 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2024-10-05T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Ray-Ban+Meta",
+    "title": "Умные очки Ray-Ban Meta",
+    "price": 250000,
+    "currency": "KZT",
+    "imageUrl": null,
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2024-10-09T12:00:00.000Z"
   }
 ]
