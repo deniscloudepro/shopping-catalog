@@ -128,7 +128,7 @@ function findVisiblePrice($: cheerio.CheerioAPI): { price: number; currency: str
     .filter(
       (el) =>
         $(el).closest(
-          '[class*="product-card-description" i], [class*="product-list" i], [class*="recommend" i], [class*="similar" i], [class*="viewed" i]'
+          '[class*="product-card-description" i], [class*="product-list" i], [class*="slider-product" i], [class*="carousel" i], [class*="recommend" i], [class*="similar" i], [class*="viewed" i]'
         ).length === 0
     )
     .filter((el) => looksLikePrice(textOf(el)));
