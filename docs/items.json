@@ -965,5 +965,15 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2023-09-18T12:00:00.000Z"
+  },
+  {
+    "url": "https://positronica.ru/product/ryukzak-muzhskoy-piquadro-russel-chernyy-ca6768w137-n-2090711/",
+    "title": "Рюкзак мужской Piquadro Russel черный (ca6768w137/n)",
+    "price": 172740,
+    "currency": "KZT",
+    "imageUrl": "https://img.positronica.ru/items/2090711_v01_b.webp",
+    "siteName": "positronica.ru",
+    "category": "accessories",
+    "createdAt": "2026-03-30T12:00:00.000Z"
   }
 ]
