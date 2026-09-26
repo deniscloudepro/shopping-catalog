@@ -955,5 +955,15 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2021-07-14T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Sony+WH-1000XM4+Midnight+Blue",
+    "title": "Наушники Sony WH-1000XM4, Midnight Blue",
+    "price": 120000,
+    "currency": "KZT",
+    "imageUrl": null,
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2023-09-18T12:00:00.000Z"
   }
 ]
