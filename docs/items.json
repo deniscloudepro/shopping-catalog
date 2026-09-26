@@ -945,5 +945,15 @@
     "siteName": null,
     "category": "appliances",
     "createdAt": "2025-02-01T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Logitech+G923+941-000149",
+    "title": "Игровой руль Logitech G923 (941-000149)",
+    "price": 29320,
+    "currency": "RUB",
+    "imageUrl": null,
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2021-07-14T12:00:00.000Z"
   }
 ]
