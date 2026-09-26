@@ -735,5 +735,15 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2026-09-26T17:38:23.378Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/stabilizator-defender-asf-1500d900vt-napolnyj-99036-281342",
+    "title": "Стабилизатор Defender ASF 1500D/900Вт напольный (99036)",
+    "price": 23690,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/stabilizator_defender_asf_1500d900vt_napolnyj_99036_281342_1.jpg",
+    "siteName": "technodom.kz",
+    "category": "appliances",
+    "createdAt": "2026-09-26T17:41:37.777Z"
   }
 ]

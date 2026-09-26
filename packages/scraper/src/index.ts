@@ -227,7 +227,7 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
   }
 
   if (!imageUrl) {
-    imageUrl = $('meta[property="og:image"]').attr("content") ?? null;
+    imageUrl = ($('meta[property="og:image"]').attr("content") ?? $('meta[name="og:image"]').attr("content")) ?? null;
   }
 
   // og:image is often a social-media crop (e.g. limpopo.kz "…-600x315w.jpg"
