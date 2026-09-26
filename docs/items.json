@@ -875,5 +875,15 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2025-01-06T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=PlayStation+VR2",
+    "title": "VR-шлем Sony PlayStation VR2 для PS5",
+    "price": 150000,
+    "currency": "KZT",
+    "imageUrl": null,
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2024-10-05T12:00:00.000Z"
   }
 ]
