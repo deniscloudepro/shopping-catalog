@@ -11,7 +11,8 @@ function escapeHtml(value) {
 
 function formatPrice(price, currency) {
   if (price === null || price === undefined || price === "") return null;
-  return currency ? `${price} ${currency}` : `${price}`;
+  const amount = typeof price === "number" ? price.toLocaleString("ru-RU") : price;
+  return currency ? `${amount} ${currency}` : `${amount}`;
 }
 
 // Items Claude adds on request live in the repo itself — pushing to main is
@@ -42,7 +43,9 @@ async function loadItems() {
     ...(sheet.status === "fulfilled" ? sheet.value : []),
   ].filter((item) => item.title && item.url);
 
-  return all.sort((a, b) => toTime(b.createdAt) - toTime(a.createdAt));
+  all.sort((a, b) => toTime(b.createdAt) - toTime(a.createdAt));
+  all.forEach((item, i) => (item.id = i));
+  return all;
 }
 
 async function loadSheetItems() {
@@ -99,14 +102,14 @@ function cardHtml(item) {
     : `<span class="placeholder">нет фото</span>`;
 
   return `
-    <a class="card" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">
+    <button type="button" class="card" data-item="${item.id}">
       <div class="card-image">${image}</div>
       <div class="card-body">
         <div class="card-title">${escapeHtml(item.title)}</div>
         ${price ? `<div class="card-price">${escapeHtml(price)}</div>` : ""}
         ${item.siteName ? `<div class="card-site">${escapeHtml(item.siteName)}</div>` : ""}
       </div>
-    </a>
+    </button>
   `;
 }
 
@@ -215,12 +218,74 @@ function renderCatalog(categories, items) {
   contentEl.innerHTML = `<nav class="chips">${tabs}</nav>${body}`;
 }
 
+// ---------- Item details dialog ----------
+
+let state = { categories: [], items: [] };
+
+function categoryPath(item) {
+  const cat = state.categories.find((c) => c.id === item.category);
+  if (!cat) return null;
+  const sub = cat.subcategories.find((s) => s.id === item.subcategory);
+  return sub ? `${cat.name} → ${sub.name}` : cat.name;
+}
+
+function formatDate(value) {
+  const t = toTime(value);
+  return t ? new Date(t).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" }) : null;
+}
+
+function dialogHtml(item) {
+  const price = formatPrice(item.price, item.currency);
+  const image = item.imageUrl
+    ? `<img src="${escapeHtml(item.imageUrl)}" alt="" />`
+    : `<span class="placeholder">нет фото</span>`;
+  const path = categoryPath(item);
+  const added = formatDate(item.createdAt);
+
+  return `
+    <button type="button" class="dialog-close" data-action="close" aria-label="Закрыть">×</button>
+    <div class="dialog-image">${image}</div>
+    <div class="dialog-body">
+      <h2 class="dialog-title">${escapeHtml(item.title)}</h2>
+      <div class="dialog-price">${price ? escapeHtml(price) : "Цена не указана"}</div>
+      <dl class="dialog-meta">
+        ${path ? `<dt>Раздел</dt><dd>${escapeHtml(path)}</dd>` : ""}
+        ${item.siteName ? `<dt>Магазин</dt><dd>${escapeHtml(item.siteName)}</dd>` : ""}
+        ${added ? `<dt>Добавлен</dt><dd>${escapeHtml(added)}</dd>` : ""}
+      </dl>
+      <a class="btn btn--primary" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Открыть в магазине ↗</a>
+    </div>
+  `;
+}
+
+function openItem(id) {
+  const item = state.items.find((i) => i.id === id);
+  if (!item) return;
+  const dialog = document.getElementById("item-dialog");
+  dialog.innerHTML = dialogHtml(item);
+  if (!dialog.open) dialog.showModal();
+}
+
+function setupDialog() {
+  const dialog = document.getElementById("item-dialog");
+  document.addEventListener("click", (event) => {
+    const card = event.target.closest(".card[data-item]");
+    if (card) openItem(Number(card.dataset.item));
+  });
+  dialog.addEventListener("click", (event) => {
+    // A click on the backdrop lands on the <dialog> itself.
+    if (event.target === dialog || event.target.closest('[data-action="close"]')) dialog.close();
+  });
+}
+
 async function render() {
   const contentEl = document.getElementById("content");
   const countEl = document.getElementById("count");
 
   try {
     const [categories, items] = await Promise.all([loadCategories(), loadItems()]);
+    state = { categories, items };
+    setupDialog();
     countEl.textContent = pluralItems(items.length);
     renderCatalog(categories, items);
     window.addEventListener("hashchange", () => {
