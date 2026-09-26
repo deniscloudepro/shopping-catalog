@@ -905,5 +905,15 @@
     "siteName": null,
     "category": "appliances",
     "createdAt": "2026-09-26T18:11:51.730Z"
+  },
+  {
+    "url": "https://www.ozon.kz/search/?text=Nordfrost+NR+402+B",
+    "title": "Холодильник Nordfrost NR 402 B однокамерный, чёрный",
+    "price": null,
+    "currency": null,
+    "imageUrl": "images/nordfrost-nr402b.jpg",
+    "siteName": "ozon",
+    "category": "appliances",
+    "createdAt": "2025-09-12T12:00:00.000Z"
   }
 ]
