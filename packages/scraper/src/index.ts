@@ -24,7 +24,10 @@ function absolutize(maybeUrl: string | undefined, base: string): string | null {
 export function parsePrice(raw: string | undefined | number): number | null {
   if (raw === undefined || raw === null) return null;
   if (typeof raw === "number") return raw;
-  const cleaned = raw.replace(/[^\d.,]/g, "").replace(/,(?=\d{3}\b)/g, "");
+  // Only the first number: "50 690 ₸ Экономия 39300 ₸" must not become 5069039300.
+  const first = raw.match(/\d[\d\s\u00a0\u202f.,]*/)?.[0];
+  if (!first) return null;
+  const cleaned = first.trim().replace(/[^\d.,]/g, "").replace(/,(?=\d{3}\b)/g, "");
   const normalized = cleaned.replace(",", ".");
   const num = parseFloat(normalized);
   return Number.isFinite(num) ? num : null;

@@ -745,5 +745,55 @@
     "siteName": "technodom.kz",
     "category": "appliances",
     "createdAt": "2026-09-26T17:41:37.777Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/vneshnij-ssd-2tb-esd310c-transcend-ts2tesd310c-272483",
+    "title": "Внешний SSD Transcend ESD310C 2TB, USB 10Gbps, Type-C/A (TS2TESD310C)",
+    "price": 50690,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/vneshnij_ssd_2tb_esd310c_transcend_ts2tesd310c_272483_1.jpg",
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-26T17:47:15.418Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/mfu-lazernoe-hp-laserjet-pro-m141w-a4-w-7md74a-259161",
+    "title": "МФУ лазерное HP LaserJet M141W A4-W (7MD74A)",
+    "price": 88990,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/259161_1.jpg",
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-26T17:47:16.238Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/svetodiodnaya-lampa-smallrig-selection-l10-3242-243080",
+    "title": "Светодиодная лампа SmallRig Selection L10 3242",
+    "price": 38990,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/243080_1.jpg",
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-26T17:47:17.140Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/umnaya-kolonka-yandeks-stancziya-midi-chernaya-yndx-00054-black-276072",
+    "title": "Умная колонка Яндекс Станция Миди, Черная (YNDX-00054 Black)",
+    "price": 87990,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_1new.jpg",
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-26T17:47:18.153Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/irrigator-kitfort-kt-2912-1-254071",
+    "title": "Ирригатор Kitfort KT-2912-1",
+    "price": 20390,
+    "currency": "KZT",
+    "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/254071_1.jpg",
+    "siteName": "technodom.kz",
+    "category": "appliances",
+    "createdAt": "2026-09-26T17:47:19.020Z"
   }
 ]
