@@ -725,5 +725,15 @@
     "siteName": null,
     "category": "appliances",
     "createdAt": "2024-03-20T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Sony+PULSE+3D+Midnight+Black",
+    "title": "Наушники Sony PULSE 3D для PS5, Midnight Black",
+    "price": 48819,
+    "currency": "KZT",
+    "imageUrl": null,
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2026-09-26T17:38:23.378Z"
   }
 ]
