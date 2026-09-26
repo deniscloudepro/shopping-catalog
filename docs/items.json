@@ -675,5 +675,15 @@
     "siteName": "mi.com.kz",
     "category": "electronics",
     "createdAt": "2026-09-26T13:09:45.168Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=PLAUD",
+    "title": "AI-диктофон Plaud",
+    "price": 1297,
+    "currency": "CNY",
+    "imageUrl": "images/plaud-recorder.jpg",
+    "siteName": "taobao.com",
+    "category": "electronics",
+    "createdAt": "2025-11-24T12:00:00.000Z"
   }
 ]
