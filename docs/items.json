@@ -975,5 +975,25 @@
     "siteName": "positronica.ru",
     "category": "accessories",
     "createdAt": "2026-03-30T12:00:00.000Z"
+  },
+  {
+    "url": "https://limpopo.kz/odezhda-all/noski/noski-muzhskie-uyn-biotrek-light-s100339-b052",
+    "title": "Носки мужские Uyn Biotrek Light",
+    "price": 9900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/208096/uyn-noski-muzhskie-biotrek-light-1-1000x1000.jpg",
+    "siteName": "limpopo.kz",
+    "category": "socks",
+    "createdAt": "2026-09-26T18:50:21.102Z"
+  },
+  {
+    "url": "https://limpopo.kz/odezhda-all/noski/noski-muzhskie-uyn-biotrek-s100335-g000",
+    "title": "Носки мужские Uyn Biotrek",
+    "price": 10900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/208094/uyn-noski-muzhskie-biotrek-1-1000x1000.jpg",
+    "siteName": "limpopo.kz",
+    "category": "socks",
+    "createdAt": "2026-09-26T18:50:21.974Z"
   }
 ]
