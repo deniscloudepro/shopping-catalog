@@ -1025,5 +1025,15 @@
     "siteName": "taobao.com",
     "category": "tourism",
     "createdAt": "2026-08-26T12:00:00.000Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=DJI+Mic+3",
+    "title": "Беспроводная микрофонная система DJI Mic 3",
+    "price": 1699,
+    "currency": "CNY",
+    "imageUrl": "images/dji-mic-3.jpg",
+    "siteName": "taobao.com",
+    "category": "electronics",
+    "createdAt": "2026-09-09T12:00:00.000Z"
   }
 ]
