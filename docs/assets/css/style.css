@@ -122,11 +122,9 @@ body {
 
 .chips {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 4px;
   margin-bottom: 24px;
-  scrollbar-width: none;
 }
 
 .chips--sub {
