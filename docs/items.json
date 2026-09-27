@@ -1035,5 +1035,15 @@
     "siteName": "taobao.com",
     "category": "electronics",
     "createdAt": "2026-09-09T12:00:00.000Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=DJI+Neo+2",
+    "title": "Дрон DJI Neo 2",
+    "price": 3699,
+    "currency": "CNY",
+    "imageUrl": "images/dji-neo-2.jpg",
+    "siteName": "taobao.com",
+    "category": "electronics",
+    "createdAt": "2026-09-09T12:01:00.000Z"
   }
 ]
