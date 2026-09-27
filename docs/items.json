@@ -1045,5 +1045,25 @@
     "siteName": "taobao.com",
     "category": "electronics",
     "createdAt": "2026-09-09T12:01:00.000Z"
+  },
+  {
+    "url": "https://www.sonycenter.kz/wh1000xm6b-e",
+    "title": "Наушники беспроводные Sony WH-1000XM6, чёрные",
+    "price": 167900,
+    "currency": "KZT",
+    "imageUrl": "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm6/naushniki-WH1000XM6b-01-600x600.webp",
+    "siteName": "sonycenter.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-27T19:39:12.969Z"
+  },
+  {
+    "url": "https://www.sonycenter.kz/wh1000xm5b",
+    "title": "Наушники беспроводные Sony WH-1000XM5, чёрные",
+    "price": 119900,
+    "currency": "KZT",
+    "imageUrl": "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-01-600x600.webp",
+    "siteName": "sonycenter.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-27T19:39:13.912Z"
   }
 ]
