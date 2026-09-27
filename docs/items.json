@@ -1015,5 +1015,15 @@
     "siteName": null,
     "category": "shoes",
     "createdAt": "2024-08-08T12:00:00.000Z"
+  },
+  {
+    "url": "https://s.taobao.com/search?q=Jetboil+MiniMo",
+    "title": "Система приготовления пищи Jetboil MiniMo, камуфляж",
+    "price": 778,
+    "currency": "CNY",
+    "imageUrl": "images/jetboil-minimo.jpg",
+    "siteName": "taobao.com",
+    "category": "tourism",
+    "createdAt": "2026-08-26T12:00:00.000Z"
   }
 ]
