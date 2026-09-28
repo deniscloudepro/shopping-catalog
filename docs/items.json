@@ -1135,5 +1135,15 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2026-09-28T09:10:47.793Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Bogner+polo",
+    "title": "Поло Bogner, бежевое",
+    "price": 13870,
+    "currency": "RUB",
+    "imageUrl": "images/bogner-polo-beige.jpg",
+    "siteName": "Bogner",
+    "category": "clothing",
+    "createdAt": "2024-07-10T13:20:00.000Z"
   }
 ]
