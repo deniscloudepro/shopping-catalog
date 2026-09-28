@@ -1075,5 +1075,15 @@
     "siteName": "dns-shop.ru",
     "category": "electronics",
     "createdAt": "2026-09-28T05:19:56.145Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Sony+PlayStation+5",
+    "title": "Игровая консоль Sony PlayStation 5",
+    "price": 60000,
+    "currency": "RUB",
+    "imageUrl": "images/ps5.jpg",
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2021-06-16T12:00:00.000Z"
   }
 ]
