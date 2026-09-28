@@ -177,7 +177,9 @@ function renderCatalog(categories, items) {
 
   const allCategories = itemsOf(UNCATEGORIZED.id).length ? [...categories, UNCATEGORIZED] : categories;
   let { cat, sub } = currentSelection();
-  const selected = allCategories.find((c) => c.id === cat) || null;
+  // With a single category (the public view) there is nothing to switch between.
+  const only = allCategories.length === 1 ? allCategories[0] : null;
+  const selected = only || allCategories.find((c) => c.id === cat) || null;
   if (!selected) sub = null;
 
   const tabs = [
@@ -215,7 +217,7 @@ function renderCatalog(categories, items) {
       .join("");
   }
 
-  contentEl.innerHTML = `<nav class="chips">${tabs}</nav>${body}`;
+  contentEl.innerHTML = `${only ? "" : `<nav class="chips">${tabs}</nav>`}${body}`;
 }
 
 // ---------- Item details dialog ----------
@@ -278,12 +280,60 @@ function setupDialog() {
   });
 }
 
+// ---------- Public vs owner view ----------
+//
+// Visitors see only categories marked "public": true in categories.json.
+// The owner opens the site once with ?owner=<key> and this browser then shows
+// everything (?owner=off forgets it). This only hides items on the page — the
+// data itself stays in the public repo and items.json.
+
+const OWNER_KEY_SHA256 = "5a91c4575a8805a4d5af43d1c44418cbf8d6f8b9f8e49f919cb0728d4fef8c6b";
+const OWNER_FLAG = "catalog-owner";
+
+async function sha256Hex(text) {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function resolveOwner() {
+  const params = new URLSearchParams(location.search);
+  const key = params.get("owner");
+  if (key !== null) {
+    if (key === "off") storageSet(OWNER_FLAG, null);
+    else if ((await sha256Hex(key)) === OWNER_KEY_SHA256) storageSet(OWNER_FLAG, "1");
+    params.delete("owner");
+    const query = params.toString();
+    history.replaceState(null, "", `${location.pathname}${query ? `?${query}` : ""}${location.hash}`);
+  }
+  return storageGet(OWNER_FLAG) === "1";
+}
+
+function storageGet(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function storageSet(key, value) {
+  try {
+    if (value === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, value);
+  } catch {
+    // Private mode etc. — the owner view just won't be remembered.
+  }
+}
+
 async function render() {
   const contentEl = document.getElementById("content");
   const countEl = document.getElementById("count");
 
   try {
-    const [categories, items] = await Promise.all([loadCategories(), loadItems()]);
+    const [allCategories, allItems, isOwner] = await Promise.all([loadCategories(), loadItems(), resolveOwner()]);
+    const categories = isOwner ? allCategories : allCategories.filter((c) => c.public);
+    const visible = new Set(categories.map((c) => c.id));
+    const items = isOwner ? allItems : allItems.filter((i) => visible.has(i.category));
     state = { categories, items };
     setupDialog();
     countEl.textContent = pluralItems(items.length);

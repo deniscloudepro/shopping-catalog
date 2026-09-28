@@ -37,7 +37,8 @@
   {
     "id": "tourism",
     "name": "Туризм",
-    "subcategories": []
+    "subcategories": [],
+    "public": true
   },
   {
     "id": "electronics",
