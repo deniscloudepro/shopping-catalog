@@ -1145,5 +1145,15 @@
     "siteName": "Bogner",
     "category": "clothing",
     "createdAt": "2024-07-10T13:20:00.000Z"
+  },
+  {
+    "url": "https://sportmaster.kz/ru/product/26188740299/?skuId=188149140299",
+    "title": "Спальный мешок Northland Hypnos -4 правосторонний, синий",
+    "price": 48490,
+    "currency": "KZT",
+    "imageUrl": "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/de1/1500_2000_4912/69132750299.jpg",
+    "siteName": "sportmaster.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-28T14:00:36.705Z"
   }
 ]
