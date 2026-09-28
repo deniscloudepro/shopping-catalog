@@ -1085,5 +1085,55 @@
     "siteName": null,
     "category": "electronics",
     "createdAt": "2021-06-16T12:00:00.000Z"
+  },
+  {
+    "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_ultrathin_magnetic_power_bank_5000_15w_gl_glacier_silver.html",
+    "title": "Внешний аккумулятор Xiaomi UltraThin Magnetic Power Bank 5000 15W GL Glacier Silver",
+    "price": 31990,
+    "currency": "KZT",
+    "imageUrl": "https://img.al-style.kz/84372_1.jpg",
+    "siteName": "mi.com.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-28T09:10:42.854Z"
+  },
+  {
+    "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_165w_power_bank_10000mah_integrated_cable_gl.html",
+    "title": "Внешний аккумулятор Xiaomi 165W Power Bank 10000mAh (Integrated Cable) GL",
+    "price": 23990,
+    "currency": "KZT",
+    "imageUrl": "https://img.al-style.kz/71075_1.jpg",
+    "siteName": "mi.com.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-28T09:10:44.014Z"
+  },
+  {
+    "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_magnetic_power_bank_10000_with_built_in_stand_black.html",
+    "title": "Внешний аккумулятор Xiaomi Magnetic Power Bank 10000 with Built-in Stand Black",
+    "price": 21990,
+    "currency": "KZT",
+    "imageUrl": "https://img.al-style.kz/84095_1.jpg",
+    "siteName": "mi.com.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-28T09:10:45.179Z"
+  },
+  {
+    "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_super_slim_magnetic_power_bank_5000_black.html",
+    "title": "Внешний аккумулятор Xiaomi Super Slim Magnetic Power Bank 5000 Black",
+    "price": 18990,
+    "currency": "KZT",
+    "imageUrl": "https://img.al-style.kz/81470_1.jpg",
+    "siteName": "mi.com.kz",
+    "category": "electronics",
+    "createdAt": "2026-09-28T09:10:46.235Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=HP+LaserJet+Pro+400+MFP+M425dw",
+    "title": "МФУ лазерное HP LaserJet Pro 400 MFP M425dw",
+    "price": null,
+    "currency": null,
+    "imageUrl": "images/hp-m425dw.jpg",
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2026-09-28T09:10:47.793Z"
   }
 ]
