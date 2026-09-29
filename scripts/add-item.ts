@@ -62,6 +62,7 @@ async function productFromArg(args: string[]): Promise<ScrapedProduct> {
       price: data.price ?? null,
       currency: data.currency ?? null,
       imageUrl: data.imageUrl ?? null,
+      images: data.images ?? [],
       siteName: data.siteName ?? new URL(data.url).hostname.replace(/^www\./, ""),
     };
   }

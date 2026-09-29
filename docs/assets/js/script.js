@@ -236,17 +236,59 @@ function formatDate(value) {
   return t ? new Date(t).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" }) : null;
 }
 
+function galleryHtml(item) {
+  const photos = item.images && item.images.length ? item.images : item.imageUrl ? [item.imageUrl] : [];
+  if (!photos.length) return `<div class="dialog-image"><span class="placeholder">нет фото</span></div>`;
+
+  const slides = photos
+    .map(
+      (src, i) =>
+        `<div class="gallery-slide"><img src="${escapeHtml(src)}" alt="" ${i ? 'loading="lazy"' : ""} /></div>`
+    )
+    .join("");
+  if (photos.length === 1) return `<div class="gallery"><div class="gallery-track">${slides}</div></div>`;
+
+  const dots = photos
+    .map((_, i) => `<button type="button" class="gallery-dot${i ? "" : " is-active"}" data-slide="${i}" aria-label="Фото ${i + 1}"></button>`)
+    .join("");
+  return `
+    <div class="gallery">
+      <div class="gallery-track">${slides}</div>
+      <button type="button" class="gallery-nav gallery-nav--prev" data-step="-1" aria-label="Предыдущее фото">‹</button>
+      <button type="button" class="gallery-nav gallery-nav--next" data-step="1" aria-label="Следующее фото">›</button>
+      <div class="gallery-dots">${dots}</div>
+    </div>
+  `;
+}
+
+// Swipe comes from CSS scroll-snap; this only wires the arrows/dots and keeps
+// the active dot in sync with the scroll position.
+function setupGallery(root) {
+  const track = root.querySelector(".gallery-track");
+  const dots = [...root.querySelectorAll(".gallery-dot")];
+  if (!track || !dots.length) return;
+
+  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+  const goTo = (i) => track.scrollTo({ left: Math.max(0, Math.min(dots.length - 1, i)) * track.clientWidth, behavior: "smooth" });
+
+  track.addEventListener("scroll", () => {
+    const i = current();
+    dots.forEach((d, k) => d.classList.toggle("is-active", k === i));
+  }, { passive: true });
+  root.querySelectorAll("[data-step]").forEach((btn) =>
+    btn.addEventListener("click", () => goTo(current() + Number(btn.dataset.step)))
+  );
+  dots.forEach((d) => d.addEventListener("click", () => goTo(Number(d.dataset.slide))));
+}
+
 function dialogHtml(item) {
   const price = formatPrice(item.price, item.currency);
-  const image = item.imageUrl
-    ? `<img src="${escapeHtml(item.imageUrl)}" alt="" />`
-    : `<span class="placeholder">нет фото</span>`;
   const path = categoryPath(item);
   const added = formatDate(item.createdAt);
 
   return `
     <button type="button" class="dialog-close" data-action="close" aria-label="Закрыть">×</button>
-    <div class="dialog-image">${image}</div>
+    ${galleryHtml(item)}
     <div class="dialog-body">
       <h2 class="dialog-title">${escapeHtml(item.title)}</h2>
       <div class="dialog-price">${price ? escapeHtml(price) : "Цена не указана"}</div>
@@ -265,6 +307,7 @@ function openItem(id) {
   if (!item) return;
   const dialog = document.getElementById("item-dialog");
   dialog.innerHTML = dialogHtml(item);
+  setupGallery(dialog);
   if (!dialog.open) dialog.showModal();
 }
 

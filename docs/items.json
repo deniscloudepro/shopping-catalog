@@ -8,7 +8,13 @@
     "siteName": "intertop.kz",
     "createdAt": "2026-09-25T11:30:47.311Z",
     "category": "shoes",
-    "subcategory": "the-north-face"
+    "subcategory": "the-north-face",
+    "images": [
+      "https://kz.media.intertop.com/load/mp926429/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp926429/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp926429/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp926429/medium/3.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/jackets-the-north-face-10075204",
@@ -19,7 +25,13 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T11:47:29.816Z"
+    "createdAt": "2026-09-25T11:47:29.816Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp649639/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp649639/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp649639/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp649639/medium/3.webp"
+    ]
   },
   {
     "url": "https://limpopo.kz/gore-tex/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00",
@@ -29,7 +41,15 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-3-jpg-3-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "shoes",
-    "createdAt": "2026-09-25T12:41:13.062Z"
+    "createdAt": "2026-09-25T12:41:13.062Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-3-jpg-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-1-jpg-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-5-jpg-6-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-4-jpg-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-6-jpg-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/205209/botinki-muzhskie-la-sportiva-tx5-evo-mid-gtx-zfhs107-g00y00-2-jpg-2-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/obuv-all/boots/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00",
@@ -39,7 +59,15 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-1-jpg-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "shoes",
-    "createdAt": "2026-09-25T12:41:14.027Z"
+    "createdAt": "2026-09-25T12:41:14.027Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-1-jpg-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-5-jpg-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-3-jpg-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-4-jpg-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-2-jpg-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208848/botinki-muzhskie-la-sportiva-ultra-raptor-3-mid-gtx-zfhs109-e47k00-6-jpg-6-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/karemati/korvik-naduvnoj-naturehike-tuye-5-8-ultralight-inflatable-mattress-cnh22dz016",
@@ -49,7 +77,12 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/204363/naturehike-korvik-naduvnoy-tuye-5-8-ultralight-inflatable-mattress-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T12:45:33.038Z"
+    "createdAt": "2026-09-25T12:45:33.038Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204363/naturehike-korvik-naduvnoy-tuye-5-8-ultralight-inflatable-mattress-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204363/naturehike-korvik-naduvnoy-tuye-5-8-ultralight-inflatable-mattress-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204363/naturehike-korvik-naduvnoy-tuye-5-8-ultralight-inflatable-mattress-3-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/karemati/karemat-skladnoj-naturehike-troues-r2-6-egg-nest-foldable-waterproof-pad-cnk2650ws010",
@@ -59,7 +92,15 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T12:45:34.059Z"
+    "createdAt": "2026-09-25T12:45:34.059Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204360/naturehike-karemat-skladnoy-troues-r2-6-egg-nest-foldable-waterproof-pad-6-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/rukzaki-saumki/bags-for-turism/rukzaki-alpinistkie-turisticheskie/ryukzak-muzhskoj-salomon-aerotrek-30-lc2535500",
@@ -69,7 +110,15 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-5-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T12:48:01.444Z"
+    "createdAt": "2026-09-25T12:48:01.444Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/175346/pohodnyy-ryukzak-muzhskoy-salomon-aerotrek-30-chernyy-6-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://thesport.kz/product/la-sportiva-noski-hike-tech-2/",
@@ -89,7 +138,19 @@
     "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__1.jpg",
     "siteName": "sport-lab.kz",
     "category": "clothing",
-    "createdAt": "2026-09-25T12:55:09.214Z"
+    "createdAt": "2026-09-25T12:55:09.214Z",
+    "images": [
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__3.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__4.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__5.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C20197__6.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C20197__1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C20197__2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C20197__3.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C20197__4.jpg"
+    ]
   },
   {
     "url": "https://prosport.kz/solntsezashchitnye-ochki/julbo-ochki-solntsezaschitnye-slack-cover-sp-4-j5871214",
@@ -99,7 +160,12 @@
     "imageUrl": "https://prosport.kz/components/com_jshopping/files/img_products/julbo-ochki-solntsezaschitnye-slack-cover-sp-4-j5871214.jpg",
     "siteName": "prosport.kz",
     "category": "accessories",
-    "createdAt": "2026-09-25T13:02:32.380Z"
+    "createdAt": "2026-09-25T13:02:32.380Z",
+    "images": [
+      "https://prosport.kz/components/com_jshopping/files/img_products/julbo-ochki-solntsezaschitnye-slack-cover-sp-4-j5871214.jpg",
+      "https://prosport.kz/components/com_jshopping/files/img_products/julbo-ochki-solntsezaschitnye-slack-cover-sp-4-j58712142.jpg",
+      "https://prosport.kz/components/com_jshopping/files/img_products/julbo-ochki-solntsezaschitnye-slack-cover-sp-4-j58712143.jpg"
+    ]
   },
   {
     "url": "https://e.tb.cn/h.8FH1KTfZ8OgjslJ?tk=Gm2JTmXeAwb",
@@ -160,7 +226,16 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-7-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T13:21:26.815Z"
+    "createdAt": "2026-09-25T13:21:26.815Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-7-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/204351/naturehike-palatka-cloud-peak-2-man-tent-pro-6-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/odezhda-all/t-shirts/longslivy-category/longsliv-muzhskoj-mammut-selun-fl-1016-02110-0001",
@@ -170,7 +245,15 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-6-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "clothing",
-    "createdAt": "2026-09-25T13:25:40.222Z"
+    "createdAt": "2026-09-25T13:25:40.222Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-6-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206700/longsliv-muzhskoy-mammut-selun-fl-1-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/odejda-aksessuary/glasses/ochki-solntsezaschitnye/ochki-solncezashitnye-julbo-slack-cover-sp3p-j5871117",
@@ -180,7 +263,14 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/158080/ochki-solntsezashchitnye-julbo-slack-cover-sp3p-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "accessories",
-    "createdAt": "2026-09-25T13:27:26.333Z"
+    "createdAt": "2026-09-25T13:27:26.333Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/images_products/158080/ochki-solntsezashchitnye-julbo-slack-cover-sp3p-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158080/ochki-solntsezashchitnye-julbo-slack-cover-sp3p-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158080/ochki-solntsezashchitnye-julbo-slack-cover-sp3p-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158080/ochki-solntsezashchitnye-julbo-slack-cover-sp3p-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158080/ochki-solntsezashchitnye-julbo-slack-cover-sp3p-5-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://sport-lab.kz/catalog/aksessuary-22/osprey-ryukzak-atmos-ag-65",
@@ -190,7 +280,15 @@
     "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/full_10003553__11.jpg",
     "siteName": "sport-lab.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T13:29:10.731Z"
+    "createdAt": "2026-09-25T13:29:10.731Z",
+    "images": [
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/full_10003553__11.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/full_10003553__21.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/full_10003553__31.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_full_10003553__11.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_full_10003553__21.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_full_10003553__31.jpg"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/sports-clothes-the-north-face-9280426/",
@@ -201,7 +299,11 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:52.685Z"
+    "createdAt": "2026-09-25T13:43:52.685Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp502586/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp502586/medium/1.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/shorts-the-north-face-9914692/",
@@ -212,7 +314,13 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:53.625Z"
+    "createdAt": "2026-09-25T13:43:53.625Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp614579/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp614579/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp614579/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp614579/medium/3.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/jackets-the-north-face-8687250/",
@@ -223,7 +331,11 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:54.543Z"
+    "createdAt": "2026-09-25T13:43:54.543Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp408869/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp408869/medium/1.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/sports-clothes-the-north-face-10075212/",
@@ -234,7 +346,14 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:55.454Z"
+    "createdAt": "2026-09-25T13:43:55.454Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp649645/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp649645/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp649645/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp649645/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp649645/medium/4.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/t-shirts-the-north-face-9915087/",
@@ -245,7 +364,13 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:56.435Z"
+    "createdAt": "2026-09-25T13:43:56.435Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp614609/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp614609/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp614609/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp614609/medium/3.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/pants-the-north-face-10279429/",
@@ -256,7 +381,14 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:57.362Z"
+    "createdAt": "2026-09-25T13:43:57.362Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp696130/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp696130/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp696130/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp696130/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp696130/medium/4.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/sweaters-and-sweaters-the-north-face-11083325/",
@@ -267,7 +399,13 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:58.275Z"
+    "createdAt": "2026-09-25T13:43:58.275Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp885522/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp885522/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp885522/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp885522/medium/3.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/t-shirts-the-north-face-11087189/",
@@ -278,7 +416,12 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:43:59.164Z"
+    "createdAt": "2026-09-25T13:43:59.164Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp886849/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp886849/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp886849/medium/2.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/sweaters-and-sweaters-the-north-face-11083334/",
@@ -289,7 +432,13 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:44:00.134Z"
+    "createdAt": "2026-09-25T13:44:00.134Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp885523/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp885523/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp885523/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp885523/medium/3.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/t-shirts-the-north-face-11087190/",
@@ -300,7 +449,11 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:44:01.073Z"
+    "createdAt": "2026-09-25T13:44:01.073Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp886848/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp886848/medium/1.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-9023588/",
@@ -311,7 +464,11 @@
     "siteName": "intertop.kz",
     "category": "caps",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:44:01.974Z"
+    "createdAt": "2026-09-25T13:44:01.974Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp460853/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp460853/medium/1.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/jackets-the-north-face-10917140/",
@@ -322,7 +479,14 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:44:02.956Z"
+    "createdAt": "2026-09-25T13:44:02.956Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp854540/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp854540/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp854540/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp854540/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp854540/medium/4.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/slip-ons-and-espadrilles-the-north-face-7834220/",
@@ -333,7 +497,15 @@
     "siteName": "intertop.kz",
     "category": "shoes",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:44:03.881Z"
+    "createdAt": "2026-09-25T13:44:03.881Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp299153/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp299153/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp299153/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp299153/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp299153/medium/4.webp",
+      "https://kz.media.intertop.com/load/mp299153/medium/5.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/travel-accessories-the-north-face-9602195/",
@@ -343,7 +515,11 @@
     "imageUrl": "https://kz.media.intertop.com/load/mp543679/medium/MAIN.webp",
     "siteName": "intertop.kz",
     "category": "accessories",
-    "createdAt": "2026-09-25T13:44:04.940Z"
+    "createdAt": "2026-09-25T13:44:04.940Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp543679/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp543679/medium/1.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-11079889/",
@@ -395,7 +571,19 @@
     "imageUrl": "https://res.garmin.com/en/products/010-02921-00/v/cf-lg.jpg",
     "siteName": "Garmin",
     "category": "electronics",
-    "createdAt": "2026-09-25T13:48:01.735Z"
+    "createdAt": "2026-09-25T13:48:01.735Z",
+    "images": [
+      "https://res.garmin.com/en/products/010-02921-00/v/cf-lg.jpg",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/cf-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/rf-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/lf-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/pd-01-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/pd-02-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/pd-03-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/pd-04-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/pd-05-xl?pgw=1",
+      "https://res.garmin.com/transform/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.0,f_auto,h_400,q_auto,w_400/c_pad,h_400,w_400/v1/Product_Images/en/products/010-02921-00/v/pd-06-xl?pgw=1"
+    ]
   },
   {
     "url": "https://www.lamoda.kz/p/rtlafe046201/",
@@ -406,7 +594,14 @@
     "siteName": "Lamoda.kz",
     "category": "shoes",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:57:28.924Z"
+    "createdAt": "2026-09-25T13:57:28.924Z",
+    "images": [
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAFE046201_33189162_1_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAFE046201_33189163_2_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAFE046201_33189164_3_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAFE046201_33189165_4_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAFE046201_33189166_5_v1_2x.jpg"
+    ]
   },
   {
     "url": "https://www.lamoda.kz/p/rtlaeg594702/",
@@ -417,7 +612,16 @@
     "siteName": "Lamoda.kz",
     "category": "caps",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:57:29.872Z"
+    "createdAt": "2026-09-25T13:57:29.872Z",
+    "images": [
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27505659_1_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27556593_9_v3_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27505660_2_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27505661_3_v1_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27556592_10_v3_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27529086_11_v2_2x.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLAEG594701_27529087_12_v2_2x.jpg"
+    ]
   },
   {
     "url": "https://www.lamoda.kz/p/rtlacu180902/",
@@ -428,7 +632,14 @@
     "siteName": "Lamoda.kz",
     "category": "shoes",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T13:57:30.758Z"
+    "createdAt": "2026-09-25T13:57:30.758Z",
+    "images": [
+      "https://a.lmcdn.ru/img600x866/R/T/RTLACU180902_24325771_1_v1.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLACU180902_24325772_2_v1.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLACU180902_24325773_3_v1.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLACU180902_24325774_4_v1.jpg",
+      "https://a.lmcdn.ru/img600x866/R/T/RTLACU180902_24325775_5_v1.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/odezhda-all/dozhdevik-poncho/dozhdevik-sea-to-summit-ultra-sil-15d-tarp-poncho-aponcho15dli",
@@ -438,7 +649,11 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/118526/dozhdevik-poncho-sea-to-summit-ultra-sil-15d-tarp-poncho-2-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T13:57:31.735Z"
+    "createdAt": "2026-09-25T13:57:31.735Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/images_products/118526/dozhdevik-poncho-sea-to-summit-ultra-sil-15d-tarp-poncho-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/118526/dozhdevik-poncho-sea-to-summit-ultra-sil-15d-tarp-poncho-1-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/turism/aksessuari-outdoor/thermosy/termos-stanley-adventure-vac-10-10819-0087",
@@ -448,7 +663,13 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/209421/termos-stanley-adventure-vac-10-10819-0087-1-jpg-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T14:05:41.458Z"
+    "createdAt": "2026-09-25T14:05:41.458Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/209421/termos-stanley-adventure-vac-10-10819-0087-1-jpg-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/209421/termos-stanley-adventure-vac-10-10819-0087-4-jpg-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/209421/termos-stanley-adventure-vac-10-10819-0087-2-jpg-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/209421/termos-stanley-adventure-vac-10-10819-0087-3-jpg-3-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/rukzaki-saumki/bags-for-turism/meshki-kompressionnie/kompressionnyj-meshok-osprey-straight-jacket-20l-10004923",
@@ -458,7 +679,11 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/172341/osprey-kompressionnyy-meshok-straight-jacket-20l-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T14:05:42.462Z"
+    "createdAt": "2026-09-25T14:05:42.462Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/images_products/172341/osprey-kompressionnyy-meshok-straight-jacket-20l-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/172341/osprey-kompressionnyy-meshok-straight-jacket-20l-2-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://sport-lab.kz/catalog/odezhda-3/termobel-e-verkh-expedition-merino-235-shirt-8",
@@ -498,7 +723,14 @@
     "imageUrl": "https://salomon.kz/components/com_jshopping/files/img_products/C19162__1.jpg",
     "siteName": "salomon.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T17:25:25.824Z"
+    "createdAt": "2026-09-25T17:25:25.824Z",
+    "images": [
+      "https://salomon.kz/components/com_jshopping/files/img_products/C19162__1.jpg",
+      "https://salomon.kz/components/com_jshopping/files/img_products/C19162__2.jpg",
+      "https://salomon.kz/components/com_jshopping/files/img_products/C19162__3.jpg",
+      "https://salomon.kz/components/com_jshopping/files/img_products/C19162__4.jpg",
+      "https://salomon.kz/components/com_jshopping/files/img_products/C19162__5.jpg"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/sandals-the-north-face-8687378",
@@ -509,7 +741,14 @@
     "siteName": "intertop.kz",
     "category": "shoes",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T17:25:26.855Z"
+    "createdAt": "2026-09-25T17:25:26.855Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp408893/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp408893/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp408893/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp408893/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp408893/medium/4.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/step-ins-the-north-face-7553300/",
@@ -520,7 +759,14 @@
     "siteName": "intertop.kz",
     "category": "shoes",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T17:25:27.828Z"
+    "createdAt": "2026-09-25T17:25:27.828Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp285284/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp285284/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp285284/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp285284/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp285284/medium/4.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/step-ins-the-north-face-10917044",
@@ -531,7 +777,14 @@
     "siteName": "intertop.kz",
     "category": "shoes",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T17:25:28.732Z"
+    "createdAt": "2026-09-25T17:25:28.732Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp854524/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp854524/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp854524/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp854524/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp854524/medium/4.webp"
+    ]
   },
   {
     "url": "https://sport-lab.kz/man/odezhda/futbolka-trackline-ss-tee-m-5",
@@ -541,7 +794,19 @@
     "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__1.jpg",
     "siteName": "sport-lab.kz",
     "category": "clothing",
-    "createdAt": "2026-09-25T17:34:34.015Z"
+    "createdAt": "2026-09-25T17:34:34.015Z",
+    "images": [
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__3.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__4.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__5.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C24388__6.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C24388__1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C24388__2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C24388__3.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C24388__4.jpg"
+    ]
   },
   {
     "url": "https://sport-lab.kz/catalog/snaryazhenie-23/trosti-compact-3",
@@ -551,7 +816,15 @@
     "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/100.473_1.jpg",
     "siteName": "sport-lab.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T17:34:34.951Z"
+    "createdAt": "2026-09-25T17:34:34.951Z",
+    "images": [
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/100.473_1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/100.473_2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/100.473_3.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_100.473_1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_100.473_2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_100.473_3.jpg"
+    ]
   },
   {
     "url": "https://limpopo.kz/odezhda-all/noski/noski-lorpen-pro-trek-coolmax-light-crew-ptlcc-5791",
@@ -572,7 +845,11 @@
     "siteName": "intertop.kz",
     "category": "clothing",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T17:49:50.927Z"
+    "createdAt": "2026-09-25T17:49:50.927Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp462866/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp462866/medium/1.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-7313659/",
@@ -583,7 +860,14 @@
     "siteName": "intertop.kz",
     "category": "caps",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T17:58:50.638Z"
+    "createdAt": "2026-09-25T17:58:50.638Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp251234/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp251234/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp251234/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp251234/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp251234/medium/4.webp"
+    ]
   },
   {
     "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-9728178",
@@ -594,7 +878,12 @@
     "siteName": "intertop.kz",
     "category": "caps",
     "subcategory": "the-north-face",
-    "createdAt": "2026-09-25T17:58:51.718Z"
+    "createdAt": "2026-09-25T17:58:51.718Z",
+    "images": [
+      "images/tnf-cap-nf0a8a2ejk31.jpg",
+      "https://kz.media.intertop.com/load/mp582665/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp582665/medium/1.webp"
+    ]
   },
   {
     "url": "https://limpopo.kz/turism/aksessuari-outdoor/fonari-turisticheskie/nalobnyj-fonar-petzl-actik-core-e065ab02",
@@ -604,7 +893,16 @@
     "imageUrl": "images/petzl-actik-core.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T18:05:57.005Z"
+    "createdAt": "2026-09-25T18:05:57.005Z",
+    "images": [
+      "images/petzl-actik-core.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206458/nalobnyy-fonar-petzl-actik-core-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206458/nalobnyy-fonar-petzl-actik-core-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206458/nalobnyy-fonar-petzl-actik-core-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206458/nalobnyy-fonar-petzl-actik-core-5-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206458/nalobnyy-fonar-petzl-actik-core-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/206458/nalobnyy-fonar-petzl-actik-core-6-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://sport-marafon.ru/catalog/muzhskie-futbolki-i-longslivy/longsliv-muzhskoy-mammut-selun-fl-sun-hoody-nebla/",
@@ -624,7 +922,14 @@
     "imageUrl": "https://kz.media.intertop.com/load/mp460777/medium/MAIN.webp",
     "siteName": "intertop.kz",
     "category": "accessories",
-    "createdAt": "2026-09-25T18:28:02.048Z"
+    "createdAt": "2026-09-25T18:28:02.048Z",
+    "images": [
+      "https://kz.media.intertop.com/load/mp460777/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp460777/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp460777/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp460777/medium/3.webp",
+      "https://kz.media.intertop.com/load/mp460777/medium/4.webp"
+    ]
   },
   {
     "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/karemati/karemat-siden-e-dlya-vzroslyh-exped-flex-sit-pad-lot2612-1",
@@ -634,7 +939,11 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/203885/exped-karemat-sidene-dlya-vzroslyh-flex-sit-pad-2-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-25T18:28:03.060Z"
+    "createdAt": "2026-09-25T18:28:03.060Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/images_products/203885/exped-karemat-sidene-dlya-vzroslyh-flex-sit-pad-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/203885/exped-karemat-sidene-dlya-vzroslyh-flex-sit-pad-1-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://www.dns-shop.kz/product/d8d4e3b53f3ad582/103-elektronnaa-kniga-onyx-boox-go-103-belyj/",
@@ -644,7 +953,19 @@
     "imageUrl": "https://c.dns-shop.kz/thumb/st1/fit/300/300/864ba7be2a08c6dfe7982740bb9f46b3/39e2838c6282140ba23ff4e72ca160a29547db35b55541fc6b75506607f19ec2.jpg",
     "siteName": "dns-shop.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T12:47:45.651Z"
+    "createdAt": "2026-09-26T12:47:45.651Z",
+    "images": [
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/864ba7be2a08c6dfe7982740bb9f46b3/39e2838c6282140ba23ff4e72ca160a29547db35b55541fc6b75506607f19ec2.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/946707ea157c5e483cdead5728ab2dc0/0a5e1ddb9f8ef2b13c666c6b81adcccecc9c026a46bb69a995baffe4c24c200e.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/b3db4fe0623c660411c94bbc771d9841/ef189fc0854d641614c04429938cf46461a2ea2c2990dd536238536c811444e8.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/8531f42fe4724567f2c453f530926f46/6054e56d342583e6d0c39c650bb0ddb8c99115e0773ab1bfa9e9703e43f9aa0c.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/1000f9314d8e75af4fbfce6160998070/6de2b4d7fa4c93c570d23f99c4d686148fc3ea5a2df94639088a5919c1be5057.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/c64c180d70952cedc4e60c0ff2c29e22/9bd0bf33bc96fd2dd2d23b015c3bd9fa59c4aef3b8c1322a1787d18abaa8a245.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/3a29279f160fd2a000414fc5f664f64e/8894152c48b78c9078337a9fe0f651f1533d9329b924bec2f554f0e55e851a36.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/3a17be5e376148a5370291ab6508abc0/740d5266b9bdfc65afbe1f70bf087dedcb2b2ebc23ebb5986f1e5f953835d771.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/d51110b9d3daef76a57649a761ee6214/e3b6e6fc5daedfbf0d39f8c90dd3aa378c9a14fe002b6bbbaee12f2eb1a6e2e5.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/b908e6ee5531311bdd5388b0c7af1f58/6bbfb6f1d8a24e3a1409e51408b6e14eaf15ab251f0d99f0d75cd9eb33bb7e34.jpg"
+    ]
   },
   {
     "url": "https://www.sulpak.kz/g/igrovoe_kompyuternoe_kreslo_canyon_cnd_sgch7_nightfall_867_352",
@@ -654,7 +975,20 @@
     "imageUrl": "images/canyon-nightfall-chair.jpg",
     "siteName": "sulpak.kz",
     "category": "furniture",
-    "createdAt": "2026-09-26T13:03:31.652Z"
+    "createdAt": "2026-09-26T13:03:31.652Z",
+    "images": [
+      "images/canyon-nightfall-chair.jpg",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_kv3bRz.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_EnyWpd.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_zwBqgB.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_0LrOnF.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_4_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_0_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_4lodCI.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_kv3bRz_160.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_EnyWpd_160.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_867_352_1_1_zwBqgB_160.webp"
+    ]
   },
   {
     "url": "https://www.sulpak.kz/g/dalnomeriy_xiaomi_bhr5596gl_mjjgcjyd001qw",
@@ -664,7 +998,19 @@
     "imageUrl": "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_0_2.webp",
     "siteName": "sulpak.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T13:06:06.939Z"
+    "createdAt": "2026-09-26T13:06:06.939Z",
+    "images": [
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_0_2.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_1_2.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_0_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_2_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_3_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_1_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_5_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_4_1.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_6_1_zff0nU.webp",
+      "https://object.pscloud.io/cms/cms/Photo/img_0_973_62_0_2_160.webp"
+    ]
   },
   {
     "url": "https://mi.com.kz/elektrosamokat_xiaomi_electric_scooter_5_max_gl.html",
@@ -674,7 +1020,12 @@
     "imageUrl": "https://img.al-style.kz/74492_1.jpg",
     "siteName": "mi.com.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T13:09:45.168Z"
+    "createdAt": "2026-09-26T13:09:45.168Z",
+    "images": [
+      "https://img.al-style.kz/74492_1.jpg",
+      "https://img.al-style.kz/74492_2.jpg",
+      "https://img.al-style.kz/74492_3.jpg"
+    ]
   },
   {
     "url": "https://s.taobao.com/search?q=PLAUD",
@@ -704,7 +1055,11 @@
     "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/CNK2300DQ022_1.jpg",
     "siteName": "sport-lab.kz",
     "category": "tourism",
-    "createdAt": "2026-09-26T15:46:04.657Z"
+    "createdAt": "2026-09-26T15:46:04.657Z",
+    "images": [
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/CNK2300DQ022_1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/CNK2300DQ022_2.jpg"
+    ]
   },
   {
     "url": "https://www.dns-shop.kz/product/c3f093d6c7940cff/otparivatel-philips-ste317080-cernyj/",
@@ -714,7 +1069,19 @@
     "imageUrl": "https://c.dns-shop.kz/thumb/st1/fit/300/300/6dfc4b44bee7d837f436571f63ac6d43/9d3b34eddee3d8498161c6186368b17cf387bd10345e38db3ae638b63346af3b.jpg",
     "siteName": "dns-shop.kz",
     "category": "appliances",
-    "createdAt": "2026-09-26T17:27:46.311Z"
+    "createdAt": "2026-09-26T17:27:46.311Z",
+    "images": [
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/6dfc4b44bee7d837f436571f63ac6d43/9d3b34eddee3d8498161c6186368b17cf387bd10345e38db3ae638b63346af3b.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/02cb3b4a0cd3cf615b28cb556b3f4053/3c9b65953938306deb6191bfe86119fff944d6184aae0f40c17128535492e5fe.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/f7cb0394a69e5ad7ac78d39233392a3e/465635a9f13aa87c6dd61aa5c5efe9f7f953ca9c320e22546fdc88be1395386c.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/f12806732ffe858f159ba33c6020c157/b4133acb6cc3729921bda07981838febd9b78be67ba2db391f1cffe96228f7d0.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/068b312239625c239b081bd2cfca1676/af4d76d4337ecdb1f7ab7cb929c7b309e59e2b9a7bf1bc6dc9d7160e231bf3c1.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/9d4fd80c909c2f95cb5eb6d110aa94f7/dd25c7797d95318e96271ca7f89de2ba5d2783334ab1bd7edf89ae268b1c0b87.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/d7f33acfd2c438d97c5206e4dc41d659/aff78cd4f64734f876342fa4b766b1062162b0a8dda6e7a382ff777070c54e15.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/8db63c7a70078f8e64aa75f6fd7b18fe/a4efaf8034f2b28ebe9a72c31abaec67c0db08f1f71a12afba71495658ccb3eb.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/a57e687f7d3370b27bd83a6e4e73d87c/e25b339f49ddf26b65bd03344ba15a0b17b076bdc36d21b0d2ba7eed6c432bdd.jpg",
+      "https://c.dns-shop.kz/thumb/st1/fit/300/300/1f7058a5ed464732d899fe5520ff3470/b51f39012dbfd85ed53ee521777bc5e706f51df08dfeebff95d3601730d2d328.jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=Xiaomi+Mijia+Smart+Safe",
@@ -754,7 +1121,15 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/259161_1.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2023-12-15T12:00:00.000Z"
+    "createdAt": "2023-12-15T12:00:00.000Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/259161_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/259161_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/259161_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/259161_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/259161_5.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/259161_6.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/svetodiodnaya-lampa-smallrig-selection-l10-3242-243080",
@@ -764,7 +1139,13 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/243080_1.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2023-12-03T12:00:00.000Z"
+    "createdAt": "2023-12-03T12:00:00.000Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/243080_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/243080_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/243080_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/243080_4.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/umnaya-kolonka-yandeks-stancziya-midi-chernaya-yndx-00054-black-276072",
@@ -774,7 +1155,19 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_1new.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T17:47:18.153Z"
+    "createdAt": "2026-09-26T17:47:18.153Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_1new.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_tw.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_5.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_6.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_7.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/umnaya_kolonka_yandeks_stancziya_midi_chernaya_yndx_00054_black_276072_8.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/irrigator-kitfort-kt-2912-1-254071",
@@ -784,7 +1177,19 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/254071_1.jpg",
     "siteName": "technodom.kz",
     "category": "appliances",
-    "createdAt": "2026-09-26T17:47:19.020Z"
+    "createdAt": "2026-09-26T17:47:19.020Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/254071_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/254071_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/254071_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/254071_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/254071_5.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/irrigator_kitfort_kt_2912_1_254071_9new.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/irrigator_kitfort_kt_2912_1_254071_2new.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/irrigator_kitfort_kt_2912_1_254071_3new.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/irrigator_kitfort_kt_2912_1_254071_6new.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/irrigator_kitfort_kt_2912_1_254071_8new.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/naushniki-vstavnye-sony-tws-bluetooth-wf-1000xm5be-black-275092",
@@ -794,7 +1199,14 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/naushniki_vstavnye_sony_tws_bluetooth_wf_1000xm5be_black_275092_1.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T17:49:30.152Z"
+    "createdAt": "2026-09-26T17:49:30.152Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/naushniki_vstavnye_sony_tws_bluetooth_wf_1000xm5be_black_275092_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/naushniki_vstavnye_sony_tws_bluetooth_wf_1000xm5be_black_275092_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/naushniki_vstavnye_sony_tws_bluetooth_wf_1000xm5be_black_275092_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/naushniki_vstavnye_sony_tws_bluetooth_wf_1000xm5be_black_275092_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/naushniki_vstavnye_sony_tws_bluetooth_wf_1000xm5be_black_275092_5.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/pristavka-televizionnaya-xiaomi-tv-box-2nd-gen-mdz-28-aa-272895",
@@ -804,7 +1216,11 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/272895_ss.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T17:49:30.975Z"
+    "createdAt": "2026-09-26T17:49:30.975Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/272895_ss.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/pristavka_televizionnaya_xiaomi_tv_box_2nd_gen_mdz_28_aa_272895_1.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/275257",
@@ -814,7 +1230,12 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/wifi_kamera_tp_link_tapo_c225_275257_1.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T17:49:31.898Z"
+    "createdAt": "2026-09-26T17:49:31.898Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/wifi_kamera_tp_link_tapo_c225_275257_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/wifi_kamera_tp_link_tapo_c225_275257_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/wifi_kamera_tp_link_tapo_c225_275257_3.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/vertikalnyj-pylesos-dreame-r20-272284",
@@ -824,7 +1245,19 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/vertikalnyj_pylesos_dreame_r20_272284_1.jpg",
     "siteName": "technodom.kz",
     "category": "appliances",
-    "createdAt": "2026-09-26T17:49:32.677Z"
+    "createdAt": "2026-09-26T17:49:32.677Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/vertikalnyj_pylesos_dreame_r20_272284_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/272284_10_a.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/272284_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/272284_9.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/272284_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/272284_11_a.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/272284_5.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/272284_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/272284_6.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/272284_7.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/robot-pylesos-dreame-x40-ultra-complete-283267",
@@ -834,7 +1267,19 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_1.jpg",
     "siteName": "technodom.kz",
     "category": "appliances",
-    "createdAt": "2026-09-26T17:49:33.644Z"
+    "createdAt": "2026-09-26T17:49:33.644Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/robot_pylesos_dreame_x40_ultra_complete_283267_10a.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/robot_pylesos_dreame_x40_ultra_complete_283267_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/robot_pylesos_dreame_x40_ultra_complete_283267_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_5.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_6.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_7.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_8.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/800/800/robot_pylesos_dreame_x40_ultra_complete_283267_9.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/trimmer-philips-qp-273420-281335",
@@ -844,7 +1289,14 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/281335_1.jpg",
     "siteName": "technodom.kz",
     "category": "appliances",
-    "createdAt": "2026-09-26T17:49:34.601Z"
+    "createdAt": "2026-09-26T17:49:34.601Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/281335_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/281335_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/281335_3.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/281335_4.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/281335_5.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/utyug-braun-si-7149wb-256944",
@@ -854,7 +1306,12 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/256944_1.jpg",
     "siteName": "technodom.kz",
     "category": "appliances",
-    "createdAt": "2026-09-26T17:49:35.422Z"
+    "createdAt": "2026-09-26T17:49:35.422Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/256944_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/256944_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/256944_3.jpg"
+    ]
   },
   {
     "url": "https://www.technodom.kz/p/igrovaya-garnitura-besprovodnaya-sony-ps5-pulse-3d-black-255635",
@@ -864,7 +1321,12 @@
     "imageUrl": "https://api.technodom.kz/f3/api/v1/images/800/800/255635_1.jpg",
     "siteName": "technodom.kz",
     "category": "electronics",
-    "createdAt": "2026-09-26T17:38:23.378Z"
+    "createdAt": "2026-09-26T17:38:23.378Z",
+    "images": [
+      "https://api.technodom.kz/f3/api/v1/images/800/800/255635_1.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/255635_2.jpg",
+      "https://api.technodom.kz/f3/api/v1/images/48/48/255635_3.jpg"
+    ]
   },
   {
     "url": "https://armeks.kz/katalog/skud-i-domofoniya/kontrol-prohoda/shlagbaumy/0000796/",
@@ -874,7 +1336,11 @@
     "imageUrl": "https://armeks.kz/assets/images/products/1400/zamok.jpg",
     "siteName": "armeks.kz",
     "category": "electronics",
-    "createdAt": "2025-01-06T12:00:00.000Z"
+    "createdAt": "2025-01-06T12:00:00.000Z",
+    "images": [
+      "https://armeks.kz/assets/images/products/1400/zamok.jpg",
+      "https://armeks.kz/assets/images/products/1400/medium/zamok.png"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=PlayStation+VR2",
@@ -924,7 +1390,13 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/images_products/158429/kovrik-sea-to-summit-comfort-light-asc-insulated-mat-2-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "tourism",
-    "createdAt": "2026-09-26T18:18:24.057Z"
+    "createdAt": "2026-09-26T18:18:24.057Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/images_products/158429/kovrik-sea-to-summit-comfort-light-asc-insulated-mat-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158429/kovrik-sea-to-summit-comfort-light-asc-insulated-mat-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158429/kovrik-sea-to-summit-comfort-light-asc-insulated-mat-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/images_products/158429/kovrik-sea-to-summit-comfort-light-asc-insulated-mat-3-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=BOSS+backpack",
@@ -944,7 +1416,12 @@
     "imageUrl": "https://img.al-style.kz/68091_1.jpg",
     "siteName": "mi.com.kz",
     "category": "appliances",
-    "createdAt": "2025-02-01T12:00:00.000Z"
+    "createdAt": "2025-02-01T12:00:00.000Z",
+    "images": [
+      "https://img.al-style.kz/68091_1.jpg",
+      "https://img.al-style.kz/68091_2.jpg",
+      "https://img.al-style.kz/68091_3.jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=Logitech+G923+941-000149",
@@ -974,7 +1451,20 @@
     "imageUrl": "images/piquadro-russel.jpg",
     "siteName": "positronica.ru",
     "category": "accessories",
-    "createdAt": "2026-03-30T12:00:00.000Z"
+    "createdAt": "2026-03-30T12:00:00.000Z",
+    "images": [
+      "images/piquadro-russel.jpg",
+      "https://img.positronica.ru/items/2090711_v01_b.webp",
+      "https://img.positronica.ru/items/2090711_v02_b.webp",
+      "https://img.positronica.ru/items/2090711_v03_b.webp",
+      "https://img.positronica.ru/items/2090711_v04_b.webp",
+      "https://img.positronica.ru/items/2090711_v05_b.webp",
+      "https://img.positronica.ru/items/2090711_v06_b.webp",
+      "https://img.positronica.ru/items/2090711_v07_b.webp",
+      "https://img.positronica.ru/items/2090711_v08_b.webp",
+      "https://img.positronica.ru/items/2090711_v09_b.webp",
+      "https://img.positronica.ru/items/2090711_v10_b.webp"
+    ]
   },
   {
     "url": "https://limpopo.kz/odezhda-all/noski/noski-muzhskie-uyn-biotrek-light-s100339-b052",
@@ -994,7 +1484,12 @@
     "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/208094/uyn-noski-muzhskie-biotrek-1-1000x1000.jpg",
     "siteName": "limpopo.kz",
     "category": "socks",
-    "createdAt": "2026-09-26T18:50:21.974Z"
+    "createdAt": "2026-09-26T18:50:21.974Z",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208094/uyn-noski-muzhskie-biotrek-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208094/uyn-noski-muzhskie-biotrek-2-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/208094/uyn-noski-muzhskie-biotrek-3-1000x1000.jpg"
+    ]
   },
   {
     "url": "https://skullshaver.ru/product/skull-shaver-gold-pro-elektrobritva-dlya-golovy-i-litsa",
@@ -1004,7 +1499,20 @@
     "imageUrl": "https://cdn.insales-shop.ru/r/mVNCilMU8jE/rs:fit:1000:0:1/q:100/plain/images/products/1/7296/562314368/Pitbull-GOLD-full-size-logo-5__1_.jpg@jpg",
     "siteName": "skullshaver.ru",
     "category": "appliances",
-    "createdAt": "2026-09-26T18:57:24.469Z"
+    "createdAt": "2026-09-26T18:57:24.469Z",
+    "images": [
+      "https://cdn.insales-shop.ru/r/mVNCilMU8jE/rs:fit:1000:0:1/q:100/plain/images/products/1/7296/562314368/Pitbull-GOLD-full-size-logo-5__1_.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/NaBupaKKEUA/rs:fit:1000:0:1/q:100/plain/images/products/1/1134/1022936174/3_b2983ce7-af29-4a17-986b-354f614d2db3_1800x1800.jpeg@jpeg",
+      "https://cdn.insales-shop.ru/r/HtQLMcZ7OMg/rs:fit:250:0:1/q:100/plain/images/products/1/1134/1022936174/3_b2983ce7-af29-4a17-986b-354f614d2db3_1800x1800.jpeg@jpeg",
+      "https://cdn.insales-shop.ru/r/chbTR1YMkaY/rs:fit:1000:0:1/q:100/plain/images/products/1/7300/562314372/V-Pitbull-Goldjpg-3.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/83mWvF7mwRk/rs:fit:250:0:1/q:100/plain/images/products/1/7300/562314372/V-Pitbull-Goldjpg-3.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/F-_2WPESPFQ/rs:fit:1000:0:1/q:100/plain/images/products/1/7295/562314367/GOLD-ART_3403-1.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/Fnm7KBR21aI/rs:fit:250:0:1/q:100/plain/images/products/1/7295/562314367/GOLD-ART_3403-1.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/ftJQoll3L-E/rs:fit:1000:0:1/q:100/plain/images/products/1/7298/562314370/Pitbull-GOLD-full-size2.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/CmF6C_Pmuxc/rs:fit:250:0:1/q:100/plain/images/products/1/7298/562314370/Pitbull-GOLD-full-size2.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/9tFQ-NGjVl0/rs:fit:1000:0:1/q:100/plain/images/products/1/7299/562314371/Pitbull-GOLD-SILVER-full-size-1__1_.jpg@jpg",
+      "https://cdn.insales-shop.ru/r/9q3ekMIqIQc/rs:fit:250:0:1/q:100/plain/images/products/1/7299/562314371/Pitbull-GOLD-SILVER-full-size-1__1_.jpg@jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=BOSS+sneakers",
@@ -1054,7 +1562,13 @@
     "imageUrl": "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm6/naushniki-WH1000XM6b-01-600x600.webp",
     "siteName": "sonycenter.kz",
     "category": "electronics",
-    "createdAt": "2026-09-27T19:39:12.969Z"
+    "createdAt": "2026-09-27T19:39:12.969Z",
+    "images": [
+      "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm6/naushniki-WH1000XM6b-01-600x600.webp",
+      "https://www.sonycenter.kz/image/cache/catalog/products/new_img/audio/wh1000xm6/naushniki-WH1000XM6b-03-600x600.webp",
+      "https://www.sonycenter.kz/image/cache/catalog/products/new_img/audio/wh1000xm6/naushniki-WH1000XM6b-04-600x600.webp",
+      "https://www.sonycenter.kz/image/cache/catalog/products/new_img/audio/wh1000xm6/naushniki-WH1000XM6b-02-600x600.webp"
+    ]
   },
   {
     "url": "https://www.sonycenter.kz/wh1000xm5b",
@@ -1064,7 +1578,14 @@
     "imageUrl": "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-01-600x600.webp",
     "siteName": "sonycenter.kz",
     "category": "electronics",
-    "createdAt": "2026-09-27T19:39:13.912Z"
+    "createdAt": "2026-09-27T19:39:13.912Z",
+    "images": [
+      "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-01-600x600.webp",
+      "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-03-600x600.webp",
+      "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-04-600x600.webp",
+      "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-05-600x600.webp",
+      "https://www.sonycenter.kz/image/cachewebp/catalog/products/new_img/audio/wh1000xm5/naushniki-sony-wh1000xm5-02-600x600.webp"
+    ]
   },
   {
     "url": "https://www.dns-shop.ru/product/9cf86014d6053332/sport-casy-garmin-fenix-6-sapphire-gps-grey-010-02158-11/",
@@ -1074,7 +1595,19 @@
     "imageUrl": "https://c.dns-shop.ru/thumb/st4/fit/300/300/d7dd9494501dbf1b6064ecfd2b639459/5a81eff9f12f517493c5fc4f919ac6bf3b2f22dc224934579787b625cb95af1f.jpg",
     "siteName": "dns-shop.ru",
     "category": "electronics",
-    "createdAt": "2026-09-28T05:19:56.145Z"
+    "createdAt": "2026-09-28T05:19:56.145Z",
+    "images": [
+      "https://c.dns-shop.ru/thumb/st4/fit/300/300/d7dd9494501dbf1b6064ecfd2b639459/5a81eff9f12f517493c5fc4f919ac6bf3b2f22dc224934579787b625cb95af1f.jpg",
+      "https://c.dns-shop.ru/thumb/st4/fit/120/120/862600364b80ff8e1ebaecc23c35f176/5a81eff9f12f517493c5fc4f919ac6bf3b2f22dc224934579787b625cb95af1f.jpg",
+      "https://c.dns-shop.ru/thumb/st4/fit/300/300/32c9b796e9a0917a7171c57b77eed95c/6d05962f29bfe7d841a49af8d0abe1614cceddae12a2374a4e8fd87ee10345c0.jpg",
+      "https://c.dns-shop.ru/thumb/st1/fit/300/300/cf0d18da24534d44a3c5a0b355f406a8/af308d06430709f56debf3a5c19816b37e6745e811f6c208ebb4ff8a72e3ef75.jpg",
+      "https://c.dns-shop.ru/thumb/st4/fit/300/300/0edd67aefc8efe08c2035a92606da82f/1878c1a1e12247f3311b6551e9e7698cbf7f964730e6382bf7df90e188d619cb.jpg",
+      "https://c.dns-shop.ru/thumb/st1/fit/300/300/69da68938064cab4be72db5aa27a6ddf/bed8a9add66715a4fd1d54b633ed1973844b4a6ddbe5a0a4ed86ffd0dd424c04.jpg",
+      "https://c.dns-shop.ru/thumb/st1/fit/300/300/6dfa6ddb3c801427b5c5303c301332cd/88a63ec85bf76dabf7b3eadfa978d09848bbf6095b83f29e813bd1279c127478.jpg",
+      "https://c.dns-shop.ru/thumb/st1/fit/300/300/192e67bd6d89550af34603e965a1d258/44c9da86a36b05f590a8317df565797278586fae618ceab9c8cca1eae1aa7be3.jpg",
+      "https://c.dns-shop.ru/thumb/st4/fit/300/300/07961688eaabae97c92ec1c3bb681735/07df99ec7136b7871d93f85859021f5c3cff694c1dda69f9dff1903e1b83c5e3.jpg",
+      "https://c.dns-shop.ru/thumb/st1/fit/300/300/2cac025b8a5cf59228b2fb4a826dabe6/e83f2656a4aaa1bd2715f0ea9bdb39d57317ec7a1b8e32ad7835c723f29ce0c1.jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=Sony+PlayStation+5",
@@ -1094,7 +1627,12 @@
     "imageUrl": "https://img.al-style.kz/84372_1.jpg",
     "siteName": "mi.com.kz",
     "category": "electronics",
-    "createdAt": "2026-09-28T09:10:42.854Z"
+    "createdAt": "2026-09-28T09:10:42.854Z",
+    "images": [
+      "https://img.al-style.kz/84372_1.jpg",
+      "https://img.al-style.kz/84372_2.jpg",
+      "https://img.al-style.kz/84372_3.jpg"
+    ]
   },
   {
     "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_165w_power_bank_10000mah_integrated_cable_gl.html",
@@ -1104,7 +1642,12 @@
     "imageUrl": "https://img.al-style.kz/71075_1.jpg",
     "siteName": "mi.com.kz",
     "category": "electronics",
-    "createdAt": "2026-09-28T09:10:44.014Z"
+    "createdAt": "2026-09-28T09:10:44.014Z",
+    "images": [
+      "https://img.al-style.kz/71075_1.jpg",
+      "https://img.al-style.kz/71075_2.jpg",
+      "https://img.al-style.kz/71075_3.jpg"
+    ]
   },
   {
     "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_magnetic_power_bank_10000_with_built_in_stand_black.html",
@@ -1114,7 +1657,12 @@
     "imageUrl": "https://img.al-style.kz/84095_1.jpg",
     "siteName": "mi.com.kz",
     "category": "electronics",
-    "createdAt": "2026-09-28T09:10:45.179Z"
+    "createdAt": "2026-09-28T09:10:45.179Z",
+    "images": [
+      "https://img.al-style.kz/84095_1.jpg",
+      "https://img.al-style.kz/84095_2.jpg",
+      "https://img.al-style.kz/84095_3.jpg"
+    ]
   },
   {
     "url": "https://mi.com.kz/portativnyy_vneshniy_akkumulyator_xiaomi_super_slim_magnetic_power_bank_5000_black.html",
@@ -1124,7 +1672,12 @@
     "imageUrl": "https://img.al-style.kz/81470_1.jpg",
     "siteName": "mi.com.kz",
     "category": "electronics",
-    "createdAt": "2026-09-28T09:10:46.235Z"
+    "createdAt": "2026-09-28T09:10:46.235Z",
+    "images": [
+      "https://img.al-style.kz/81470_1.jpg",
+      "https://img.al-style.kz/81470_2.jpg",
+      "https://img.al-style.kz/81470_3.jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=HP+LaserJet+Pro+400+MFP+M425dw",
@@ -1154,7 +1707,19 @@
     "imageUrl": "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/de1/1500_2000_4912/69132750299.jpg",
     "siteName": "sportmaster.kz",
     "category": "tourism",
-    "createdAt": "2026-09-28T14:00:36.705Z"
+    "createdAt": "2026-09-28T14:00:36.705Z",
+    "images": [
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/de1/1500_2000_4912/69132750299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/8ab/768_1024_7707/69047100299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/88e/768_1024_6071/69047110299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/ff5/768_1024_bd9d/69047120299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/74f/768_1024_6cc1/69047130299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/417/768_1024_43bf/69047140299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/550/768_1024_2d0c/69047150299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/d2a/768_1024_3eb4/69047160299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/831/768_1024_0830/164811860299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/74e/418_557_a628/69298220299.jpg"
+    ]
   },
   {
     "url": "https://sportmaster.kz/ru/product/26219480299/",
@@ -1164,7 +1729,19 @@
     "imageUrl": "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/93a/1500_2000_b5cc/78759190299.jpg",
     "siteName": "sportmaster.kz",
     "category": "tourism",
-    "createdAt": "2026-09-28T14:39:37.082Z"
+    "createdAt": "2026-09-28T14:39:37.082Z",
+    "images": [
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/93a/1500_2000_b5cc/78759190299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/0d7/768_1024_56ee/78759210299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/e98/768_1024_f7fa/78759220299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/b42/768_1024_83e5/78759230299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/cc2/768_1024_72ab/78759240299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/8ec/768_1024_ad31/78759250299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/3ae/768_1024_4e8e/78759260299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/472/768_1024_0007/78759270299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/198/418_557_55ef/118339700299.jpg",
+      "https://cdnkz.sportmaster.com/upload/mdm/media_content/resize/0ec/418_557_1d76/118339630299.jpg"
+    ]
   },
   {
     "url": "https://www.google.com/search?q=American+Tourister+WaveBreaker+Disney+96",
@@ -1184,6 +1761,17 @@
     "imageUrl": "https://ekaterinburg.panchemodan.ru/upload/iblock/6e9/6e959c9a7f7645b4b2e9748109927b2d.jpg",
     "siteName": "panchemodan.ru",
     "category": "accessories",
-    "createdAt": "2023-02-02T12:00:00.000Z"
+    "createdAt": "2023-02-02T12:00:00.000Z",
+    "images": [
+      "https://ekaterinburg.panchemodan.ru/upload/iblock/6e9/6e959c9a7f7645b4b2e9748109927b2d.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/258/25853957befb6a32d4f3415a7ecaf31f.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/85e/85e37a14cea25b178e302602740a6eec.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/93a/93ad6c56635289051d660ef70ad2cc18.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/397/3971a426d71ff173ec4108a41eb0591e.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/50b/50b3a2dfaf7399bc8e7312d920008aec.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/ff9/ff9d0ce8ae891038bcfe81cffe4f2c7c.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/50d/50d690404c6b8087ef8b97777a7ad0bd.jpg",
+      "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/53d/53d85ed8bb71c4ddcc582f35a6500d58.jpg"
+    ]
   }
 ]

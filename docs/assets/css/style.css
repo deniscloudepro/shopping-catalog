@@ -317,3 +317,85 @@ button.card {
   border-color: var(--text);
   color: var(--card);
 }
+
+/* Photo carousel in the item dialog: swipe via scroll-snap, arrows + dots. */
+.gallery {
+  position: relative;
+  background: #ffffff;
+}
+
+.gallery-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  aspect-ratio: 1 / 1;
+  max-height: 60dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-nav--prev {
+  left: 8px;
+}
+
+.gallery-nav--next {
+  right: 8px;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.gallery-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.gallery-dot.is-active {
+  background: rgba(0, 0, 0, 0.65);
+}

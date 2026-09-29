@@ -6,6 +6,8 @@ export interface ScrapedProduct {
   price: number | null;
   currency: string | null;
   imageUrl: string | null;
+  /** All product photos found on the page (first = imageUrl), for the gallery. */
+  images: string[];
   siteName: string | null;
 }
 
@@ -87,7 +89,7 @@ function largestVariant($: cheerio.CheerioAPI, url: string): string {
   return best.url;
 }
 
-const PLACEHOLDER_IMAGE = /vk-image|placeholder|no[-_]?image|default[-_]?(image|og)|logo/i;
+const PLACEHOLDER_IMAGE = /vk-image|placeholder|no[-_]?image|default[-_]?(image|og)|logo|\/include\/s\d\/mi\.jpg/i;
 
 const CURRENCY_SYMBOLS: [RegExp, string][] = [
   [/₸|тг\.?|тенге/i, "KZT"],
@@ -187,6 +189,7 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
   let price: number | null = null;
   let currency: string | null = null;
   let imageUrl: string | null = null;
+  const ldImages: string[] = [];
   let siteName: string | null = null;
 
   $('script[type="application/ld+json"]').each((_, el) => {
@@ -199,6 +202,7 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
       if (!title && typeof product.name === "string") title = product.name;
 
       if (!imageUrl) imageUrl = firstImageUrl(product.image);
+      ldImages.push(...allImageUrls(product.image));
 
       const offers = Array.isArray(product.offers) ? product.offers[0] : product.offers;
       if (offers && typeof offers === "object") {
@@ -301,14 +305,92 @@ export function parseProductHtml(html: string, pageUrl: string): ScrapedProduct 
     }
   }
 
+  const mainImage = absolutize(imageUrl ?? undefined, finalUrl);
   return {
     url: finalUrl,
     title: (title ?? finalUrl).toString().trim(),
     price,
     currency,
-    imageUrl: absolutize(imageUrl ?? undefined, finalUrl),
+    imageUrl: mainImage,
+    images: collectGallery($, title, mainImage, ldImages, finalUrl),
     siteName,
   };
+}
+
+function allImageUrls(image: unknown): string[] {
+  if (typeof image === "string") return [image];
+  if (Array.isArray(image)) return image.flatMap(allImageUrls);
+  if (image && typeof image === "object" && typeof (image as { url?: unknown }).url === "string") {
+    return [(image as { url: string }).url];
+  }
+  return [];
+}
+
+const MAX_GALLERY = 10;
+
+/**
+ * The product's photo gallery: JSON-LD images, the shop's gallery markup and
+ * images captioned with the product name — each upgraded to its largest size
+ * on the page and deduplicated (the same photo in several sizes counts once).
+ */
+function collectGallery(
+  $: cheerio.CheerioAPI,
+  title: string | null,
+  mainImage: string | null,
+  ldImages: string[],
+  pageUrl: string
+): string[] {
+  const name = title?.toLowerCase().trim() ?? "";
+  const srcOf = (el: Parameters<typeof $>[0]) =>
+    $(el).attr("data-largeimg") ?? $(el).attr("data-src") ?? $(el).attr("src");
+
+  const fromMarkup = $(
+    [
+      ".woocommerce-product-gallery__image a",
+      'img[id^="main_image"]',
+      "img.desktop-gallery-main-img",
+      "img.product-images-slider__img",
+      'img[itemprop="image"]',
+    ].join(", ")
+  )
+    .toArray()
+    .map((el) => ($(el).is("a") ? $(el).attr("href") : srcOf(el)));
+
+  const captioned = name
+    ? $("img[alt]")
+        .toArray()
+        .filter((el) => ($(el).attr("alt") ?? "").toLowerCase().includes(name))
+        .map(srcOf)
+    : [];
+
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const raw of [mainImage, ...ldImages, ...fromMarkup, ...captioned]) {
+    if (!raw || raw.startsWith("data:") || PLACEHOLDER_IMAGE.test(raw)) continue;
+    // intertop.kz galleries use /smallest/ thumbnails of the /medium/ photos.
+    const abs = absolutize(largestVariant($, raw), pageUrl)?.replace(
+      /(media\.intertop\.com\/load\/\w+)\/(smallest|small)\//,
+      "$1/medium/"
+    );
+    if (!abs) continue;
+    // Same photo in another size / format: …-80x80.jpg, …/fit/300/300/…, .jpg.webp
+    const key = abs
+      // Compare paths only; image proxies wrap the original URL (…/https://host/path).
+      .replace(/^.*\/https?:\/\/[^/]+/, "")
+      .replace(/^https?:\/\/[^/]+/, "")
+      .replace(/[?#].*$/, "")
+      .replace(/\.webp$/i, "")
+      .replace(/\/images\/\d+\/\d+\//i, "/images/")
+      .replace(/\/resize\/[^/]+\/\d+_\d+_[0-9a-f]+\//i, "/resize/")
+      .replace(/-\d+x\d+[a-z]?(\.[a-z0-9]+)$/i, "$1")
+      .replace(/\/(fit|resize)\/\d+\/\d+\/[0-9a-f]+\//i, "/")
+      .replace(/\/(thumb|smallest|small|medium|large)\//i, "/");
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(abs);
+    if (result.length >= MAX_GALLERY) break;
+  }
+  return result;
 }
 
 function decodeQuotedPrintable(input: string): Buffer {
