@@ -1773,5 +1773,44 @@
       "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/50d/50d690404c6b8087ef8b97777a7ad0bd.jpg",
       "https://img.panchemodan.ru/upload/q_90,o_webp,h_750,w_750/https://www.panchemodan.ru/upload/iblock/53d/53d85ed8bb71c4ddcc582f35a6500d58.jpg"
     ]
+  },
+  {
+    "url": "https://sportidea.kz/catalog/odezhda/kofty_tolstovki_svitera/kofty_svitera_tolstovki_muzhskie/millet_kofta_muzhskaya_fusion_pow__1.html",
+    "title": "Мужская кофта Millet Fusion Power",
+    "price": 69900,
+    "currency": "KZT",
+    "imageUrl": "https://sportidea.kz/upload/iblock/76c/mdzpoubtog4s79drs1rbjmzna9ii9vgg/MIV9022_0247_detail.jpg.jpg",
+    "images": [
+      "https://sportidea.kz/upload/iblock/76c/mdzpoubtog4s79drs1rbjmzna9ii9vgg/MIV9022_0247_detail.jpg.jpg"
+    ],
+    "siteName": "sportidea.kz",
+    "category": "clothing",
+    "createdAt": "2026-09-29T11:59:15.041Z"
+  },
+  {
+    "url": "https://sportidea.kz/catalog/ryukzaki_sumki/germomeshki_nakidki_chekhly/osprey_germo_meshok_ultralight_drysack_20_1.html",
+    "title": "Гермо-мешок Osprey Ultralight DrySack 20",
+    "price": 12900,
+    "currency": "KZT",
+    "imageUrl": "https://sportidea.kz/upload/iblock/85e/kjq5iezrozqk0232siuuqxr92niu9ozi/10004933_detail.jpg.jpg",
+    "images": [
+      "https://sportidea.kz/upload/iblock/85e/kjq5iezrozqk0232siuuqxr92niu9ozi/10004933_detail.jpg.jpg"
+    ],
+    "siteName": "sportidea.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-29T11:59:15.997Z"
+  },
+  {
+    "url": "https://sportidea.kz/catalog/turizm_i_promalp/aksessuary_turizm/sea_to_summit_vkladysh_v_spalnyy_meshok_reactor_sleeping_bag_liner_1.html",
+    "title": "Вкладыш в спальный мешок Sea To Summit Reactor Sleeping Bag Liner",
+    "price": 19900,
+    "currency": "KZT",
+    "imageUrl": "https://sportidea.kz/upload/iblock/05c/qdvl3tolzoyjj00yjncjkmllhnvxt2kk/053202_turizm_promalp.jpg.jpg",
+    "images": [
+      "https://sportidea.kz/upload/iblock/05c/qdvl3tolzoyjj00yjncjkmllhnvxt2kk/053202_turizm_promalp.jpg.jpg"
+    ],
+    "siteName": "sportidea.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-29T11:59:17.051Z"
   }
 ]
