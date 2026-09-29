@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FARU Мальдивы</title>
+<meta name="description" content="FARU — путешествия только на Мальдивы. Подбор острова и курорта под вас: атоллы, рифы, трансферы, сезоны.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: aerial-view hero (an atoll seen from a seaplane), then a north-to-south
+   reading of the archipelago — matcher, atoll chain, seasons, transfers, request. */
+:root {
+  --sand: #f5f8f7;        /* white coral sand, faint aqua bias */
+  --sand-2: #e8f0ee;
+  --ink: #0c2b3a;         /* deep channel (kandu) */
+  --ink-soft: #4b6572;
+  --lagoon: #1fa9a4;      /* shallow lagoon */
+  --lagoon-ink: #0d7f7b;  /* lagoon, text-safe */
+  --shallow: #bfeee6;
+  --ocean: #0a3a55;       /* open ocean beyond the reef */
+  --ocean-2: #06263a;
+  --coral: #e8795d;       /* one warm note: reef coral / sunset */
+  --line: #cfdedb;
+  --card: #ffffff;
+  --on-ocean: #eefaf8;
+  --foam: #bfeee6;        /* lagoon highlight on ocean surfaces, same in both themes */
+  --display: "Cormorant", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gutter: clamp(16px, 4vw, 48px);
+  --maxw: 1180px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sand: #07202d; --sand-2: #0b2a39; --ink: #e6f4f2; --ink-soft: #9fb9c1;
+    --lagoon: #34c3bd; --lagoon-ink: #5fd6cf; --shallow: #124a4f;
+    --ocean: #041a27; --ocean-2: #02121c; --coral: #f08e74;
+    --line: #1c4150; --card: #0c2a38; --on-ocean: #eefaf8; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --sand: #07202d; --sand-2: #0b2a39; --ink: #e6f4f2; --ink-soft: #9fb9c1;
+  --lagoon: #34c3bd; --lagoon-ink: #5fd6cf; --shallow: #124a4f;
+  --ocean: #041a27; --ocean-2: #02121c; --coral: #f08e74;
+  --line: #1c4150; --card: #0c2a38; --on-ocean: #eefaf8; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--sand); color: var(--ink);
+  font: 400 16px/1.6 var(--body); -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--lagoon); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: clamp(2.2rem, 4.6vw, 3.5rem); line-height: 1.02; }
+h3 { font-size: 1.6rem; line-height: 1.1; }
+p { margin: 0; }
+.eyebrow {
+  font: 500 0.72rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--lagoon-ink); display: inline-flex; gap: 0.6em; align-items: center;
+}
+.lede { color: var(--ink-soft); max-width: 58ch; font-size: 1.05rem; }
+.sec { padding-block: clamp(64px, 9vw, 120px); }
+.sec-head { display: grid; gap: 16px; margin-bottom: clamp(32px, 5vw, 56px); }
+
+/* ---------- header ---------- */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--ocean-2) 82%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  color: var(--on-ocean);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; }
+.logo { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+.logo b { font: 600 1.55rem/1 var(--display); letter-spacing: 0.22em; }
+.logo small { font: 400 0.68rem/1 var(--mono); letter-spacing: 0.12em; opacity: 0.7; text-transform: uppercase; }
+.nav { display: flex; gap: clamp(12px, 2.4vw, 28px); font-size: 0.9rem; }
+.nav a { text-decoration: none; opacity: 0.82; }
+.nav a:hover { opacity: 1; }
+.nav .cta-mini { opacity: 1; color: var(--foam); }
+@media (max-width: 760px) { .nav a:not(.cta-mini) { display: none; } }
+
+/* ---------- hero ---------- */
+.hero { position: relative; background: var(--ocean); color: var(--on-ocean); overflow: hidden; isolation: isolate; }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; display: block; }
+.hero .wrap {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  min-height: min(680px, 88svh); align-items: end; padding-block: clamp(56px, 8vw, 96px);
+}
+.hero-copy { display: grid; gap: 24px; max-width: 36rem; }
+.hero .eyebrow { color: var(--foam); }
+.hero h1 { font-size: clamp(3rem, 7.4vw, 6rem); line-height: 0.92; font-weight: 400; }
+.hero h1 em { font-style: italic; color: var(--foam); }
+.hero p.lede { color: color-mix(in srgb, var(--on-ocean) 82%, transparent); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px;
+  font: 500 0.95rem/1 var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-solid { background: var(--foam); color: #062a2e; }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ocean) 40%, transparent); color: var(--on-ocean); background: transparent; }
+.coords {
+  position: absolute; right: var(--gutter); bottom: 20px; font: 400 0.7rem/1.5 var(--mono);
+  letter-spacing: 0.08em; text-align: right; opacity: 0.7;
+}
+@media (max-width: 820px) {
+  .hero .wrap { grid-template-columns: 1fr; min-height: 0; padding-top: 300px; }
+  .coords { display: none; }
+}
+
+/* ---------- facts band ---------- */
+.facts { background: var(--ocean-2); color: var(--on-ocean); }
+.facts .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding-block: 36px; }
+.fact b { display: block; font: 400 clamp(2rem, 4vw, 2.8rem)/1 var(--display); font-variant-numeric: lining-nums tabular-nums; }
+.fact span { font-size: 0.86rem; opacity: 0.75; }
+@media (max-width: 720px) { .facts .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- principles ---------- */
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); }
+.principle { display: grid; gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 20px; }
+.principle .term { font: 400 0.75rem/1 var(--mono); color: var(--lagoon-ink); letter-spacing: 0.08em; }
+.principle p { color: var(--ink-soft); }
+@media (max-width: 820px) { .principles { grid-template-columns: 1fr; } }
+
+/* ---------- matcher ---------- */
+.matcher { background: var(--sand-2); }
+.m-grid { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.controls { display: grid; gap: 26px; position: sticky; top: 84px; }
+@media (max-width: 900px) { .m-grid { grid-template-columns: 1fr; } .controls { position: static; } }
+.ctl { display: grid; gap: 10px; border: 0; margin: 0; padding: 0; min-width: 0; }
+.ctl legend { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); padding: 0; margin-bottom: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip input { position: absolute; opacity: 0; pointer-events: none; }
+.chip span {
+  display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--card); font-size: 0.88rem; cursor: pointer; user-select: none;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.chip input:checked + span { background: var(--ink); color: var(--sand); border-color: var(--ink); }
+.chip input:focus-visible + span { outline: 2px solid var(--lagoon); outline-offset: 2px; }
+.m-note { font-size: 0.8rem; color: var(--ink-soft); }
+
+.results-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.results-head p { color: var(--ink-soft); font-size: 0.9rem; }
+.results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .results { grid-template-columns: 1fr; } }
+.resort {
+  background: var(--card); border-radius: 18px; overflow: hidden; display: grid;
+  grid-template-rows: auto 1fr; border: 1px solid var(--line);
+}
+.resort .swatch { height: 92px; position: relative; }
+.resort .swatch canvas { width: 100%; height: 100%; display: block; }
+.resort .rank {
+  position: absolute; left: 14px; top: 12px; font: 500 0.7rem/1 var(--mono); letter-spacing: 0.1em;
+  color: #eefaf8; background: rgba(6, 38, 58, .55); padding: 6px 9px; border-radius: 999px;
+}
+.resort .price { position: absolute; right: 14px; top: 12px; font: 500 0.78rem/1 var(--mono); color: #eefaf8; background: rgba(6,38,58,.55); padding: 6px 9px; border-radius: 999px; }
+.resort-body { padding: 18px 20px 20px; display: grid; gap: 12px; align-content: start; }
+.resort-meta { font: 400 0.74rem/1.4 var(--mono); color: var(--ink-soft); letter-spacing: 0.02em; }
+.resort-body p { font-size: 0.92rem; color: var(--ink-soft); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.74rem; padding: 4px 9px; border-radius: 6px; background: var(--sand-2); color: var(--ink); }
+.tag.hit { background: color-mix(in srgb, var(--lagoon) 18%, var(--card)); color: var(--lagoon-ink); font-weight: 500; }
+.reef { display: inline-flex; gap: 3px; vertical-align: middle; margin-left: 4px; }
+.reef i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); display: inline-block; }
+.reef i.on { background: var(--lagoon); }
+.more { margin-top: 20px; }
+.btn-line { border: 1px solid var(--ink); color: var(--ink); background: transparent; }
+.empty { padding: 28px; border: 1px dashed var(--line); border-radius: 18px; color: var(--ink-soft); grid-column: 1 / -1; }
+
+/* ---------- atolls ---------- */
+.a-grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); align-items: start; }
+@media (max-width: 820px) { .a-grid { grid-template-columns: 1fr; } }
+.chain-box { position: sticky; top: 84px; }
+@media (max-width: 820px) { .chain-box { position: static; overflow-x: auto; } }
+.chain { width: 100%; max-width: 300px; height: auto; display: block; margin-inline: auto; }
+@media (max-width: 820px) { .chain { max-width: 240px; } }
+.chain .atoll { cursor: pointer; }
+.chain .atoll ellipse.ring { fill: color-mix(in srgb, var(--shallow) 55%, transparent); stroke: var(--lagoon); stroke-width: 2.2; stroke-dasharray: 3 3.5; transition: fill .2s ease; }
+.chain .atoll:hover ellipse.ring, .chain .atoll:focus-visible ellipse.ring { fill: var(--shallow); }
+.chain .atoll.on ellipse.ring { fill: var(--lagoon); stroke: var(--ink); stroke-dasharray: none; }
+.chain text { font: 400 10px var(--mono); fill: var(--ink-soft); }
+.chain .atoll.on text { fill: var(--ink); font-weight: 500; }
+.chain .equator { stroke: var(--coral); stroke-dasharray: 2 4; stroke-width: 1; }
+.chain .equator-t { fill: var(--coral); }
+.chain .male { fill: var(--coral); }
+.atoll-card { display: grid; gap: 22px; }
+.atoll-card .dv { font: 400 0.8rem/1 var(--mono); color: var(--lagoon-ink); letter-spacing: 0.06em; }
+.atoll-card h3 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 400; }
+.atoll-card .lede { font-size: 1.1rem; color: var(--ink); }
+.kv { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-block: 1px solid var(--line); }
+.kv div { padding: 16px 16px 16px 0; display: grid; gap: 4px; }
+.kv div + div { padding-left: 16px; border-left: 1px solid var(--line); }
+.kv dt { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+.kv dd { margin: 0; font-size: 0.95rem; }
+@media (max-width: 560px) { .kv { grid-template-columns: 1fr; } .kv div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
+.atoll-card ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; color: var(--ink-soft); }
+.atoll-resorts { display: flex; flex-wrap: wrap; gap: 8px; }
+.atoll-resorts button { font: 400 0.85rem var(--body); border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 7px 12px; border-radius: 999px; cursor: pointer; }
+.atoll-resorts button:hover { border-color: var(--lagoon); }
+
+/* ---------- seasons ---------- */
+.seasons { background: var(--ocean); color: var(--on-ocean); }
+.seasons .eyebrow { color: var(--foam); }
+.seasons .lede { color: color-mix(in srgb, var(--on-ocean) 78%, transparent); }
+.monsoons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-bottom: 40px; }
+.monsoon { display: grid; gap: 8px; border-top: 1px solid color-mix(in srgb, var(--on-ocean) 25%, transparent); padding-top: 18px; }
+.monsoon b { font: 400 1.9rem/1 var(--display); font-style: italic; }
+.monsoon span { font: 400 0.75rem/1 var(--mono); letter-spacing: 0.08em; color: var(--foam); }
+.monsoon p { color: color-mix(in srgb, var(--on-ocean) 78%, transparent); font-size: 0.95rem; }
+@media (max-width: 720px) { .monsoons { grid-template-columns: 1fr; } }
+.cal-scroll { overflow-x: auto; }
+.cal { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 3px; font-variant-numeric: tabular-nums; }
+.cal th { font: 400 0.7rem/1 var(--mono); letter-spacing: 0.06em; color: color-mix(in srgb, var(--on-ocean) 70%, transparent); padding: 6px 0; text-align: center; font-weight: 400; }
+.cal th.row { text-align: left; font: 400 0.86rem/1.2 var(--body); color: var(--on-ocean); padding-right: 12px; white-space: nowrap; }
+.cal td { height: 26px; border-radius: 5px; background: rgba(255,255,255,.06); }
+.cal td.l1 { background: color-mix(in srgb, #7fe0d6 35%, transparent); }
+.cal td.l2 { background: color-mix(in srgb, #7fe0d6 70%, transparent); }
+.cal td.l3 { background: #9ff0e6; }
+.cal td.c1 { background: color-mix(in srgb, #f08e74 45%, transparent); }
+.cal td.c2 { background: #f08e74; }
+.cal-legend { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 16px; font-size: 0.8rem; color: color-mix(in srgb, var(--on-ocean) 75%, transparent); }
+.cal-legend i { display: inline-block; width: 14px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+
+/* ---------- transfers ---------- */
+.transfers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 860px) { .transfers { grid-template-columns: 1fr; } }
+.tr { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: grid; gap: 14px; align-content: start; }
+.tr svg { width: 44px; height: 44px; color: var(--lagoon-ink); }
+.tr .time { font: 500 0.8rem/1 var(--mono); color: var(--lagoon-ink); letter-spacing: 0.04em; }
+.tr p { color: var(--ink-soft); font-size: 0.93rem; }
+.tr .warn { font-size: 0.85rem; color: var(--ink); border-left: 2px solid var(--coral); padding-left: 10px; }
+
+/* ---------- process ---------- */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); counter-reset: s; }
+@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+.step { display: grid; gap: 10px; align-content: start; }
+.step::before { counter-increment: s; content: counter(s); font: 400 3rem/1 var(--display); font-style: italic; color: var(--lagoon); }
+.step p { color: var(--ink-soft); font-size: 0.93rem; }
+
+/* ---------- request ---------- */
+.request { background: var(--sand-2); }
+.r-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+@media (max-width: 860px) { .r-grid { grid-template-columns: 1fr; } }
+form.req { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: clamp(20px, 3vw, 32px); }
+@media (max-width: 560px) { form.req { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field.wide { grid-column: 1 / -1; }
+.field label { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+.field input, .field select, .field textarea {
+  font: 400 1rem/1.4 var(--body); color: var(--ink); background: var(--sand); border: 1px solid var(--line);
+  border-radius: 10px; padding: 11px 12px; width: 100%;
+}
+.field textarea { min-height: 88px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--lagoon); outline-offset: 0; border-color: transparent; }
+.req .btn { justify-self: start; background: var(--ink); color: var(--sand); }
+.out { grid-column: 1 / -1; display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 16px; }
+.out pre { margin: 0; white-space: pre-wrap; font: 400 0.85rem/1.5 var(--mono); background: var(--sand); padding: 14px; border-radius: 10px; }
+.out .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.contacts { display: grid; gap: 14px; margin-top: 28px; }
+.contacts div { display: grid; gap: 2px; }
+.contacts dt { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+.contacts dd { margin: 0; font-size: 1.05rem; user-select: all; }
+
+/* ---------- footer ---------- */
+footer { background: var(--ocean-2); color: var(--on-ocean); }
+footer .wrap { padding-block: 48px; display: grid; gap: 32px; }
+.gloss { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 760px) { .gloss { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gloss b { display: block; font: 400 1.35rem/1.1 var(--display); font-style: italic; color: var(--foam); }
+.gloss span { font-size: 0.82rem; opacity: 0.75; }
+.foot-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; opacity: 0.65; border-top: 1px solid rgba(255,255,255,.12); padding-top: 20px; }
+
+.reveal { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+.reveal.d2 { animation-delay: .12s; } .reveal.d3 { animation-delay: .24s; } .reveal.d4 { animation-delay: .36s; }
+@keyframes rise { from { transform: translateY(14px); opacity: .001; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .reveal { animation: none; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="FARU — на главную"><b>FARU</b><small>только Мальдивы</small></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#match">Подбор</a>
+      <a href="#atolls">Атоллы</a>
+      <a href="#seasons">Сезоны</a>
+      <a href="#transfer">Трансфер</a>
+      <a class="cta-mini" href="#request">Оставить заявку</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="atoll" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow reveal">Фару — «риф» на дивехи</span>
+        <h1 id="hero-title" class="reveal d2">Мальдивы — это 1 192 острова. <em>Ваш</em> — один.</h1>
+        <p class="lede reveal d3">Мы занимаемся только Мальдивами. Знаем, где домашний риф начинается у самой виллы, куда гидросамолёт не летит после заката и в каком месяце к атоллу Баа приходят манты. Подберём остров под вас, а не под каталог.</p>
+        <div class="btns reveal d4">
+          <a class="btn btn-solid" href="#match">Подобрать остров</a>
+          <a class="btn btn-ghost" href="#atolls">Карта атоллов</a>
+        </div>
+      </div>
+    </div>
+    <div class="coords" aria-hidden="true">4°10′N 73°30′E<br>Велана · MLE</div>
+  </section>
+
+  <section class="facts" aria-label="Мальдивы в цифрах">
+    <div class="wrap">
+      <div class="fact"><b>26</b><span>природных атоллов с севера на юг</span></div>
+      <div class="fact"><b>1 192</b><span>коралловых острова, обитаемы около 200</span></div>
+      <div class="fact"><b>~180</b><span>курортов, и почти каждый — на своём острове</span></div>
+      <div class="fact"><b>1,5 м</b><span>средняя высота суши над океаном</span></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Почему только Мальдивы</span>
+        <h2 id="why-title">Здесь отель выбирают вместе с островом</h2>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <span class="term">один остров · один курорт</span>
+          <h3>Остров — это весь ваш отпуск</h3>
+          <p>С курорта никуда не выйдешь пешком. Размер острова, пляж, рестораны и соседи по вилле определяют каждый день поездки, поэтому мы знаем курорты изнутри, а не по буклетам.</p>
+        </div>
+        <div class="principle">
+          <span class="term">faru · домашний риф</span>
+          <h3>Риф решает больше, чем звёзды</h3>
+          <p>У одних курортов риф в двадцати метрах от пляжа, у других до него везут на лодке. Для снорклинга это главная разница, и её редко пишут в описании отеля.</p>
+        </div>
+        <div class="principle">
+          <span class="term">катер · гидросамолёт · рейс</span>
+          <h3>Трансфер — часть маршрута</h3>
+          <p>Гидросамолёты летают только днём. Вечерний прилёт может означать ночь в Мале. Мы строим перелёт так, чтобы вы попали на остров в день прилёта.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec matcher" id="match" aria-labelledby="match-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Подбор курорта</span>
+        <h2 id="match-title">Расскажите, какой отдых вы хотите</h2>
+        <p class="lede">Выберите, с кем едете и что для вас важно. Курорты перестроятся по совпадению. Это быстрая прикидка: окончательный подбор мы делаем в разговоре.</p>
+      </div>
+      <div class="m-grid">
+        <form class="controls" id="mform" aria-label="Параметры подбора">
+          <fieldset class="ctl">
+            <legend>С кем едете</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="who" id="who-couple" value="couple" checked><span>Вдвоём</span></label>
+              <label class="chip"><input type="radio" name="who" id="who-honey" value="honeymoon"><span>Медовый месяц</span></label>
+              <label class="chip"><input type="radio" name="who" id="who-family" value="family"><span>С детьми</span></label>
+              <label class="chip"><input type="radio" name="who" id="who-friends" value="friends"><span>С друзьями</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="ctl">
+            <legend>Что важно</legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="want" id="want-reef" value="reef" checked><span>Домашний риф</span></label>
+              <label class="chip"><input type="checkbox" name="want" id="want-water" value="overwater"><span>Вилла на воде</span></label>
+              <label class="chip"><input type="checkbox" name="want" id="want-quiet" value="privacy"><span>Тишина</span></label>
+              <label class="chip"><input type="checkbox" name="want" id="want-ai" value="allin"><span>Всё включено</span></label>
+              <label class="chip"><input type="checkbox" name="want" id="want-dive" value="diving"><span>Дайвинг</span></label>
+              <label class="chip"><input type="checkbox" name="want" id="want-surf" value="surf"><span>Серфинг</span></label>
+              <label class="chip"><input type="checkbox" name="want" id="want-kids" value="kids"><span>Детский клуб</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="ctl">
+            <legend>Трансфер из аэропорта</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="tr" id="tr-any" value="any" checked><span>Неважно</span></label>
+              <label class="chip"><input type="radio" name="tr" id="tr-boat" value="boat"><span>Только катер</span></label>
+              <label class="chip"><input type="radio" name="tr" id="tr-noflight" value="noflight"><span>Без внутреннего рейса</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="ctl">
+            <legend>Бюджет за виллу в ночь</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="budget" id="b-2" value="2"><span>до $800</span></label>
+              <label class="chip"><input type="radio" name="budget" id="b-3" value="3" checked><span>до $1 500</span></label>
+              <label class="chip"><input type="radio" name="budget" id="b-4" value="4"><span>без ограничений</span></label>
+            </div>
+            <p class="m-note">Ориентир для высокого сезона. Цены сильно зависят от дат и типа виллы.</p>
+          </fieldset>
+        </form>
+        <div>
+          <div class="results-head">
+            <h3 id="res-title">Подходят лучше всего</h3>
+            <p id="res-count" aria-live="polite"></p>
+          </div>
+          <div class="results" id="results"></div>
+          <div class="more"><button class="btn btn-line" id="more-btn" type="button">Показать все</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="atolls" aria-labelledby="atolls-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Атоллы · с севера на юг</span>
+        <h2 id="atolls-title">Каждый атолл — со своим характером</h2>
+        <p class="lede">Мальдивы вытянуты цепочкой почти на 900 км и пересекают экватор. Нажмите на атолл, чтобы узнать, чем он хорош и как туда добраться.</p>
+      </div>
+      <div class="a-grid">
+        <div class="chain-box"><svg class="chain" id="chain" viewBox="0 0 300 820" role="group" aria-label="Схема атоллов"></svg></div>
+        <article class="atoll-card" id="atoll-card" aria-live="polite"></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec seasons" id="seasons" aria-labelledby="seasons-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Когда ехать</span>
+        <h2 id="seasons-title">Два муссона вместо четырёх сезонов</h2>
+        <p class="lede">Температура круглый год около +30 °C, вода +28 °C. Меняются ветер, дожди, цены и то, кого вы встретите под водой.</p>
+      </div>
+      <div class="monsoons">
+        <div class="monsoon"><span>ИРУВАЙ · декабрь – апрель</span><b>Северо-восточный муссон</b><p>Сухо и солнечно, спокойное море, лучшая видимость под водой. Самые высокие цены, особенно на Новый год.</p></div>
+        <div class="monsoon"><span>ХУЛХАНГУ · май – ноябрь</span><b>Юго-западный муссон</b><p>Короткие тропические ливни и ветер, но много солнечных дней. Цены ниже, время серфинга и сезон мант в заливе Ханифару.</p></div>
+      </div>
+      <div class="cal-scroll">
+        <table class="cal" id="cal" aria-label="Календарь сезонов"></table>
+      </div>
+      <div class="cal-legend">
+        <span><i style="background:#9ff0e6"></i>лучшее время</span>
+        <span><i style="background:color-mix(in srgb,#7fe0d6 70%,transparent)"></i>хорошо</span>
+        <span><i style="background:color-mix(in srgb,#7fe0d6 35%,transparent)"></i>возможно</span>
+        <span><i style="background:#f08e74"></i>пик цен</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="transfer" aria-labelledby="transfer-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Трансфер</span>
+        <h2 id="transfer-title">Как добраться до острова</h2>
+        <p class="lede">Все международные рейсы прилетают в аэропорт Велана у Мале. Дальше у каждого курорта свой способ доставки, и от него зависит, как пройдёт первый день.</p>
+      </div>
+      <div class="transfers">
+        <div class="tr">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 30h30l6-8H14"/><path d="M4 36c4 3 8 3 12 0s8-3 12 0 8 3 12 0 6-2 6-2"/><path d="M18 22l4-8h8"/></svg>
+          <h3>Скоростной катер</h3>
+          <span class="time">15–60 минут · круглосуточно</span>
+          <p>Для атоллов Северный и Южный Мале. Можно прилететь поздно вечером и уже ночью быть на острове. Лучший вариант для короткой поездки и семей с малышами.</p>
+        </div>
+        <div class="tr">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 22h32c3 0 5 1.5 5 3s-2 3-5 3H14l-6-6z"/><path d="M20 22l-4-9h5l8 9"/><path d="M20 28l-3 6h5l5-6"/><path d="M12 38h8M26 38h8"/><path d="M14 34v4M32 34v4"/></svg>
+          <h3>Гидросамолёт</h3>
+          <span class="time">20–60 минут · только днём</span>
+          <p>Для дальних атоллов: Ари, Баа, Раа, Нуну, Лавиани, Даалу. Сам перелёт — одно из главных впечатлений поездки: атоллы сверху выглядят как на открытках.</p>
+          <p class="warn">Не летает после заката. Если ваш рейс приходит вечером, первая ночь пройдёт в отеле у аэропорта. Багаж обычно до 20 кг + 5 кг ручной клади.</p>
+        </div>
+        <div class="tr">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 26l40-10-4 6-12 4 4 12-4 1-8-10-10 3-3-3z"/><path d="M4 40h40"/></svg>
+          <h3>Внутренний рейс + катер</h3>
+          <span class="time">40–75 минут полёта</span>
+          <p>Для южных атоллов: Лааму, Гаафу, Адду. Летает и в тёмное время суток, а на месте ждёт короткий трансфер на катере. Здесь меньше туристов и дикие рифы.</p>
+          <p class="warn">Стыковку с международным рейсом лучше закладывать с запасом в 3 часа.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="how-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Как мы работаем</span>
+        <h2 id="how-title">От разговора до виллы на воде</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Разговор</h3><p>Пятнадцать минут по телефону или в мессенджере: даты, с кем едете, что любите, какой бюджет.</p></div>
+        <div class="step"><h3>Подборка</h3><p>Два-три острова с честными плюсами и минусами: какой риф, сколько лететь, где шумнее.</p></div>
+        <div class="step"><h3>Бронирование</h3><p>Вилла, питание, перелёт и трансфер одним пакетом. Виза для большинства туристов не нужна: штамп на 30 дней ставят по прилёте.</p></div>
+        <div class="step"><h3>На связи</h3><p>Во время поездки мы в мессенджере: поменять виллу, заказать ужин на песчаной косе, помочь с вылетом.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec request" id="request" aria-labelledby="req-title">
+    <div class="wrap r-grid">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow">Заявка</span>
+        <h2 id="req-title">Найдём ваш остров</h2>
+        <p class="lede">Заполните несколько полей, и мы пришлём подборку курортов с ценами на ваши даты. Обычно отвечаем в течение дня.</p>
+        <dl class="contacts">
+          <div><dt>WhatsApp · Telegram</dt><dd id="c-phone">+7 700 000 00 00</dd></div>
+          <div><dt>Почта</dt><dd id="c-mail">hello@faru.travel</dd></div>
+        </dl>
+      </div>
+      <form class="req" id="req" novalidate>
+        <div class="field"><label for="f-name">Как к вам обращаться</label><input id="f-name" name="name" autocomplete="name" required placeholder="Анна"></div>
+        <div class="field"><label for="f-contact">Телефон или Telegram</label><input id="f-contact" name="contact" required placeholder="+7 … или @username"></div>
+        <div class="field"><label for="f-dates">Даты или месяц</label><input id="f-dates" name="dates" placeholder="Например, конец февраля"></div>
+        <div class="field"><label for="f-nights">Ночей</label><input id="f-nights" name="nights" type="number" min="3" max="30" value="9"></div>
+        <div class="field"><label for="f-guests">Кто едет</label><input id="f-guests" name="guests" placeholder="2 взрослых, ребёнок 5 лет"></div>
+        <div class="field"><label for="f-budget">Бюджет на поездку</label>
+          <select id="f-budget" name="budget">
+            <option>Пока не знаю</option><option>до $5 000</option><option>$5 000 – 10 000</option><option>$10 000 – 20 000</option><option>от $20 000</option>
+          </select></div>
+        <div class="field wide"><label for="f-wish">Пожелания</label><textarea id="f-wish" name="wish" placeholder="Хотим виллу на воде, хороший риф и чтобы без детей вокруг"></textarea></div>
+        <button class="btn" type="submit">Собрать заявку</button>
+        <div class="out" id="out" hidden>
+          <p>Заявка готова. Отправьте её нам в мессенджер одним сообщением:</p>
+          <pre id="out-text"></pre>
+          <div class="row">
+            <button class="btn btn-line" type="button" id="copy-btn">Скопировать текст</button>
+            <a class="btn btn-line" id="wa-link" href="#" target="_blank" rel="noopener">Открыть WhatsApp</a>
+            <span id="copy-ok" class="m-note" aria-live="polite"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--foam)">Словарь острова</span>
+    </div>
+    <div class="gloss">
+      <div><b>faru</b><span>риф, кольцо атолла</span></div>
+      <div><b>kandu</b><span>глубокий канал между рифами, где ходят манты и акулы</span></div>
+      <div><b>thila</b><span>подводная вершина, любимое место дайверов</span></div>
+      <div><b>finolhu</b><span>песчаная коса без пальм</span></div>
+      <div><b>dhoni</b><span>традиционная мальдивская лодка</span></div>
+    </div>
+    <div class="foot-row"><span>FARU · путешествия только на Мальдивы</span><span>Сведения о курортах — ориентир, актуальные условия уточняйте при бронировании</span></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- contacts: fill in real ones ---------- */
+const CONTACT = { phoneLabel: "+7 700 000 00 00", whatsapp: "", email: "hello@faru.travel" };
+
+/* ---------- data ---------- */
+// reef: 1 — слабый/далеко, 2 — хороший, 3 — отличный у самого пляжа
+// transfer: boat | seaplane | flight ; price: 1 ($) .. 4 ($$$$)
+const RESORTS = [
+  { name: "Baros Maldives", atoll: "nmale", transfer: "boat", min: 25, price: 3, reef: 3,
+    kids: false, adults: false, overwater: true, allin: false, privacy: true, diving: true, surf: false, romance: true,
+    note: "Небольшой остров-классика в 25 минутах от аэропорта. Риф опоясывает весь остров, лагуна прозрачная. Детей принимают с 8 лет." },
+  { name: "Gili Lankanfushi", atoll: "nmale", transfer: "boat", min: 20, price: 4, reef: 2,
+    kids: true, adults: false, overwater: true, allin: false, privacy: true, diving: false, surf: false, romance: true,
+    note: "Все виллы над водой, философия «no news, no shoes». Отдельно стоящие резиденции Crusoe, до которых добираются на лодке." },
+  { name: "Kurumba Maldives", atoll: "nmale", transfer: "boat", min: 10, price: 2, reef: 1,
+    kids: true, adults: false, overwater: false, allin: false, privacy: false, diving: true, surf: false, romance: false,
+    note: "Первый курорт Мальдив, открыт в 1972 году. Десять минут от аэропорта, много ресторанов и детский клуб." },
+  { name: "Bandos Maldives", atoll: "nmale", transfer: "boat", min: 15, price: 2, reef: 2,
+    kids: true, adults: false, overwater: true, allin: true, privacy: false, diving: true, surf: false, romance: false,
+    note: "Большой живой остров с дайв-центром и детским клубом. Хороший риф с черепахами, демократичные цены." },
+  { name: "Cocoa Island by COMO", atoll: "smale", transfer: "boat", min: 40, price: 4, reef: 2,
+    kids: false, adults: false, overwater: true, allin: false, privacy: true, diving: true, surf: false, romance: true,
+    note: "Виллы над водой в форме лодок-дони, узкий остров-коса. Камерно и очень тихо." },
+  { name: "Soneva Jani", atoll: "noonu", transfer: "seaplane", min: 45, price: 4, reef: 1,
+    kids: true, adults: false, overwater: true, allin: false, privacy: true, diving: false, surf: false, romance: true,
+    note: "Огромная лагуна, виллы на воде с горками в океан и раздвижной крышей над спальней. Открытая обсерватория и кинотеатр под звёздами." },
+  { name: "Sun Siyam Iru Fushi", atoll: "noonu", transfer: "seaplane", min: 45, price: 3, reef: 2,
+    kids: true, adults: false, overwater: true, allin: true, privacy: false, diving: true, surf: false, romance: false,
+    note: "Большой зелёный остров, много категорий вилл и ресторанов, сильный детский клуб. Есть пакеты «всё включено»." },
+  { name: "JOALI Maldives", atoll: "raa", transfer: "seaplane", min: 45, price: 4, reef: 2,
+    kids: true, adults: false, overwater: true, allin: false, privacy: true, diving: false, surf: false, romance: true,
+    note: "Курорт-галерея: искусство, дизайн и дворецкие. Мягкий песок и спокойная лагуна." },
+  { name: "Amilla Maldives", atoll: "baa", transfer: "seaplane", min: 30, price: 3, reef: 2,
+    kids: true, adults: false, overwater: true, allin: false, privacy: false, diving: true, surf: false, romance: false,
+    note: "Рядом с заливом Ханифару с мантами. Виллы-домики на деревьях, отличный семейный клуб." },
+  { name: "Hurawalhi Island Resort", atoll: "lhaviyani", transfer: "seaplane", min: 40, price: 3, reef: 2,
+    kids: false, adults: true, overwater: true, allin: true, privacy: true, diving: true, surf: false, romance: true,
+    note: "Только для взрослых. Ресторан 5.8 — один из самых больших полностью стеклянных подводных ресторанов в мире." },
+  { name: "Kandolhu Maldives", atoll: "nari", transfer: "seaplane", min: 35, price: 3, reef: 3,
+    kids: false, adults: false, overwater: true, allin: true, privacy: true, diving: true, surf: false, romance: true,
+    note: "Крошечный остров примерно на 30 вилл. Домашний риф в нескольких метрах от пляжа, пять ресторанов на пару десятков гостей." },
+  { name: "Vilamendhoo Island Resort", atoll: "sari", transfer: "seaplane", min: 25, price: 2, reef: 3,
+    kids: true, adults: false, overwater: true, allin: true, privacy: false, diving: true, surf: false, romance: false,
+    note: "Один из лучших домашних рифов за свои деньги. Рядом зона китовых акул Южного Ари, популярное «всё включено»." },
+  { name: "Conrad Maldives Rangali Island", atoll: "sari", transfer: "seaplane", min: 30, price: 4, reef: 2,
+    kids: true, adults: false, overwater: true, allin: false, privacy: false, diving: true, surf: false, romance: true,
+    note: "Два острова, соединённые мостом, и подводный ресторан Ithaa. Рядом китовые акулы круглый год." },
+  { name: "Angsana Velavaru", atoll: "dhaalu", transfer: "seaplane", min: 40, price: 3, reef: 2,
+    kids: true, adults: false, overwater: true, allin: true, privacy: true, diving: true, surf: false, romance: true,
+    note: "Отдельная группа вилл InOcean посреди лагуны. Спокойная атмосфера, пакеты «всё включено»." },
+  { name: "Six Senses Laamu", atoll: "laamu", transfer: "flight", min: 60, price: 4, reef: 2,
+    kids: true, adults: false, overwater: true, allin: false, privacy: true, diving: true, surf: true, romance: true,
+    note: "Единственный курорт атолла. Серф-брейк Yin Yang рядом, морская биология и эко-программы, детский клуб." },
+  { name: "Canareef Resort", atoll: "addu", transfer: "flight", min: 85, price: 2, reef: 2,
+    kids: true, adults: false, overwater: true, allin: true, privacy: false, diving: true, surf: false, romance: false,
+    note: "Южнее экватора, недорого. Рядом затонувшее судно British Loyalty и точки с мантами. Хорош для дайверов." }
+];
+
+const ATOLLS = [
+  { id: "haa", name: "Хаа Алифу", dv: "Haa Alifu · Thiladhunmathi Uthuruburi", lat: 6.9, lon: 73.0, rx: 20, ry: 34,
+    lede: "Самый север страны. Мало курортов, почти нет лодок на горизонте, ощущение края света.",
+    getting: "Гидросамолёт ~70 мин или рейс в Ханимаду", best: "Январь – апрель", mood: "Уединение",
+    notes: ["Подходит тем, кто был на Мальдивах и хочет тишины", "Остров Утему — родина национального героя Мохаммеда Такуруфану"] },
+  { id: "noonu", name: "Нуну", dv: "Noonu · Miladhunmadulu Dhekunuburi", lat: 5.85, lon: 73.45, rx: 16, ry: 26,
+    lede: "Атолл ультра-люкса: широкие бирюзовые лагуны и архитектурные виллы на воде.",
+    getting: "Гидросамолёт ~45 мин", best: "Декабрь – апрель", mood: "Медовый месяц",
+    notes: ["Лагуны мелкие и огромные, идеальный цвет воды", "Домашние рифы чаще всего далеко от вилл"] },
+  { id: "raa", name: "Раа", dv: "Raa · Maalhosmadulu Uthuruburi", lat: 5.6, lon: 72.95, rx: 20, ry: 30,
+    lede: "Новые курорты, много пространства и мало соседей. Лагуны спокойные, а до мант в Баа рукой подать.",
+    getting: "Гидросамолёт ~45 мин", best: "Декабрь – апрель", mood: "Новое и тихое",
+    notes: ["Хороший выбор, если важен свежий дизайн", "Зимой здесь спокойнее, чем на атоллах Мале"] },
+  { id: "lhaviyani", name: "Лавиани", dv: "Lhaviyani · Faadhippolhu", lat: 5.35, lon: 73.55, rx: 13, ry: 15,
+    lede: "Компактный атолл с сильным дайвингом: каналы с акулами и знаменитый затонувший «Шипъярд».",
+    getting: "Гидросамолёт ~40 мин", best: "Январь – май", mood: "Дайвинг",
+    notes: ["Много курортов с «всё включено»", "Есть острова только для взрослых"] },
+  { id: "baa", name: "Баа", dv: "Baa · Maalhosmadulu Dhekunuburi", lat: 5.1, lon: 73.0, rx: 20, ry: 20,
+    lede: "Биосферный резерват ЮНЕСКО. В заливе Ханифару с июня по ноябрь собираются десятки мант и китовые акулы.",
+    getting: "Гидросамолёт ~30 мин", best: "Июнь – ноябрь для мант", mood: "Природа",
+    notes: ["Плавать в Ханифару можно только с лицензированным гидом", "Хорошие курорты для семей"] },
+  { id: "nmale", name: "Северный Мале", dv: "Kaafu · North Malé", lat: 4.5, lon: 73.45, rx: 22, ry: 36,
+    lede: "Ближе всего к аэропорту. Катер вместо гидросамолёта, можно прилететь поздно вечером. Здесь же лучшие серф-споты у Мале.",
+    getting: "Катер 10–50 мин", best: "Круглый год", mood: "Близко и удобно",
+    notes: ["Идеально для 5–7 ночей и семей с малышами", "Серф-споты Chickens, Cokes, Sultans"] },
+  { id: "nari", name: "Северный Ари", dv: "Alif Alif · North Ari", lat: 4.1, lon: 72.85, rx: 18, ry: 26, side: "left",
+    lede: "Маленькие острова с сильными домашними рифами и каналами, где кормятся манты и рифовые акулы.",
+    getting: "Гидросамолёт ~25–35 мин", best: "Январь – апрель", mood: "Снорклинг",
+    notes: ["Много островов, которые обходятся за 10 минут пешком", "Лучше видимость в сухой сезон"] },
+  { id: "sari", name: "Южный Ари", dv: "Alif Dhaal · South Ari", lat: 3.6, lon: 72.85, rx: 18, ry: 24, side: "left",
+    lede: "Морской заповедник с китовыми акулами круглый год. Здесь же подводный ресторан Ithaa.",
+    getting: "Гидросамолёт ~30 мин или рейс в Маамигили", best: "Круглый год", mood: "Встреча с китовой акулой",
+    notes: ["Выезды к китовым акулам делают почти все курорты атолла", "Хорошие варианты «всё включено»"] },
+  { id: "smale", name: "Южный Мале", dv: "Kaafu · South Malé", lat: 3.95, lon: 73.45, rx: 11, ry: 16,
+    lede: "Каналы с течениями для дайвинга и спокойные курорты в часе на катере от аэропорта.",
+    getting: "Катер 30–60 мин", best: "Январь – апрель", mood: "Спокойно и близко",
+    notes: ["Хорошо для дайверов: Guraidhoo Kandu, Kandooma Thila", "Не нужен гидросамолёт"] },
+  { id: "vaavu", name: "Вааву", dv: "Vaavu · Felidhu", lat: 3.4, lon: 73.5, rx: 13, ry: 14,
+    lede: "Почти без курортов, зато одни из самых известных дайв-сайтов страны: Фоттейо и ночные акулы у Алиматы.",
+    getting: "Катер ~90 мин или сафари", best: "Январь – апрель", mood: "Дайв-сафари",
+    notes: ["Чаще всего сюда приезжают на дайв-яхте"] },
+  { id: "dhaalu", name: "Даалу", dv: "Dhaalu · Nilandhe Atoll Dhekunuburi", lat: 2.85, lon: 72.95, rx: 11, ry: 15,
+    lede: "Тихий атолл с несколькими большими курортами и мягкими пляжами.",
+    getting: "Гидросамолёт ~40 мин или рейс в Кудахувадху", best: "Декабрь – апрель", mood: "Спокойный отдых",
+    notes: ["Хорош для пар и долгих поездок"] },
+  { id: "thaa", name: "Таа", dv: "Thaa · Kolhumadulu", lat: 2.35, lon: 73.1, rx: 20, ry: 20,
+    lede: "Большой малоосвоенный атолл с сильными волнами для опытных серферов.",
+    getting: "Внутренний рейс + катер", best: "Март – октябрь", mood: "Серфинг",
+    notes: ["Мало курортов и туристов"] },
+  { id: "laamu", name: "Лааму", dv: "Laamu · Hadhdhunmathi", lat: 1.85, lon: 73.45, rx: 15, ry: 22,
+    lede: "Серфинг, морская биология и почти нетронутые рифы. Острова соединены самой длинной дорогой страны.",
+    getting: "Рейс в Кадду ~45 мин + катер", best: "Март – октябрь", mood: "Серфинг и эко",
+    notes: ["Серф-брейк Yin Yang", "Здесь работают программы защиты черепах и морских трав"] },
+  { id: "gaafu", name: "Гаафу (Хуваду)", dv: "Gaafu · Huvadhu", lat: 0.5, lon: 73.3, rx: 36, ry: 36,
+    lede: "Один из крупнейших атоллов мира. Глубокие каналы, дикие рифы и огромные расстояния между островами.",
+    getting: "Рейс ~55 мин + катер", best: "Круглый год", mood: "Далеко от всех",
+    notes: ["Любимый атолл серферов и дайверов", "Курортов мало, туристов ещё меньше"] },
+  { id: "addu", name: "Адду", dv: "Seenu · Addu", lat: -0.62, lon: 73.15, rx: 11, ry: 9,
+    lede: "Южнее экватора. Острова соединены мостами, можно кататься на велосипеде, рядом затонувший British Loyalty.",
+    getting: "Рейс в Ган ~70 мин", best: "Круглый год", mood: "Дайвинг и культура",
+    notes: ["Здесь живут, а не только отдыхают: можно увидеть настоящие Мальдивы", "Недорогие курорты"] }
+];
+const ATOLL_BY_ID = Object.fromEntries(ATOLLS.map(a => [a.id, a]));
+const TR_LABEL = { boat: "катер", seaplane: "гидросамолёт", flight: "рейс + катер" };
+const PRICE = ["", "$", "$$", "$$$", "$$$$"];
+
+/* ---------- matcher ---------- */
+const mform = document.getElementById("mform");
+const resultsEl = document.getElementById("results");
+const moreBtn = document.getElementById("more-btn");
+let showAll = false;
+
+function readPrefs() {
+  const fd = new FormData(mform);
+  return { who: fd.get("who"), want: fd.getAll("want"), tr: fd.get("tr"), budget: Number(fd.get("budget")) };
+}
+const WANT_LABEL = { reef: "домашний риф", overwater: "вилла на воде", privacy: "тишина", allin: "всё включено",
+  diving: "дайвинг", surf: "серфинг", kids: "детский клуб" };
+
+function score(r, p) {
+  if (p.who === "family" && r.adults) return null;
+  if (p.tr === "boat" && r.transfer !== "boat") return null;
+  if (p.tr === "noflight" && r.transfer === "flight") return null;
+  if (r.price > p.budget) return null;
+  let s = 0; const hits = [];
+  if (p.who === "couple" || p.who === "honeymoon") { if (r.romance) { s += 2; hits.push(p.who === "honeymoon" ? "для молодожёнов" : "для двоих"); } if (r.adults) s += 1; }
+  if (p.who === "honeymoon" && r.price >= 3) s += 1;
+  if (p.who === "family") { if (r.kids) { s += 3; hits.push("с детьми"); } else s -= 3; }
+  if (p.who === "friends") { if (r.allin) s += 1; if (r.diving) s += 1; }
+  for (const w of p.want) {
+    const ok = w === "reef" ? r.reef >= 2 : w === "kids" ? r.kids : r[w];
+    if (ok) { s += w === "reef" ? r.reef : 2; hits.push(WANT_LABEL[w]); } else s -= 1;
+  }
+  s -= r.min / 60; // shorter transfer wins ties
+  return { s, hits };
+}
+
+function reefDots(n) { return `<span class="reef" aria-label="риф ${n} из 3">${[1,2,3].map(i => `<i class="${i <= n ? "on" : ""}"></i>`).join("")}</span>`; }
+
+function render() {
+  const p = readPrefs();
+  const list = RESORTS.map(r => ({ r, m: score(r, p) })).filter(x => x.m).sort((a, b) => b.m.s - a.m.s);
+  const shown = showAll ? list : list.slice(0, 4);
+  document.getElementById("res-count").textContent = list.length
+    ? `${list.length} из ${RESORTS.length} курортов подходят` : "";
+  resultsEl.innerHTML = shown.length ? shown.map(({ r, m }, i) => {
+    const a = ATOLL_BY_ID[r.atoll];
+    return `<article class="resort">
+      <div class="swatch"><canvas data-seed="${r.name}" data-reef="${r.reef}" data-water="${r.overwater ? 1 : 0}" aria-hidden="true"></canvas>
+        <span class="rank">${i === 0 ? "лучшее совпадение" : "№ " + (i + 1)}</span><span class="price">${PRICE[r.price]}</span></div>
+      <div class="resort-body">
+        <h3>${r.name}</h3>
+        <div class="resort-meta">${a.name} · ${TR_LABEL[r.transfer]} ~${r.min} мин · риф ${reefDots(r.reef)}</div>
+        <p>${r.note}</p>
+        <div class="tags">${m.hits.map(h => `<span class="tag hit">${h}</span>`).join("")}${r.adults ? '<span class="tag">только взрослые</span>' : ""}</div>
+      </div></article>`;
+  }).join("") : `<div class="empty">Под такие условия курортов в нашей подборке нет. Попробуйте поднять бюджет или разрешить гидросамолёт, либо просто напишите нам: вариантов на Мальдивах гораздо больше.</div>`;
+  moreBtn.hidden = list.length <= 4;
+  moreBtn.textContent = showAll ? "Свернуть" : `Показать все ${list.length}`;
+  resultsEl.querySelectorAll("canvas").forEach(drawSwatch);
+}
+mform.addEventListener("change", () => { showAll = false; render(); });
+moreBtn.addEventListener("click", () => { showAll = !showAll; render(); });
+
+/* seeded random for per-resort aerial swatches */
+function rng(str) { let h = 2166136261; for (const c of str) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return () => ((h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909)) >>> 0) / 4294967296; }
+function drawSwatch(cv) {
+  const w = cv.clientWidth || 300, h = cv.clientHeight || 92, dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = w * dpr; cv.height = h * dpr; const c = cv.getContext("2d"); c.scale(dpr, dpr);
+  const R = rng(cv.dataset.seed);
+  const g = c.createLinearGradient(0, 0, w, h); g.addColorStop(0, "#0b4868"); g.addColorStop(1, "#0a3350");
+  c.fillStyle = g; c.fillRect(0, 0, w, h);
+  const cx = w * (0.35 + R() * 0.3), cy = h * (0.45 + R() * 0.2), rw = w * (0.28 + R() * 0.12), rh = h * (0.55 + R() * 0.2);
+  c.save(); c.filter = "blur(10px)"; c.fillStyle = "#2ec4bb"; c.beginPath(); c.ellipse(cx, cy, rw * 1.25, rh * 1.15, 0, 0, 7); c.fill(); c.restore();
+  c.save(); c.filter = "blur(4px)"; c.fillStyle = "#8fe6da"; c.beginPath(); c.ellipse(cx, cy, rw, rh * 0.85, 0, 0, 7); c.fill(); c.restore();
+  c.fillStyle = "#f4f1e6"; c.beginPath(); c.ellipse(cx, cy, rw * 0.55, rh * 0.42, R() * 0.6 - 0.3, 0, 7); c.fill();
+  c.fillStyle = "#3f8f5c"; c.beginPath(); c.ellipse(cx, cy, rw * 0.44, rh * 0.3, R() * 0.6 - 0.3, 0, 7); c.fill();
+  if (cv.dataset.water === "1") {
+    c.strokeStyle = "rgba(244,241,230,.9)"; c.lineWidth = 1.5; const n = 5 + Math.floor(R() * 4);
+    const x0 = cx + rw * 0.45, y0 = cy - rh * 0.1;
+    c.beginPath(); c.moveTo(x0, y0); c.lineTo(x0 + rw * 0.7, y0 + 2); c.stroke();
+    for (let i = 1; i <= n; i++) { const x = x0 + (rw * 0.7) * i / n; c.fillStyle = "#e9e1cf"; c.fillRect(x - 3, y0 - 6 + (i % 2) * 10, 6, 5); }
+  }
+}
+
+/* ---------- atoll chain ---------- */
+const chain = document.getElementById("chain");
+const Y = lat => 20 + (7.3 - lat) * (780 / 8.1), X = lon => 20 + (lon - 72.4) * (260 / 1.6);
+function buildChain() {
+  const ns = "http://www.w3.org/2000/svg"; let html = "";
+  const eq = Y(0);
+  html += `<line class="equator" x1="0" x2="300" y1="${eq}" y2="${eq}"/><text class="equator-t" x="296" y="${eq - 5}" text-anchor="end">экватор 0°</text>`;
+  for (const a of ATOLLS) {
+    const x = X(a.lon), y = Y(a.lat), right = a.side ? a.side === "right" : x < 150;
+    html += `<g class="atoll" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}">
+      <ellipse class="ring" cx="${x}" cy="${y}" rx="${a.rx}" ry="${a.ry}"/>
+      <text x="${right ? x + a.rx + 6 : x - a.rx - 6}" y="${y + 3}" text-anchor="${right ? "start" : "end"}">${a.name}</text></g>`;
+  }
+  const mx = X(73.51), my = Y(4.18);
+  html += `<circle class="male" cx="${mx}" cy="${my}" r="3.5"/><text x="${mx + 8}" y="${my + 14}" style="fill:var(--coral)">Мале ✈</text>`;
+  chain.innerHTML = html;
+  chain.querySelectorAll(".atoll").forEach(g => {
+    g.addEventListener("click", () => selectAtoll(g.dataset.id));
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectAtoll(g.dataset.id); } });
+  });
+}
+function selectAtoll(id) {
+  const a = ATOLL_BY_ID[id];
+  chain.querySelectorAll(".atoll").forEach(g => g.classList.toggle("on", g.dataset.id === id));
+  const rs = RESORTS.filter(r => r.atoll === id);
+  document.getElementById("atoll-card").innerHTML = `
+    <span class="dv">${a.dv} · ${a.lat >= 0 ? a.lat.toFixed(1) + "°N" : Math.abs(a.lat).toFixed(1) + "°S"}</span>
+    <h3>${a.name}</h3>
+    <p class="lede">${a.lede}</p>
+    <dl class="kv"><div><dt>Как добраться</dt><dd>${a.getting}</dd></div><div><dt>Лучшее время</dt><dd>${a.best}</dd></div><div><dt>Для кого</dt><dd>${a.mood}</dd></div></dl>
+    <ul>${a.notes.map(n => `<li>${n}</li>`).join("")}</ul>
+    ${rs.length ? `<div><span class="eyebrow">Курорты в подборке</span><div class="atoll-resorts" style="margin-top:12px">${rs.map(r => `<button type="button" data-r="${r.name}">${r.name}</button>`).join("")}</div></div>` : ""}`;
+  document.querySelectorAll(".atoll-resorts button").forEach(b => b.addEventListener("click", () => {
+    const r = RESORTS.find(x => x.name === b.dataset.r);
+    // loosen filters so the resort is visible in the matcher
+    document.getElementById("b-4").checked = true; document.getElementById("tr-any").checked = true;
+    if (r.adults) document.getElementById("who-couple").checked = true;
+    showAll = true; render();
+    document.getElementById("match").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }));
+}
+
+/* ---------- season calendar ---------- */
+const MONTHS = ["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"];
+const CAL = [
+  ["Солнце и спокойное море", "l3 l3 l3 l3 l1 l1 l1 l1 l1 l1 l2 l2"],
+  ["Видимость под водой",      "l3 l3 l3 l3 l2 l1 l1 l1 l1 l2 l2 l3"],
+  ["Манты в Ханифару (Баа)",   "- - - - - l2 l3 l3 l3 l3 l2 -"],
+  ["Китовые акулы (Юж. Ари)",  "l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 l2"],
+  ["Серфинг",                  "- - l2 l2 l3 l3 l3 l3 l3 l2 - -"],
+  ["Цены",                     "c1 c1 c1 c1 - - - - - - - c2"]
+];
+document.getElementById("cal").innerHTML =
+  `<thead><tr><th></th>${MONTHS.map(m => `<th scope="col">${m}</th>`).join("")}</tr></thead><tbody>` +
+  CAL.map(([t, row]) => `<tr><th class="row" scope="row">${t}</th>${row.split(" ").map(c => `<td class="${c === "-" ? "" : c}"></td>`).join("")}</tr>`).join("") + "</tbody>";
+
+/* ---------- request form ---------- */
+document.getElementById("c-phone").textContent = CONTACT.phoneLabel;
+document.getElementById("c-mail").textContent = CONTACT.email;
+const req = document.getElementById("req");
+req.addEventListener("submit", e => {
+  e.preventDefault();
+  const f = new FormData(req);
+  if (!String(f.get("name")).trim() || !String(f.get("contact")).trim()) {
+    const miss = !String(f.get("name")).trim() ? "f-name" : "f-contact";
+    document.getElementById(miss).focus(); document.getElementById(miss).placeholder = "Заполните это поле"; return;
+  }
+  const p = readPrefs();
+  const text = [
+    `Здравствуйте! Заявка с сайта FARU.`,
+    `Имя: ${f.get("name")}`, `Контакт: ${f.get("contact")}`,
+    f.get("dates") && `Даты: ${f.get("dates")}`, `Ночей: ${f.get("nights")}`,
+    f.get("guests") && `Кто едет: ${f.get("guests")}`, `Бюджет: ${f.get("budget")}`,
+    p.want.length && `Важно: ${p.want.map(w => WANT_LABEL[w]).join(", ")}`,
+    f.get("wish") && `Пожелания: ${f.get("wish")}`
+  ].filter(Boolean).join("\n");
+  document.getElementById("out-text").textContent = text;
+  const wa = document.getElementById("wa-link");
+  wa.hidden = !CONTACT.whatsapp;
+  wa.href = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(text)}`;
+  document.getElementById("out").hidden = false;
+});
+document.getElementById("copy-btn").addEventListener("click", () => {
+  const t = document.getElementById("out-text"), ok = document.getElementById("copy-ok");
+  navigator.clipboard.writeText(t.textContent).then(() => { ok.textContent = "Скопировано"; })
+    .catch(() => { const s = getSelection(), r = document.createRange(); r.selectNodeContents(t); s.removeAllRanges(); s.addRange(r); ok.textContent = "Текст выделен, скопируйте его"; });
+});
+
+/* ---------- hero: an atoll seen from the seaplane ---------- */
+(function hero() {
+  const cv = document.getElementById("atoll"), c = cv.getContext("2d");
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let base, W, H, dpr, glints = [], raf;
+  function build() {
+    dpr = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    base = document.createElement("canvas"); base.width = cv.width; base.height = cv.height;
+    const b = base.getContext("2d"); b.scale(dpr, dpr);
+    const narrow = W < 820;
+    const cx = narrow ? W * 0.62 : W * 0.78, cy = narrow ? 150 : H * 0.5;
+    const R = narrow ? Math.min(W * 0.42, 170) : Math.min(W * 0.2, H * 0.4);
+    // open ocean
+    const og = b.createRadialGradient(cx, cy, R * 0.2, cx, cy, Math.max(W, H));
+    og.addColorStop(0, "#0e5577"); og.addColorStop(0.45, "#0a3a55"); og.addColorStop(1, "#05202f");
+    b.fillStyle = og; b.fillRect(0, 0, W, H);
+    // ring shape
+    const pts = n => { const a = []; for (let i = 0; i <= n; i++) { const t = i / n * Math.PI * 2;
+      const r = R * (1 + 0.07 * Math.sin(3 * t + 0.6) + 0.04 * Math.sin(7 * t + 1.9) + 0.02 * Math.sin(13 * t));
+      a.push([cx + Math.cos(t) * r * 1.18, cy + Math.sin(t) * r * 0.86]); } return a; };
+    const ring = pts(180);
+    const path = (s) => { b.beginPath(); ring.forEach(([x, y], i) => { const X = cx + (x - cx) * s, Y = cy + (y - cy) * s; i ? b.lineTo(X, Y) : b.moveTo(X, Y); }); b.closePath(); };
+    // outer reef glow
+    b.save(); b.filter = `blur(${R * 0.12}px)`; path(1.1); b.fillStyle = "#1c9fb0"; b.fill(); b.restore();
+    // lagoon
+    b.save(); b.filter = `blur(${R * 0.04}px)`; path(1.0); b.fillStyle = "#58d3cb"; b.fill(); b.restore();
+    b.save(); b.filter = `blur(${R * 0.06}px)`; path(0.86); b.fillStyle = "#2fb7b8"; b.fill(); b.restore();
+    b.save(); b.filter = `blur(${R * 0.1}px)`; path(0.62); b.fillStyle = "#1f98a8"; b.fill(); b.restore();
+    // reef crest
+    b.save(); b.filter = "blur(2px)"; path(0.99); b.strokeStyle = "rgba(214,250,244,.55)"; b.lineWidth = Math.max(3, R * 0.035); b.stroke(); b.restore();
+    // islands along the rim
+    let s = 7; const rand = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    const count = 16;
+    for (let k = 0; k < count; k++) {
+      const idx = Math.floor((k / count + rand() * 0.03) * 180), [x, y] = ring[idx];
+      const [nx, ny] = ring[(idx + 2) % 180], ang = Math.atan2(ny - y, nx - x);
+      const len = R * (0.04 + rand() * 0.07), wid = len * (0.35 + rand() * 0.2);
+      b.save(); b.translate(x, y); b.rotate(ang);
+      b.filter = "blur(3px)"; b.fillStyle = "rgba(170,240,230,.9)"; b.beginPath(); b.ellipse(0, 0, len * 1.7, wid * 2.2, 0, 0, 7); b.fill();
+      b.filter = "none"; b.fillStyle = "#f3efe2"; b.beginPath(); b.ellipse(0, 0, len, wid, 0, 0, 7); b.fill();
+      if (len > R * 0.06) { b.fillStyle = "#3c8a55"; b.beginPath(); b.ellipse(0, 0, len * 0.72, wid * 0.58, 0, 0, 7); b.fill(); }
+      b.restore();
+    }
+    // one resort island with a water-villa jetty, inside the lagoon
+    const ix = cx - R * 0.28, iy = cy + R * 0.18;
+    b.save(); b.filter = "blur(4px)"; b.fillStyle = "rgba(190,246,238,.95)"; b.beginPath(); b.ellipse(ix, iy, R * 0.14, R * 0.1, -0.3, 0, 7); b.fill(); b.restore();
+    b.fillStyle = "#f3efe2"; b.beginPath(); b.ellipse(ix, iy, R * 0.085, R * 0.058, -0.3, 0, 7); b.fill();
+    b.fillStyle = "#3c8a55"; b.beginPath(); b.ellipse(ix, iy, R * 0.064, R * 0.04, -0.3, 0, 7); b.fill();
+    b.strokeStyle = "rgba(243,239,226,.85)"; b.lineWidth = 1.4; b.beginPath(); b.moveTo(ix + R * 0.07, iy - R * 0.02); b.lineTo(ix + R * 0.26, iy - R * 0.07); b.stroke();
+    for (let i = 1; i <= 7; i++) { const t = i / 7, x = ix + R * (0.07 + 0.19 * t), y = iy - R * (0.02 + 0.05 * t) + (i % 2 ? -5 : 5);
+      b.fillStyle = "#e9e1cf"; b.fillRect(x - 2.5, y - 2, 5, 4); }
+    // left fade so copy stays readable
+    const fade = b.createLinearGradient(0, 0, narrow ? 0 : W * 0.6, narrow ? H : 0);
+    if (narrow) { fade.addColorStop(0.25, "rgba(5,32,47,0)"); fade.addColorStop(0.5, "rgba(5,32,47,.85)"); fade.addColorStop(1, "rgba(5,32,47,.95)"); }
+    else { fade.addColorStop(0, "rgba(5,32,47,.94)"); fade.addColorStop(0.75, "rgba(5,32,47,.6)"); fade.addColorStop(1, "rgba(5,32,47,0)"); }
+    b.fillStyle = fade; b.fillRect(0, 0, W, H);
+    glints = Array.from({ length: 70 }, () => { const t = rand() * Math.PI * 2, r = R * (0.2 + rand() * 0.75);
+      return { x: cx + Math.cos(t) * r * 1.18, y: cy + Math.sin(t) * r * 0.86, p: rand() * 6.28, sp: 0.6 + rand() * 1.2 }; });
+  }
+  function frame(t) {
+    c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(base, 0, 0); c.scale(dpr, dpr);
+    for (const g of glints) { const a = Math.max(0, Math.sin(g.p + t / 1000 * g.sp)) ** 6;
+      if (a > 0.02) { c.fillStyle = `rgba(255,255,255,${a * 0.85})`; c.fillRect(g.x, g.y, 2, 1.2); } }
+    if (!still && !document.hidden) raf = requestAnimationFrame(frame);
+  }
+  function start() { cancelAnimationFrame(raf); build(); frame(0); }
+  start();
+  let to; addEventListener("resize", () => { clearTimeout(to); to = setTimeout(() => { start(); resultsEl.querySelectorAll("canvas").forEach(drawSwatch); }, 150); });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && !still) { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); } });
+})();
+
+buildChain(); selectAtoll("baa"); render();
+</script>
+</body>
+</html>
