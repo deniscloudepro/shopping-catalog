@@ -1823,5 +1823,16 @@
     "siteName": null,
     "category": "clothing",
     "createdAt": "2018-01-20T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Ride+Getwood+Jacket",
+    "title": "Куртка горнолыжная Ride Getwood Jacket M",
+    "price": null,
+    "currency": null,
+    "imageUrl": "images/ride-getwood-jacket.jpg",
+    "images": [],
+    "siteName": null,
+    "category": "clothing",
+    "createdAt": "2018-01-05T12:00:00.000Z"
   }
 ]
