@@ -1834,5 +1834,21 @@
     "siteName": null,
     "category": "clothing",
     "createdAt": "2018-01-05T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=RuRoC+ski+helmet",
+    "title": "Шлем горнолыжный RuRoC",
+    "price": null,
+    "currency": null,
+    "imageUrl": "images/ruroc-helmet-1.jpg",
+    "images": [
+      "images/ruroc-helmet-1.jpg",
+      "images/ruroc-helmet-2.jpg",
+      "images/ruroc-helmet-3.jpg",
+      "images/ruroc-helmet-4.jpg"
+    ],
+    "siteName": null,
+    "category": "accessories",
+    "createdAt": "2026-09-30T10:48:29.253Z"
   }
 ]
