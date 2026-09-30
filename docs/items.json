@@ -1812,5 +1812,16 @@
     "siteName": "sportidea.kz",
     "category": "tourism",
     "createdAt": "2026-09-29T11:59:17.051Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Ride+Phinney+Pant+Insulated",
+    "title": "Брюки горнолыжные Ride Phinney Pant Insulated",
+    "price": 6248,
+    "currency": "RUB",
+    "imageUrl": "images/ride-phinney-pant.jpg",
+    "images": [],
+    "siteName": null,
+    "category": "clothing",
+    "createdAt": "2018-01-20T12:00:00.000Z"
   }
 ]
