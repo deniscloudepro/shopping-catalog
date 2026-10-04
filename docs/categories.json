@@ -59,5 +59,10 @@
     "id": "accessories",
     "name": "Аксессуары",
     "subcategories": []
+  },
+  {
+    "id": "wishlist",
+    "name": "Wishlist",
+    "subcategories": []
   }
 ]
