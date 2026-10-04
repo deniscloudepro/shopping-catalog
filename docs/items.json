@@ -1864,11 +1864,13 @@
   },
   {
     "url": "https://limpopo.kz/odezhda-all/pants/bryuki-muzhskie-la-sportiva-blanche-d83999999",
-    "title": "Брюки мужские La Sportiva Blanche",
-    "price": null,
-    "currency": null,
-    "imageUrl": null,
-    "images": [],
+    "title": "Утепленные брюки мужские La Sportiva Blanche",
+    "price": 149900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache//catalog/d_o_p/easyphoto/381861/d83999999-1-1000x1000.jpg",
+    "images": [
+      "https://limpopo.kz/image/cache//catalog/d_o_p/easyphoto/381861/d83999999-1-1000x1000.jpg"
+    ],
     "siteName": "limpopo.kz",
     "category": "wishlist",
     "createdAt": "2026-10-04T12:04:17.044Z"
