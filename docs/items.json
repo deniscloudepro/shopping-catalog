@@ -1905,5 +1905,18 @@
     "siteName": "nimsdaistore.com",
     "category": "caps",
     "createdAt": "2026-10-25T12:00:00.000Z"
+  },
+  {
+    "url": "https://sport-marafon.ru/catalog/ochki/ochki-julbo-ultimate-cover-black-matt-fluo-orange-spectron-4/",
+    "title": "Очки Julbo Ultimate Cover Black/Matt Fluo Orange Spectron 4 (витринный образец)",
+    "price": 26400,
+    "currency": "KZT",
+    "imageUrl": "https://sport-marafon.ru/upload/files/iblock/elements/7158d08a-36ef-11e7-80c7-901b0e95a2a8/1360c111-633f-11ec-85d9-b42e99c9b482/1360c111633f11ec85d9b42e99c9b482_0196d5cd244111f189c6c4cbe1f0aabb.jpg",
+    "images": [
+      "https://sport-marafon.ru/upload/files/iblock/elements/7158d08a-36ef-11e7-80c7-901b0e95a2a8/1360c111-633f-11ec-85d9-b42e99c9b482/1360c111633f11ec85d9b42e99c9b482_0196d5cd244111f189c6c4cbe1f0aabb.jpg"
+    ],
+    "siteName": "sport-marafon.ru",
+    "category": "accessories",
+    "createdAt": "2026-10-13T12:00:00.000Z"
   }
 ]
