@@ -1874,5 +1874,22 @@
     "siteName": "limpopo.kz",
     "category": "wishlist",
     "createdAt": "2026-10-04T12:04:17.044Z"
+  },
+  {
+    "url": "https://nimsdaistore.com/products/pramukh-chest-rig-1",
+    "title": "Нагрудная система (chest rig) Nimsdai Pramukh",
+    "price": 100,
+    "currency": "USD",
+    "imageUrl": "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-1.webp?v=1785917924&width=1000",
+    "images": [
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-1.webp?v=1785917924&width=1000",
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-2.webp?v=1785917929&width=1000",
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-3.webp?v=1785917935&width=1000",
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-4.webp?v=1785917940&width=1000",
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai_Chest_Rig.jpg?v=1785917946&width=1000"
+    ],
+    "siteName": "nimsdaistore.com",
+    "category": "accessories",
+    "createdAt": "2026-10-26T17:47:05.145Z"
   }
 ]
