@@ -1891,5 +1891,19 @@
     "siteName": "nimsdaistore.com",
     "category": "accessories",
     "createdAt": "2026-10-26T17:47:05.145Z"
+  },
+  {
+    "url": "https://nimsdaistore.com/products/nimsdai-cap-all-black",
+    "title": "Кепка Nimsdai Classic Cap, чёрная",
+    "price": 29148,
+    "currency": "KZT",
+    "imageUrl": "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Cap-6.webp?v=1749722227&width=1000",
+    "images": [
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Cap-6.webp?v=1749722227&width=1000",
+      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Cap-5.webp?v=1749722516&width=1000"
+    ],
+    "siteName": "nimsdaistore.com",
+    "category": "caps",
+    "createdAt": "2026-10-25T12:00:00.000Z"
   }
 ]
