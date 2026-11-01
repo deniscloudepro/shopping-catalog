@@ -1932,5 +1932,18 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-10-26T12:00:00.000Z"
+  },
+  {
+    "url": "https://everestoutfit.com/product/jangbu-ultralight-pro/",
+    "title": "Пуховая куртка Everest Outfit Jangbu Ultralight Pro",
+    "price": 98.6,
+    "currency": "USD",
+    "imageUrl": "https://everestoutfit.com/wp-content/uploads/2023/06/jangbu-ultralight.png",
+    "images": [
+      "https://everestoutfit.com/wp-content/uploads/2023/06/jangbu-ultralight.png"
+    ],
+    "siteName": "everestoutfit.com",
+    "category": "clothing",
+    "createdAt": "2026-10-10T12:00:00.000Z"
   }
 ]
