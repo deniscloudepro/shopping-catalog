@@ -1918,5 +1918,19 @@
     "siteName": "sport-marafon.ru",
     "category": "accessories",
     "createdAt": "2026-10-13T12:00:00.000Z"
+  },
+  {
+    "url": "https://sport-marafon.ru/catalog/muzhskie-uteplennye-kurtki-i-pukhovki/kurtka-muzhskaya-the-north-face-summit-breithorn-hoodie-tnf-black/",
+    "title": "Куртка The North Face Summit Breithorn Hoodie, TNF Black (NF0A87ZMJK31)",
+    "price": 214000,
+    "currency": "KZT",
+    "imageUrl": "https://sport-marafon.ru/upload/files/iblock/elements/c220c58f-00b2-11e3-9e97-e83935202582/1a7eb035-8ba1-11ef-85dc-b42e99c9b482/1a7eb0358ba111ef85dcb42e99c9b482_879510f84ebf11f189c6c4cbe1f0aabb.png",
+    "images": [
+      "https://sport-marafon.ru/upload/files/iblock/elements/c220c58f-00b2-11e3-9e97-e83935202582/1a7eb035-8ba1-11ef-85dc-b42e99c9b482/1a7eb0358ba111ef85dcb42e99c9b482_879510f84ebf11f189c6c4cbe1f0aabb.png"
+    ],
+    "siteName": "sport-marafon.ru",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-10-26T12:00:00.000Z"
   }
 ]
