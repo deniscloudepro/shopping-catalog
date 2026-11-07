@@ -1945,5 +1945,23 @@
     "siteName": "everestoutfit.com",
     "category": "clothing",
     "createdAt": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "url": "https://sport-lab.kz/catalog/odezhda-3/kurtka-bonatti-wp-jacket-m-19",
+    "title": "Куртка Salomon Bonatti WP Jacket M",
+    "price": 92900,
+    "currency": "KZT",
+    "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__1.jpg",
+    "images": [
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__3.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C26850__1.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C26850__2.jpg",
+      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C26850__3.jpg"
+    ],
+    "siteName": "sport-lab.kz",
+    "category": "clothing",
+    "createdAt": "2026-11-07T10:32:17.907Z"
   }
 ]
