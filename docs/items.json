@@ -1993,5 +1993,19 @@
     "category": "shoes",
     "subcategory": "the-north-face",
     "createdAt": "2026-10-24T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=The+North+Face+cap+neck+flap+black",
+    "title": "Кепка The North Face с защитой шеи, чёрная",
+    "price": 19850,
+    "currency": "KZT",
+    "imageUrl": "images/tnf-cap-neck-flap.jpg",
+    "images": [
+      "images/tnf-cap-neck-flap.jpg"
+    ],
+    "siteName": null,
+    "category": "caps",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-10-10T12:00:00.000Z"
   }
 ]
