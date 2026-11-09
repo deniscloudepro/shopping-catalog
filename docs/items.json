@@ -2035,5 +2035,21 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-27T12:00:00.000Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/gloves-and-mittens-the-north-face-11636218",
+    "title": "Перчатки The North Face модель NF0A8HMUJK31",
+    "price": 33990,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp1011850/medium/MAIN.webp",
+    "images": [
+      "https://kz.media.intertop.com/load/mp1011850/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp1011850/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp1011850/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp1011850/medium/3.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "accessories",
+    "createdAt": "2026-09-29T12:00:00.000Z"
   }
 ]
