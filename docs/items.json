@@ -1976,5 +1976,22 @@
     "siteName": "sport-marafon.ru",
     "category": "accessories",
     "createdAt": "2026-10-24T12:00:00.000Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/sneakers-the-north-face-11261041",
+    "title": "Кроссовки The North Face модель NF0A8G6BKX71",
+    "price": 81520,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp926428/medium/MAIN.webp",
+    "images": [
+      "https://kz.media.intertop.com/load/mp926428/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp926428/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp926428/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp926428/medium/3.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "shoes",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-10-24T12:00:00.000Z"
   }
 ]
