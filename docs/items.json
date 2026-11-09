@@ -2051,5 +2051,21 @@
     "siteName": "intertop.kz",
     "category": "accessories",
     "createdAt": "2026-09-29T12:00:00.000Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/hats-the-north-face-10465865/",
+    "title": "Шапка The North Face модель NF0A888AJK31",
+    "price": 16990,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp746013/medium/MAIN.webp",
+    "images": [
+      "https://kz.media.intertop.com/load/mp746013/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp746013/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp746013/medium/2.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "caps",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-29T12:01:00.000Z"
   }
 ]
