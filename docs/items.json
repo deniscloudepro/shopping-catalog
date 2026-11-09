@@ -2020,5 +2020,20 @@
     "siteName": null,
     "category": "accessories",
     "createdAt": "2026-10-10T12:01:00.000Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/sweaters-and-sweaters-the-north-face-10367703",
+    "title": "Спортивная кофта The North Face модель NF0A8DY8JK31",
+    "price": 49690,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp713798/medium/MAIN.webp",
+    "images": [
+      "https://kz.media.intertop.com/load/mp713798/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp713798/medium/1.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-09-27T12:00:00.000Z"
   }
 ]
