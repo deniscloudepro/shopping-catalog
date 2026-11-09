@@ -2007,5 +2007,18 @@
     "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=The+North+Face+neck+gaiter+black",
+    "title": "Бафф (неквормер) The North Face, чёрный",
+    "price": 15550,
+    "currency": "KZT",
+    "imageUrl": "images/tnf-neck-gaiter.jpg",
+    "images": [
+      "images/tnf-neck-gaiter.jpg"
+    ],
+    "siteName": null,
+    "category": "accessories",
+    "createdAt": "2026-10-10T12:01:00.000Z"
   }
 ]
