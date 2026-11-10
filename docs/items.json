@@ -2130,5 +2130,18 @@
     "siteName": null,
     "category": "tourism",
     "createdAt": "2026-11-10T09:12:17.822Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Buff+Everest+Trekking+Map",
+    "title": "Бафф Buff Everest Trekking Map",
+    "price": 12344,
+    "currency": "KZT",
+    "imageUrl": "images/buff-everest-trekking-map.jpg",
+    "images": [
+      "images/buff-everest-trekking-map.jpg"
+    ],
+    "siteName": "Mountain outdoor PVT.LTD",
+    "category": "accessories",
+    "createdAt": "2026-10-26T12:02:00.000Z"
   }
 ]
