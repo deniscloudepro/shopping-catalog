@@ -2067,5 +2067,60 @@
     "category": "caps",
     "subcategory": "the-north-face",
     "createdAt": "2026-09-29T12:01:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Katadyn+water+filter+system",
+    "title": "Система фильтрации воды Katadyn",
+    "price": 35293,
+    "currency": "KZT",
+    "imageUrl": null,
+    "images": [],
+    "siteName": null,
+    "category": "tourism",
+    "createdAt": "2026-11-10T09:12:14.904Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=down+socks+insulated",
+    "title": "Пуховые носки (Down Sock)",
+    "price": 23425,
+    "currency": "KZT",
+    "imageUrl": null,
+    "images": [],
+    "siteName": null,
+    "category": "socks",
+    "createdAt": "2026-11-10T09:12:15.589Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Oxy+Watch",
+    "title": "Oxy Watch",
+    "price": 16781,
+    "currency": "KZT",
+    "imageUrl": null,
+    "images": [],
+    "siteName": null,
+    "category": "electronics",
+    "createdAt": "2026-11-10T09:12:16.327Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=merino+socks",
+    "title": "Носки из мериносовой шерсти (Merino Socks)",
+    "price": 13974,
+    "currency": "KZT",
+    "imageUrl": null,
+    "images": [],
+    "siteName": null,
+    "category": "socks",
+    "createdAt": "2026-11-10T09:12:17.099Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Exped+drybag",
+    "title": "Гермомешок Exped (Drybag)",
+    "price": 6223,
+    "currency": "KZT",
+    "imageUrl": null,
+    "images": [],
+    "siteName": null,
+    "category": "tourism",
+    "createdAt": "2026-11-10T09:12:17.822Z"
   }
 ]
