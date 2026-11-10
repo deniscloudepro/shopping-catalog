@@ -103,7 +103,7 @@ function cardHtml(item) {
 
   return `
     <button type="button" class="card" data-item="${item.id}">
-      <div class="card-image">${image}</div>
+      <div class="card-image${item.imageStyle ? ` card-image--${item.imageStyle}` : ""}">${image}</div>
       <div class="card-body">
         <div class="card-title">${escapeHtml(item.title)}</div>
         ${price ? `<div class="card-price">${escapeHtml(price)}</div>` : ""}
@@ -237,13 +237,14 @@ function formatDate(value) {
 }
 
 function galleryHtml(item) {
+  const slideClass = item.imageStyle ? ` gallery-slide--${item.imageStyle}` : "";
   const photos = item.images && item.images.length ? item.images : item.imageUrl ? [item.imageUrl] : [];
   if (!photos.length) return `<div class="dialog-image"><span class="placeholder">нет фото</span></div>`;
 
   const slides = photos
     .map(
       (src, i) =>
-        `<div class="gallery-slide"><img src="${escapeHtml(src)}" alt="" ${i ? 'loading="lazy"' : ""} /></div>`
+        `<div class="gallery-slide${slideClass}"><img src="${escapeHtml(src)}" alt="" ${i ? 'loading="lazy"' : ""} /></div>`
     )
     .join("");
   if (photos.length === 1) return `<div class="gallery"><div class="gallery-track">${slides}</div></div>`;

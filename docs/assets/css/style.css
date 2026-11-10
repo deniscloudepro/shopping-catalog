@@ -399,3 +399,15 @@ button.card {
 .gallery-dot.is-active {
   background: rgba(0, 0, 0, 0.65);
 }
+
+/* Shoe photos from some shops are a small shoe on a grey canvas: enlarge the
+   shoe and turn the light-grey background white. Set "imageStyle": "zoom" on
+   the item in items.json. */
+.card-image--zoom img {
+  transform: scale(1.5);
+  filter: brightness(1.09);
+}
+
+.gallery-slide--zoom img {
+  filter: brightness(1.09);
+}
