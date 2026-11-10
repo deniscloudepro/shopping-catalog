@@ -2134,7 +2134,7 @@
   {
     "url": "https://www.google.com/search?q=Buff+Everest+Trekking+Map",
     "title": "Бафф Buff Everest Trekking Map",
-    "price": 12344,
+    "price": 12092,
     "currency": "KZT",
     "imageUrl": "images/buff-everest-trekking-map.jpg",
     "images": [
@@ -2147,7 +2147,7 @@
   {
     "url": "https://sport-marafon.ru/catalog/bandany-povyazki-sharfy/bandana-buff-original-siary-purple/",
     "title": "Бафф Buff Original Siary Purple",
-    "price": 10312,
+    "price": 10102,
     "currency": "KZT",
     "imageUrl": "images/buff-original-siary-purple.jpg",
     "images": [
@@ -2156,5 +2156,16 @@
     "siteName": "Mountain outdoor PVT.LTD",
     "category": "accessories",
     "createdAt": "2026-10-26T12:03:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=trekking+pole+tips+rubber",
+    "title": "Наконечники для треккинговых палок (2 шт.)",
+    "price": 4837,
+    "currency": "KZT",
+    "imageUrl": null,
+    "images": [],
+    "siteName": null,
+    "category": "tourism",
+    "createdAt": "2026-11-10T12:54:13.767Z"
   }
 ]
