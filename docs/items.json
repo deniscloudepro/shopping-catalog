@@ -2077,13 +2077,18 @@
     "createdAt": "2026-09-29T12:01:00.000Z"
   },
   {
-    "url": "https://www.google.com/search?q=Katadyn+water+filter+system",
-    "title": "Система фильтрации воды Katadyn",
+    "url": "https://www.mountainshop.net/product/katadyn-befree-ac-filter-bottle/",
+    "title": "Фильтр для воды Katadyn BeFree AC (бутылка)",
     "price": 35293,
     "currency": "KZT",
-    "imageUrl": null,
-    "images": [],
-    "siteName": null,
+    "imageUrl": "images/katadyn-befree-1.jpg",
+    "images": [
+      "images/katadyn-befree-1.jpg",
+      "images/katadyn-befree-2.jpg",
+      "images/katadyn-befree-3.jpg",
+      "images/katadyn-befree-4.jpg"
+    ],
+    "siteName": "Mountain Shop",
     "category": "tourism",
     "createdAt": "2026-11-10T09:12:14.904Z"
   },
