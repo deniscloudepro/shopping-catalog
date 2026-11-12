@@ -2235,5 +2235,18 @@
     "siteName": "intertop.kz",
     "category": "tourism",
     "createdAt": "2026-10-01T12:01:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Sea+to+Summit+Aeros+Premium+pillow",
+    "title": "Надувная подушка Sea to Summit Aeros Premium, мятная",
+    "price": 18905,
+    "currency": "KZT",
+    "imageUrl": "images/sts-aeros-pillow.jpg",
+    "images": [
+      "images/sts-aeros-pillow.jpg"
+    ],
+    "siteName": null,
+    "category": "tourism",
+    "createdAt": "2026-11-12T17:36:58.542Z"
   }
 ]
