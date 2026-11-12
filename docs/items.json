@@ -2189,5 +2189,21 @@
     "category": "clothing",
     "subcategory": "the-north-face",
     "createdAt": "2026-11-12T12:00:00.000Z"
+  },
+  {
+    "url": "https://limpopo.kz/odezhda-all/t-shirts/futbolka-dlya-plavaniya-muzhskaya-rip-curl-search-hood-l-s-16imrv-1000",
+    "title": "Футболка для плавания (гидрофутболка) Rip Curl Search Hood L/S",
+    "price": 26900,
+    "currency": "KZT",
+    "imageUrl": "https://limpopo.kz/image/cache/catalog/easyphoto/207404/rip-curl-futbolka-dlya-plavaniya-muzhskaya-search-hood-l-s-1-1000x1000.jpg",
+    "images": [
+      "https://limpopo.kz/image/cache/catalog/easyphoto/207404/rip-curl-futbolka-dlya-plavaniya-muzhskaya-search-hood-l-s-1-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/207404/rip-curl-futbolka-dlya-plavaniya-muzhskaya-search-hood-l-s-3-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/207404/rip-curl-futbolka-dlya-plavaniya-muzhskaya-search-hood-l-s-4-1000x1000.jpg",
+      "https://limpopo.kz/image/cache/catalog/easyphoto/207404/rip-curl-futbolka-dlya-plavaniya-muzhskaya-search-hood-l-s-2-1000x1000.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "clothing",
+    "createdAt": "2026-07-04T12:00:00.000Z"
   }
 ]
