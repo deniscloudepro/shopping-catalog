@@ -2205,5 +2205,20 @@
     "siteName": "limpopo.kz",
     "category": "clothing",
     "createdAt": "2026-07-04T12:00:00.000Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/scarfs-shawls-the-north-face-9280373",
+    "title": "Бафф The North Face модель NF0A88JNJK31",
+    "price": 18570,
+    "currency": "KZT",
+    "imageUrl": "images/tnf-gaiter-nf0a88jn.jpg",
+    "images": [
+      "images/tnf-gaiter-nf0a88jn.jpg",
+      "https://kz.media.intertop.com/load/mp502572/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp502572/medium/1.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "accessories",
+    "createdAt": "2026-10-01T12:00:00.000Z"
   }
 ]
