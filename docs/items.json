@@ -2172,5 +2172,22 @@
     "siteName": null,
     "category": "tourism",
     "createdAt": "2026-11-10T12:54:13.767Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/sweaters-and-sweaters-the-north-face-11969763",
+    "title": "Кофта The North Face модель NF0A8HRWQLI1",
+    "price": 26875,
+    "currency": "KZT",
+    "imageUrl": "https://kz.media.intertop.com/load/mp1070658/medium/MAIN.webp",
+    "images": [
+      "https://kz.media.intertop.com/load/mp1070658/medium/MAIN.webp",
+      "https://kz.media.intertop.com/load/mp1070658/medium/1.webp",
+      "https://kz.media.intertop.com/load/mp1070658/medium/2.webp",
+      "https://kz.media.intertop.com/load/mp1070658/medium/3.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-11-12T12:00:00.000Z"
   }
 ]
