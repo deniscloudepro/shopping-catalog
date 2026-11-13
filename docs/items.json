@@ -1887,13 +1887,13 @@
     "title": "Нагрудная система (chest rig) Nimsdai Pramukh",
     "price": 100,
     "currency": "USD",
-    "imageUrl": "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-1.webp?v=1785917924&width=1000",
+    "imageUrl": "images/p-7a8eb7eb-1.jpg",
     "images": [
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-1.webp?v=1785917924&width=1000",
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-2.webp?v=1785917929&width=1000",
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-3.webp?v=1785917935&width=1000",
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Chest-Rig-4.webp?v=1785917940&width=1000",
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai_Chest_Rig.jpg?v=1785917946&width=1000"
+      "images/p-7a8eb7eb-1.jpg",
+      "images/p-7a8eb7eb-2.jpg",
+      "images/p-7a8eb7eb-3.jpg",
+      "images/p-7a8eb7eb-4.jpg",
+      "images/p-7a8eb7eb-5.jpg"
     ],
     "siteName": "nimsdaistore.com",
     "category": "accessories",
@@ -1904,10 +1904,10 @@
     "title": "Кепка Nimsdai Classic Cap, чёрная",
     "price": 29148,
     "currency": "KZT",
-    "imageUrl": "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Cap-6.webp?v=1749722227&width=1000",
+    "imageUrl": "images/p-18aec62b-1.jpg",
     "images": [
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Cap-6.webp?v=1749722227&width=1000",
-      "https://nimsdaistore.com/cdn/shop/files/Nimsdai-Cap-5.webp?v=1749722516&width=1000"
+      "images/p-18aec62b-1.jpg",
+      "images/p-18aec62b-2.jpg"
     ],
     "siteName": "nimsdaistore.com",
     "category": "caps",
@@ -1958,14 +1958,14 @@
     "title": "Куртка Salomon Bonatti WP Jacket M",
     "price": 92900,
     "currency": "KZT",
-    "imageUrl": "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__1.jpg",
+    "imageUrl": "images/p-35b4de30-1.jpg",
     "images": [
-      "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__1.jpg",
-      "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__2.jpg",
-      "https://sport-lab.kz/components/com_jshopping/files/img_products/C26850__3.jpg",
-      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C26850__1.jpg",
-      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C26850__2.jpg",
-      "https://sport-lab.kz/components/com_jshopping/files/img_products/thumb_C26850__3.jpg"
+      "images/p-35b4de30-1.jpg",
+      "images/p-35b4de30-2.jpg",
+      "images/p-35b4de30-3.jpg",
+      "images/p-35b4de30-4.jpg",
+      "images/p-35b4de30-5.jpg",
+      "images/p-35b4de30-6.jpg"
     ],
     "siteName": "sport-lab.kz",
     "category": "clothing",
