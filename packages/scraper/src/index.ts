@@ -462,3 +462,64 @@ export function extractHtmlFromMhtml(raw: Buffer): { html: string; url: string |
   }
   return null;
 }
+
+export interface EmbeddedImage {
+  type: string;
+  data: Buffer;
+}
+
+/**
+ * Key that identifies "the same photo" across the URLs a page and a saved copy
+ * of it use: resize_cache/…/570_550_1/, small/ vs medium/, "-320x320" suffixes.
+ */
+export function imageKey(url: string): string {
+  let path: string;
+  try {
+    path = decodeURIComponent(new URL(url).pathname);
+  } catch {
+    return url;
+  }
+  const sizeDir = /^(?:resize_cache|small|smallest|medium|large|thumb|cache|catalog|\d+_\d+(?:_\w+)?)$/;
+  const segs = path.split("/").filter((p) => p && !sizeDir.test(p));
+  if (!segs.length) return url;
+  const last = segs[segs.length - 1]
+    .replace(/-\d+x\d+[a-z]?(?=\.\w+$)/, "")
+    .replace(/\.(?:jpe?g|png|webp)(?:\.webp)?$/i, "");
+  const parent = segs.length > 1 ? segs[segs.length - 2] : "";
+  return /^mp\d+$/.test(parent) ? `${parent}/${last}` : last;
+}
+
+/**
+ * Photos stored inside a .mht saved page (the browser embeds what the page had
+ * loaded), keyed by imageKey(); the biggest file wins when one photo is there
+ * in several sizes. Tiny files (icons, trackers) are ignored.
+ */
+export function extractMhtmlImages(raw: Buffer): Map<string, EmbeddedImage> {
+  const text = raw.toString("latin1");
+  const boundary = text.slice(0, 4000).match(/boundary="?([^"\r\n;]+)"?/i)?.[1];
+  const result = new Map<string, EmbeddedImage>();
+  if (!boundary) return result;
+
+  let offset = 0;
+  for (const chunk of text.split(`--${boundary}`).slice(1)) {
+    const start = offset;
+    offset += chunk.length + boundary.length + 2;
+    const sep = chunk.indexOf("\r\n\r\n");
+    if (sep < 0) continue;
+    const head = chunk.slice(0, sep);
+    const type = head.match(/Content-Type:\s*(image\/(?:png|jpeg|webp))/i)?.[1];
+    const loc = head.match(/Content-Location:\s*(\S+)/i)?.[1];
+    if (!type || !loc) continue;
+
+    let body = Buffer.from(chunk.slice(sep + 4), "latin1");
+    if (body.subarray(-2).toString("latin1") === "\r\n") body = body.subarray(0, -2);
+    if (/base64/i.test(head)) body = Buffer.from(body.toString("latin1"), "base64");
+    if (body.length < 6000) continue;
+
+    const key = imageKey(loc);
+    const prev = result.get(key);
+    if (!prev || body.length > prev.data.length) result.set(key, { type, data: body });
+    void start;
+  }
+  return result;
+}
