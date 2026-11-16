@@ -2094,11 +2094,13 @@
   },
   {
     "url": "https://www.google.com/search?q=down+socks+insulated",
-    "title": "Пуховые носки (Down Sock)",
+    "title": "Пуховые носки Exped (Down Sock)",
     "price": 23425,
     "currency": "KZT",
-    "imageUrl": null,
-    "images": [],
+    "imageUrl": "images/exped-down-sock.jpg",
+    "images": [
+      "images/exped-down-sock.jpg"
+    ],
     "siteName": null,
     "category": "socks",
     "createdAt": "2026-11-10T09:12:15.589Z"
