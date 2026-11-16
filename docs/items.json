@@ -2313,5 +2313,27 @@
     "siteName": "limpopo.kz",
     "category": "shoes",
     "createdAt": "2026-11-16T18:13:34.573Z"
+  },
+  {
+    "url": "https://dashwallets.com/products/passport-shell-2-0-travel-wallet",
+    "title": "Дорожный кошелёк для паспорта Dash Passport Shell 2.0",
+    "price": 17680,
+    "currency": "KZT",
+    "imageUrl": "images/p-3ebaa5b8-1.jpg",
+    "images": [
+      "images/p-3ebaa5b8-1.jpg",
+      "images/p-3ebaa5b8-2.jpg",
+      "images/p-3ebaa5b8-3.jpg",
+      "images/p-3ebaa5b8-4.jpg",
+      "images/p-3ebaa5b8-5.jpg",
+      "images/p-3ebaa5b8-6.jpg",
+      "images/p-3ebaa5b8-7.jpg",
+      "images/p-3ebaa5b8-8.jpg",
+      "images/p-3ebaa5b8-9.jpg",
+      "images/p-3ebaa5b8-10.jpg"
+    ],
+    "siteName": "dashwallets.com",
+    "category": "accessories",
+    "createdAt": "2026-11-16T18:16:08.781Z"
   }
 ]
