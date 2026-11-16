@@ -411,3 +411,66 @@ button.card {
 .gallery-slide--zoom img {
   filter: brightness(1.09);
 }
+
+/* Owner-only editor in the item dialog */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+.edit-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.edit-row {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-form input,
+.edit-form select {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+}
+
+.edit-row input {
+  flex: 1;
+}
+
+.edit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form-status {
+  min-height: 1em;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.edit-note {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}

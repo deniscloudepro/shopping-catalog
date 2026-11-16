@@ -222,7 +222,104 @@ function renderCatalog(categories, items) {
 
 // ---------- Item details dialog ----------
 
-let state = { categories: [], items: [] };
+let state = { categories: [], items: [], isOwner: false };
+
+// ---------- Owner edits (price, purchase date) ----------
+//
+// The site is static, so an edit is saved in this browser only (localStorage)
+// and layered over items.json. To make it permanent for everyone, the editor
+// can copy a ready message for Claude, who commits the change to items.json.
+
+const OVERRIDES_KEY = "catalog-overrides";
+const CURRENCY_CHOICES = ["KZT", "CNY", "USD", "RUB", "EUR", "GBP"];
+const itemKey = (url) => String(url).replace(/\/+$/, "");
+
+function readOverrides() {
+  try {
+    return JSON.parse(storageGet(OVERRIDES_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function writeOverrides(overrides) {
+  storageSet(OVERRIDES_KEY, Object.keys(overrides).length ? JSON.stringify(overrides) : null);
+}
+
+function applyOverrides(items) {
+  const overrides = readOverrides();
+  for (const item of items) {
+    const edit = overrides[itemKey(item.url)];
+    if (!edit) continue;
+    item.original = { price: item.price, currency: item.currency, createdAt: item.createdAt };
+    Object.assign(item, edit);
+    item.edited = true;
+  }
+}
+
+function isoDay(value) {
+  const t = toTime(value);
+  return t ? new Date(t).toISOString().slice(0, 10) : "";
+}
+
+function parsePriceInput(raw) {
+  const cleaned = raw.replace(/[\s\u00a0]/g, "").replace(",", ".");
+  if (cleaned === "") return null;
+  const num = Number(cleaned);
+  return Number.isFinite(num) && num >= 0 ? num : NaN;
+}
+
+function editorHtml(item) {
+  const currency = item.currency || "KZT";
+  const options = [...new Set([...CURRENCY_CHOICES, currency])]
+    .map((c) => `<option${c === currency ? " selected" : ""}>${escapeHtml(c)}</option>`)
+    .join("");
+  const orig = item.original;
+  const wasPrice = orig ? formatPrice(orig.price, orig.currency) : null;
+  return `
+    <form class="edit-form" data-form="edit">
+      <div class="edit-title">Править для себя</div>
+      <label class="edit-field">Цена
+        <span class="edit-row">
+          <input name="price" inputmode="decimal" autocomplete="off" placeholder="не указана"
+                 value="${item.price === null || item.price === undefined ? "" : escapeHtml(item.price)}" />
+          <select name="currency" aria-label="Валюта">${options}</select>
+        </span>
+      </label>
+      <label class="edit-field">Дата покупки
+        <input type="date" name="date" value="${isoDay(item.createdAt)}" />
+      </label>
+      <div class="edit-actions">
+        <button type="submit" class="btn">Сохранить</button>
+        <button type="button" class="btn" data-action="copy-edit">Скопировать для Claude</button>
+        ${item.edited ? '<button type="button" class="btn" data-action="reset-edit">Сбросить</button>' : ""}
+      </div>
+      <div class="form-status" role="status">${
+        item.edited
+          ? `Изменено на этом устройстве${wasPrice ? ` (в каталоге: ${escapeHtml(wasPrice)})` : ""}.`
+          : ""
+      }</div>
+      <p class="edit-note">Сохраняется только в этом браузере. Чтобы цену и дату увидели везде,
+        нажми «Скопировать для Claude» и отправь мне.</p>
+    </form>
+  `;
+}
+
+function claudeMessage(item) {
+  const bits = [];
+  const priceText = formatPrice(item.price, item.currency);
+  bits.push(priceText ? `цена ${priceText}` : "цена не указана");
+  const day = toTime(item.createdAt);
+  if (day) bits.push(`дата покупки ${new Date(day).toLocaleDateString("ru-RU")}`);
+  return `Поменяй в каталоге «${item.title}»: ${bits.join(", ")}.`;
+}
+
+function refreshAfterEdit(item) {
+  state.items.sort((a, b) => toTime(b.createdAt) - toTime(a.createdAt));
+  state.items.forEach((it, i) => (it.id = i));
+  renderCatalog(state.categories, state.items);
+  openItem(item.id);
+}
 
 function categoryPath(item) {
   const cat = state.categories.find((c) => c.id === item.category);
@@ -299,6 +396,7 @@ function dialogHtml(item) {
         ${added ? `<dt>Добавлен</dt><dd>${escapeHtml(added)}</dd>` : ""}
       </dl>
       <a class="btn btn--primary" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Открыть в магазине ↗</a>
+      ${state.isOwner ? editorHtml(item) : ""}
     </div>
   `;
 }
@@ -307,6 +405,7 @@ function openItem(id) {
   const item = state.items.find((i) => i.id === id);
   if (!item) return;
   const dialog = document.getElementById("item-dialog");
+  dialog.dataset.item = String(id);
   dialog.innerHTML = dialogHtml(item);
   setupGallery(dialog);
   if (!dialog.open) dialog.showModal();
@@ -317,6 +416,59 @@ function setupDialog() {
   document.addEventListener("click", (event) => {
     const card = event.target.closest(".card[data-item]");
     if (card) openItem(Number(card.dataset.item));
+  });
+  dialog.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const item = state.items.find((i) => i.id === Number(dialog.dataset.item));
+    if (!item || form.dataset.form !== "edit") return;
+
+    const price = parsePriceInput(form.price.value);
+    if (Number.isNaN(price)) {
+      form.querySelector(".form-status").textContent = "Введи число, например 25900";
+      return;
+    }
+    const overrides = readOverrides();
+    const key = itemKey(item.url);
+    const base = item.original || { price: item.price, currency: item.currency, createdAt: item.createdAt };
+    const edit = {
+      price,
+      currency: price === null ? null : form.currency.value,
+      createdAt: form.date.value ? `${form.date.value}T12:00:00.000Z` : base.createdAt,
+    };
+    const unchanged =
+      edit.price === base.price && (edit.price === null || edit.currency === base.currency) && isoDay(edit.createdAt) === isoDay(base.createdAt);
+    if (unchanged) delete overrides[key];
+    else overrides[key] = edit;
+    writeOverrides(overrides);
+
+    item.original = unchanged ? undefined : base;
+    item.edited = !unchanged;
+    Object.assign(item, unchanged ? base : edit);
+    refreshAfterEdit(item);
+  });
+
+  dialog.addEventListener("click", (event) => {
+    const action = event.target.closest("[data-action]")?.dataset.action;
+    const item = state.items.find((i) => i.id === Number(dialog.dataset.item));
+    if (action === "copy-edit" && item) {
+      const text = claudeMessage(item);
+      const status = dialog.querySelector(".form-status");
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+        .then(() => (status.textContent = "Скопировано — вставь это сообщение мне."))
+        .catch(() => window.prompt("Скопируй и отправь мне:", text));
+      return;
+    }
+    if (action === "reset-edit" && item && item.original) {
+      const overrides = readOverrides();
+      delete overrides[itemKey(item.url)];
+      writeOverrides(overrides);
+      Object.assign(item, item.original);
+      item.original = undefined;
+      item.edited = false;
+      refreshAfterEdit(item);
+      return;
+    }
   });
   dialog.addEventListener("click", (event) => {
     // A click on the backdrop lands on the <dialog> itself.
@@ -375,10 +527,13 @@ async function render() {
 
   try {
     const [allCategories, allItems, isOwner] = await Promise.all([loadCategories(), loadItems(), resolveOwner()]);
+    if (isOwner) applyOverrides(allItems);
+    allItems.sort((a, b) => toTime(b.createdAt) - toTime(a.createdAt));
+    allItems.forEach((it, i) => (it.id = i));
     const categories = isOwner ? allCategories : allCategories.filter((c) => c.public);
     const visible = new Set(categories.map((c) => c.id));
     const items = isOwner ? allItems : allItems.filter((i) => visible.has(i.category));
-    state = { categories, items };
+    state = { categories, items, isOwner };
     setupDialog();
     countEl.textContent = pluralItems(items.length);
     renderCatalog(categories, items);
