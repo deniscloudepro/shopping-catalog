@@ -2298,5 +2298,20 @@
     "siteName": "thesport.kz",
     "category": "shoes",
     "createdAt": "2026-11-16T18:02:19.409Z"
+  },
+  {
+    "url": "https://limpopo.kz/obuv-all/skalnye-tufli-la-sportiva-tarantula-40c917319",
+    "title": "Скальные туфли La Sportiva Tarantula (40C917319)",
+    "price": 65900,
+    "currency": "KZT",
+    "imageUrl": "images/p-1d9f4536-1.jpg",
+    "images": [
+      "images/p-1d9f4536-1.jpg",
+      "images/p-1d9f4536-2.jpg",
+      "images/p-1d9f4536-3.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "shoes",
+    "createdAt": "2026-11-16T18:13:34.573Z"
   }
 ]
