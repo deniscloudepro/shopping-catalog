@@ -2282,5 +2282,21 @@
     "siteName": "technodom.kz",
     "category": "electronics",
     "createdAt": "2026-01-28T12:00:00.000Z"
+  },
+  {
+    "url": "https://thesport.kz/product/la-sportiva-botinki-muzhskie-aequilibrium-st-gtx/",
+    "title": "Треккинговые ботинки мужские La Sportiva Aequilibrium ST GTX",
+    "price": 179900,
+    "currency": "KZT",
+    "imageUrl": "images/p-10451a10-1.webp",
+    "images": [
+      "images/p-10451a10-1.webp",
+      "images/p-10451a10-2.webp",
+      "images/p-10451a10-3.webp",
+      "images/p-10451a10-4.webp"
+    ],
+    "siteName": "thesport.kz",
+    "category": "shoes",
+    "createdAt": "2026-11-16T18:02:19.409Z"
   }
 ]
