@@ -2248,5 +2248,18 @@
     "siteName": null,
     "category": "tourism",
     "createdAt": "2026-11-12T17:36:58.542Z"
+  },
+  {
+    "url": "https://www.sportmaster.ru/catalog/aksessuary/ryukzaki_i_sumki/chemodany/",
+    "title": "Дорожная сумка-чемодан на колёсах Völkl, фиолетово-серая",
+    "price": null,
+    "currency": null,
+    "imageUrl": "images/volkl-travel-bag.jpg",
+    "images": [
+      "images/volkl-travel-bag.jpg"
+    ],
+    "siteName": "Спортмастер (Россия)",
+    "category": "accessories",
+    "createdAt": "2015-07-01T12:00:00.000Z"
   }
 ]
