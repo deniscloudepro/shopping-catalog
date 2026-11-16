@@ -2263,5 +2263,18 @@
     "siteName": "Спортмастер (Россия)",
     "category": "accessories",
     "createdAt": "2015-07-01T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.technodom.kz/p/myshka-besprovodnaya-usbbt-logitech-mx-master-4-graphite-910-007562-294422",
+    "title": "Мышка беспроводная USB/BT Logitech MX Master 4, Graphite (910-007562)",
+    "price": 74457,
+    "currency": "KZT",
+    "imageUrl": "images/logitech-mx-master-4.jpg",
+    "images": [
+      "images/logitech-mx-master-4.jpg"
+    ],
+    "siteName": "technodom.kz",
+    "category": "electronics",
+    "createdAt": "2026-01-28T12:00:00.000Z"
   }
 ]
