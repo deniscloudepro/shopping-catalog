@@ -2335,5 +2335,36 @@
     "siteName": "dashwallets.com",
     "category": "accessories",
     "createdAt": "2026-11-16T18:16:08.781Z"
+  },
+  {
+    "url": "https://sport-lab.kz/catalog/termobel-e-9/la-sportiva-longsliv-muzhskoy-wool40-aero-longsleeve-l89999100",
+    "title": "Лонгслив La Sportiva Wool40 Aero Longsleeve (термобельё)",
+    "price": 32900,
+    "currency": "KZT",
+    "imageUrl": "images/p-60751848-1.jpg",
+    "images": [
+      "images/p-60751848-1.jpg",
+      "images/p-60751848-2.jpg",
+      "images/p-60751848-3.jpg",
+      "images/p-60751848-4.jpg",
+      "images/p-60751848-5.jpg",
+      "images/p-60751848-6.jpg"
+    ],
+    "siteName": "sport-lab.kz",
+    "category": "clothing",
+    "createdAt": "2026-11-20T18:41:33.870Z"
+  },
+  {
+    "url": "https://sport-lab.kz/catalog/termobel-e-9/la-sportiva-bryuki-muzhskie-wool40-aer",
+    "title": "Брюки La Sportiva Wool40 Aero (термобельё)",
+    "price": 28900,
+    "currency": "KZT",
+    "imageUrl": "images/p-157bc001-1.jpg",
+    "images": [
+      "images/p-157bc001-1.jpg"
+    ],
+    "siteName": "sport-lab.kz",
+    "category": "clothing",
+    "createdAt": "2026-11-20T18:41:34.516Z"
   }
 ]
