@@ -2428,5 +2428,38 @@
     "siteName": "limpopo.kz",
     "category": "tourism",
     "createdAt": "2026-11-21T10:00:50.559Z"
+  },
+  {
+    "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/sleeping-bag/spal-nyj-meshok-naturehike-snow-petrel-mummy-down-sleeping-bag-cnk2550ws014-sp1000",
+    "title": "Спальный мешок Naturehike Snow Petrel (пуховый, кокон)",
+    "price": 219900,
+    "currency": "KZT",
+    "imageUrl": "images/p-02c2867b-1.jpg",
+    "images": [
+      "images/p-02c2867b-1.jpg",
+      "images/p-02c2867b-2.jpg",
+      "images/p-02c2867b-3.jpg",
+      "images/p-02c2867b-4.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-11-21T10:04:37.898Z"
+  },
+  {
+    "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/sleeping-bag/spal-nyj-meshok-sea-to-summit-boab-synthetic-9c-15f-asl043121-442008",
+    "title": "Спальный мешок Sea to Summit Boab Synthetic -9°C (regular wide)",
+    "price": 79900,
+    "currency": "KZT",
+    "imageUrl": "images/p-d4cce155-1.jpg",
+    "images": [
+      "images/p-d4cce155-1.jpg",
+      "images/p-d4cce155-2.jpg",
+      "images/p-d4cce155-3.jpg",
+      "images/p-d4cce155-4.jpg",
+      "images/p-d4cce155-5.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-11-21T10:04:38.947Z"
   }
 ]
