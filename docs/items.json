@@ -2367,5 +2367,36 @@
     "siteName": "sport-lab.kz",
     "category": "clothing",
     "createdAt": "2026-11-20T18:41:34.516Z"
+  },
+  {
+    "url": "https://limpopo.kz/odezhda-all/blouse/kofty/kofta-muzhskaya-mammut-madris-light-ml-1014-03842-0001",
+    "title": "Кофта Mammut Madris Light ML (мужская)",
+    "price": 65900,
+    "currency": "KZT",
+    "imageUrl": "images/p-c28a87ce-1.jpg",
+    "images": [
+      "images/p-c28a87ce-1.jpg",
+      "images/p-c28a87ce-2.jpg",
+      "images/p-c28a87ce-3.jpg",
+      "images/p-c28a87ce-4.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "clothing",
+    "createdAt": "2026-11-21T09:53:51.095Z"
+  },
+  {
+    "url": "https://limpopo.kz/sports-tourist-nutrition/sports-nutrition/energetik/energeticheskij-napitok%E2%80%91poroshok-amacx-turbo-drink-watermelon-01908",
+    "title": "Энергетический напиток-порошок Amacx Turbo Drink Watermelon, 850 г",
+    "price": 18900,
+    "currency": "KZT",
+    "imageUrl": "images/amacx-turbo-drink-watermelon.jpg",
+    "images": [
+      "images/amacx-turbo-drink-watermelon.jpg",
+      "images/p-5b0b56fc-1.jpg",
+      "images/p-5b0b56fc-2.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-11-21T09:53:52.108Z"
   }
 ]
