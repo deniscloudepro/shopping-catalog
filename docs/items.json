@@ -2398,5 +2398,35 @@
     "siteName": "limpopo.kz",
     "category": "tourism",
     "createdAt": "2026-11-21T09:53:52.108Z"
+  },
+  {
+    "url": "https://limpopo.kz/obuv-all/aksessuary-dlya-obuvi/fonariki-gamashi/fonariki-s-molniej-manaraga-0020804",
+    "title": "Гамаши-фонарики с молнией Манарага 0020804",
+    "price": 13900,
+    "currency": "KZT",
+    "imageUrl": "images/p-2e2b9bd6-1.jpg",
+    "images": [
+      "images/p-2e2b9bd6-1.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-11-21T10:00:49.387Z"
+  },
+  {
+    "url": "https://limpopo.kz/turism/turisticheskoe-snaryazhenie/ledostupy/283-ledostupy-veriga-crampons-mount-track",
+    "title": "Ледоступы Veriga Crampons Mount Track 283",
+    "price": 25900,
+    "currency": "KZT",
+    "imageUrl": "images/p-d86c88c4-1.jpg",
+    "images": [
+      "images/p-d86c88c4-1.jpg",
+      "images/p-d86c88c4-2.jpg",
+      "images/p-d86c88c4-3.jpg",
+      "images/p-d86c88c4-4.jpg",
+      "images/p-d86c88c4-5.jpg"
+    ],
+    "siteName": "limpopo.kz",
+    "category": "tourism",
+    "createdAt": "2026-11-21T10:00:50.559Z"
   }
 ]
