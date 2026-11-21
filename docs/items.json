@@ -2476,5 +2476,24 @@
     "siteName": "limpopo.kz",
     "category": "tourism",
     "createdAt": "2026-09-30T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.kant.ru/catalog/product/2073965-vkladysh_v_spalnik_sea_to_summit_reactor_regular_pewter/",
+    "title": "Вкладыш в спальник Sea to Summit Reactor Regular Pewter",
+    "price": null,
+    "currency": null,
+    "imageUrl": "images/p-3e9bd38f-1.jpg",
+    "images": [
+      "images/p-3e9bd38f-1.jpg",
+      "images/p-3e9bd38f-2.jpg",
+      "images/p-3e9bd38f-3.jpg",
+      "images/p-3e9bd38f-4.jpg",
+      "images/p-3e9bd38f-5.jpg",
+      "images/p-3e9bd38f-6.jpg",
+      "images/p-3e9bd38f-7.jpg"
+    ],
+    "siteName": "sportidea.kz",
+    "category": "tourism",
+    "createdAt": "2026-09-29T12:00:00.000Z"
   }
 ]
