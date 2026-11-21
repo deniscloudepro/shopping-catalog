@@ -2495,5 +2495,18 @@
     "siteName": "sportidea.kz",
     "category": "tourism",
     "createdAt": "2026-09-29T12:00:00.000Z"
+  },
+  {
+    "url": "https://sport-lab.kz/aksessuary/grelka-dlya-nog-para",
+    "title": "Грелка для ног (пара)",
+    "price": 800,
+    "currency": "KZT",
+    "imageUrl": "images/p-7af70964-1.jpg",
+    "images": [
+      "images/p-7af70964-1.jpg"
+    ],
+    "siteName": "sport-lab.kz",
+    "category": "tourism",
+    "createdAt": "2026-10-04T12:00:00.000Z"
   }
 ]
