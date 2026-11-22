@@ -2534,5 +2534,18 @@
     "siteName": "Sherpa Adventure Gear (Катманду)",
     "category": "clothing",
     "createdAt": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "url": "https://blackdiamondequipment.com/products/storm-450-headlamp?variant=68041530769725",
+    "title": "Налобный фонарь Black Diamond Storm 450",
+    "price": 22700,
+    "currency": "KZT",
+    "imageUrl": "images/p-0a698511-1.webp",
+    "images": [
+      "images/p-0a698511-1.webp"
+    ],
+    "siteName": "Sherpa Adventure Gear (Катманду)",
+    "category": "tourism",
+    "createdAt": "2026-10-10T12:00:00.000Z"
   }
 ]
