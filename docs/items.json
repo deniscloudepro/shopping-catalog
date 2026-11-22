@@ -2508,5 +2508,18 @@
     "siteName": "The Sport",
     "category": "tourism",
     "createdAt": "2026-11-14T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.google.com/search?q=Black+Diamond+Alpine+Carbon+Cork+Sherpa+Adventure+Gear+Kathmandu",
+    "title": "Треккинговые палки Black Diamond Alpine Carbon Cork",
+    "price": 66000,
+    "currency": "KZT",
+    "imageUrl": "images/black-diamond-alpine-carbon-cork.jpg",
+    "images": [
+      "images/black-diamond-alpine-carbon-cork.jpg"
+    ],
+    "siteName": "Sherpa Adventure Gear (Катманду)",
+    "category": "tourism",
+    "createdAt": "2026-10-10T12:00:00.000Z"
   }
 ]
