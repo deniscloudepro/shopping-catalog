@@ -2521,5 +2521,18 @@
     "siteName": "Sherpa Adventure Gear (Катманду)",
     "category": "tourism",
     "createdAt": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "url": "https://www.outdoorlife.com.sg/black-diamond-mens-fineline-stretch-full-159418397.html?id=316071000",
+    "title": "Брюки Black Diamond Fineline Stretch Full Zip (мужские, Short)",
+    "price": 77000,
+    "currency": "KZT",
+    "imageUrl": "images/p-755a40a4-1.webp",
+    "images": [
+      "images/p-755a40a4-1.webp"
+    ],
+    "siteName": "Sherpa Adventure Gear (Катманду)",
+    "category": "clothing",
+    "createdAt": "2026-10-10T12:00:00.000Z"
   }
 ]
