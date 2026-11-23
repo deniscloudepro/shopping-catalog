@@ -251,7 +251,7 @@ function applyOverrides(items) {
   for (const item of items) {
     const edit = overrides[itemKey(item.url)];
     if (!edit) continue;
-    item.original = { price: item.price, currency: item.currency, createdAt: item.createdAt };
+    item.original = { price: item.price, currency: item.currency, createdAt: item.createdAt, siteName: item.siteName };
     Object.assign(item, edit);
     item.edited = true;
   }
@@ -267,6 +267,15 @@ function parsePriceInput(raw) {
   if (cleaned === "") return null;
   const num = Number(cleaned);
   return Number.isFinite(num) && num >= 0 ? num : NaN;
+}
+
+function shopNames() {
+  const names = new Set();
+  for (const it of state.items) {
+    const name = (it.siteName || "").trim();
+    if (name) names.add(name);
+  }
+  return [...names].sort((a, b) => a.localeCompare(b, "ru"));
 }
 
 function editorHtml(item) {
@@ -289,6 +298,11 @@ function editorHtml(item) {
       <label class="edit-field">Дата покупки
         <input type="date" name="date" value="${isoDay(item.createdAt)}" />
       </label>
+      <label class="edit-field">Магазин
+        <input name="shop" list="shop-list" autocomplete="off" placeholder="выбери из списка или впиши свой"
+               value="${escapeHtml(item.siteName || "")}" />
+        <datalist id="shop-list">${shopNames().map((n) => `<option value="${escapeHtml(n)}"></option>`).join("")}</datalist>
+      </label>
       <div class="edit-actions">
         <button type="submit" class="btn">Сохранить</button>
         <button type="button" class="btn" data-action="copy-edit">Скопировать для Claude</button>
@@ -299,7 +313,7 @@ function editorHtml(item) {
           ? `Изменено на этом устройстве${wasPrice ? ` (в каталоге: ${escapeHtml(wasPrice)})` : ""}.`
           : ""
       }</div>
-      <p class="edit-note">Сохраняется только в этом браузере. Чтобы цену и дату увидели везде,
+      <p class="edit-note">Сохраняется только в этом браузере. Чтобы цену, дату и магазин увидели везде,
         нажми «Скопировать для Claude» и отправь мне.</p>
     </form>
   `;
@@ -311,6 +325,7 @@ function claudeMessage(item) {
   bits.push(priceText ? `цена ${priceText}` : "цена не указана");
   const day = toTime(item.createdAt);
   if (day) bits.push(`дата покупки ${new Date(day).toLocaleDateString("ru-RU")}`);
+  if (item.siteName) bits.push(`магазин ${item.siteName}`);
   return `Поменяй в каталоге «${item.title}»: ${bits.join(", ")}.`;
 }
 
@@ -430,14 +445,16 @@ function setupDialog() {
     }
     const overrides = readOverrides();
     const key = itemKey(item.url);
-    const base = item.original || { price: item.price, currency: item.currency, createdAt: item.createdAt };
+    const base = item.original || { price: item.price, currency: item.currency, createdAt: item.createdAt, siteName: item.siteName };
     const edit = {
       price,
       currency: price === null ? null : form.currency.value,
       createdAt: form.date.value ? `${form.date.value}T12:00:00.000Z` : base.createdAt,
+      siteName: form.shop.value.trim() || undefined,
     };
     const unchanged =
-      edit.price === base.price && (edit.price === null || edit.currency === base.currency) && isoDay(edit.createdAt) === isoDay(base.createdAt);
+      edit.price === base.price && (edit.price === null || edit.currency === base.currency) && isoDay(edit.createdAt) === isoDay(base.createdAt) &&
+      (edit.siteName || "") === (base.siteName || "");
     if (unchanged) delete overrides[key];
     else overrides[key] = edit;
     writeOverrides(overrides);
