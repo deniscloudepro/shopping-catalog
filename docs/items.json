@@ -2550,5 +2550,20 @@
     "siteName": "Sherpa Adventure Gear (Катманду)",
     "category": "tourism",
     "createdAt": "2026-10-10T12:00:00.000Z"
+  },
+  {
+    "url": "https://intertop.kz/ru-kz/product/sports-clothes-the-north-face-9053523",
+    "title": "Брюки The North Face Futurelight™ модель NF0A8AK7JK31",
+    "price": 97415,
+    "currency": "KZT",
+    "imageUrl": "images/p-edc3c6b9-1.webp",
+    "images": [
+      "images/p-edc3c6b9-1.webp",
+      "https://kz.media.intertop.com/load/mp462951/medium/1.webp"
+    ],
+    "siteName": "intertop.kz",
+    "category": "clothing",
+    "subcategory": "the-north-face",
+    "createdAt": "2026-11-25T17:02:19.763Z"
   }
 ]
