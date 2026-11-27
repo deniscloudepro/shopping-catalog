@@ -412,6 +412,16 @@ button.card {
   filter: brightness(1.09);
 }
 
+/* Milder variant for clothes photos that were cut off at scale 1.5. */
+.card-image--zoom-sm img {
+  transform: scale(1.2);
+  filter: brightness(1.09);
+}
+
+.gallery-slide--zoom-sm img {
+  filter: brightness(1.09);
+}
+
 /* Owner-only editor in the item dialog */
 .edit-form {
   display: flex;
